@@ -8,7 +8,13 @@ function Template() {
 				<div class="col-12 text-center">
 					<h1>Social Bullet</h1>
 				</div>
-			</div>
+            </div>
+            {/* <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8 text-center">
+                    <button class="nav-btn">Test Button</button>
+                </div>
+            </div> */}
 			<div class="row">
 				<div class="col-12">
 					<AmplifySignOut />

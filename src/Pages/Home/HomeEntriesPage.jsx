@@ -1,4 +1,4 @@
-import Template from '../../Components/Template.jsx';
+import Template from '../../Components/template.jsx';
 
 function HomeEntriesPage() {
 	return <Template />;
