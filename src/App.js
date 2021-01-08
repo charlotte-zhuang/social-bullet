@@ -23,6 +23,7 @@ function App() {
 			<div className="App">
 				<div>
 					<Switch>
+						<Redirect from="/" to="/home-entries" exact/>
 						<Redirect from="/home" to="/home-entries" />
 						<Redirect from="/journal" to="/journal-entries" />
 						<Redirect from="/settings" to="/settings-preferences" />
