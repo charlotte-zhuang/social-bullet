@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "socialbullet0e354fc2": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}

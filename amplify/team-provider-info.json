@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-socialbullet-dev-134022-authRole",
+      "UnauthRoleArn": "arn:aws:iam::734874972910:role/amplify-socialbullet-dev-134022-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::734874972910:role/amplify-socialbullet-dev-134022-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-socialbullet-dev-134022-deployment",
+      "UnauthRoleName": "amplify-socialbullet-dev-134022-unauthRole",
+      "StackName": "amplify-socialbullet-dev-134022",
+      "StackId": "arn:aws:cloudformation:us-west-2:734874972910:stack/amplify-socialbullet-dev-134022/1ec01230-51fa-11eb-99dc-0a1d6640693d",
+      "AmplifyAppId": "dggjq2ydg9wec"
+    },
+    "categories": {
+      "auth": {
+        "socialbullet0e354fc2": {}
+      }
+    }
+  }
+}
