@@ -54,7 +54,6 @@ function App() {
             <Route path="/edit-project" component={EditProjPage} />
             <Route path="/edit-entry" component={EditEntryPage} />
             <Route component={NullPage} />
-            <AmplifySignOut />
           </Switch>
         </div>
       </div>

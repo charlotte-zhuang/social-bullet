@@ -1,5 +1,7 @@
+import Template from '../../Components/Template.jsx';
+
 function HomeEntriesPage() {
-	return <h1>Home Entries Page</h1>;
+	return <Template />;
 }
 
 export default HomeEntriesPage;
