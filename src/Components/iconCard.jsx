@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
  * @param {String} props.url
  */
 export default function IconCard({ imgSrc, size, alt = "", text, url }) {
-  const cssClass = `iconCard-${size}`;
+  const cssClass = `iconCard-${size} advent-font`;
   return (
     <Link className='normal-text-link' to={url}>
       <div className={`d-flex flex-column justify-content-center ${cssClass}`}>
