@@ -1,53 +1,55 @@
-img.iconCard-sm {
+.iconCard-sm img,
+.iconCard-md img,
+.iconCard-lg img {
   object-fit: cover;
   border-radius: 50%;
+}
+
+.iconCard-sm img {
   height: 60px;
   width: 60px;
 }
 
-img.iconCard-md {
-  object-fit: cover;
-  border-radius: 50%;
+.iconCard-md img {
   height: 100px;
   width: 100px;
 }
 
-img.iconCard-lg {
-  object-fit: cover;
-  border-radius: 50%;
+.iconCard-lg img {
   height: 240px;
   width: 240px;
 }
 
-h4.iconCard-sm {
+.iconCard-sm h4,
+.iconCard-md h4,
+.iconCard-lg h4 {
+  width: 100%;
+  text-align: center;
+}
+
+.iconCard-sm h4 {
   font-size: 10pt;
-  width: 100%;
-  text-align: center;
 }
 
-h4.iconCard-md {
+.iconCard-md h4 {
   font-size: 14pt;
-  width: 100%;
-  text-align: center;
 }
 
-h4.iconCard-lg {
+.iconCard-lg h4 {
   font-size: 18pt;
-  width: 100%;
-  text-align: center;
 }
 
-div.iconCard-sm {
+.iconCard-sm div {
   width: 60px;
   margin: 5px;
 }
 
-div.iconCard-md {
+.iconCard-md div {
   width: 100px;
   margin: 8px;
 }
 
-div.iconCard-lg {
+.iconCard-lg div {
   width: 240px;
   margin: 10px;
 }

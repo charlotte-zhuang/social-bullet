@@ -44,7 +44,7 @@ function Template({ activePage, bodyLeft, bodyCenter, bodyRight }) {
           {/* <AmplifySignOut className="nav-btn" /> */}
         </nav>
       </header>
-      <div className='d-flex justify-content-around'>
+      <div className='d-flex align-self-stretch justify-content-around'>
         <div className='body-left'>{bodyLeft}</div>
         <div className='body-center'>{bodyCenter}</div>
         <div className='body-right'>{bodyRight}</div>
