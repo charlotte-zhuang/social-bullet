@@ -27,6 +27,7 @@ import awsconfig from "./aws-exports";
 import { AmplifySignOut, withAuthenticator } from "@aws-amplify/ui-react";
 import { useEffect, useState } from "react";
 
+import { test } from "./data-models/user";
 import { listUsers } from "./graphql/queries";
 import { updateUser, createUser } from "./graphql/mutations";
 
@@ -41,6 +42,10 @@ function App() {
     console.log("Use effect is called");
     //addUser();
     fetchUser();
+    update();
+    test()
+      .then((res) => setUsers(res))
+      .catch((err) => console.log(err));
   }, []);
 
   const update = async () => {
