@@ -24,6 +24,7 @@ import "./App.css";
 
 import Amplify, { API, Auth, graphqlOperation } from "aws-amplify";
 import awsconfig from "./aws-exports";
+
 import { AmplifySignOut, withAuthenticator } from "@aws-amplify/ui-react";
 import { useEffect, useState } from "react";
 
@@ -112,32 +113,28 @@ function App() {
   };
   return (
     <Router>
-      <div className="App">
-        <div>
-          <Switch>
-            <Redirect from="/" to="/home-entries" exact />
-            <Redirect from="/home" to="/home-entries" />
-            <Redirect from="/journal" to="/journal-entries" />
-            <Redirect from="/settings" to="/settings-preferences" />
-            <Route path="/home-entries" component={HomeEntriesPage} />
-            <Route path="/home-projects" component={HomeProjsPage} />
-            <Route path="/discover" component={DiscoverPage} />
-            <Route path="/journal-profile" component={JournalProfilePage} />
-            <Route path="/journal-entries" component={JournalMyEntriesPage} />
-            <Route path="/journal-projects" component={JournalMyProjsPage} />
-            <Route path="/journal-friends" component={JournalFriendsPage} />
-            <Route path="/settings-preferences" component={SettingsPrefsPage} />
-            <Route path="/settings-credits" component={SettingsCreditsPage} />
-            <Route path="/login" component={LoginPage} />
-            <Route path="/profile" component={ProfilePage} />
-            <Route path="/project" component={ProjPage} />
-            <Route path="/edit-profile" component={EditProfilePage} />
-            <Route path="/edit-project" component={EditProjPage} />
-            <Route path="/edit-entry" component={EditEntryPage} />
-            <Route component={NullPage} />
-          </Switch>
-        </div>
-      </div>
+      <Switch>
+        <Redirect from="/" to="/home-entries" exact />
+        <Redirect from="/home" to="/home-entries" />
+        <Redirect from="/journal" to="/journal-entries" />
+        <Redirect from="/settings" to="/settings-preferences" />
+        <Route path="/home-entries" component={HomeEntriesPage} />
+        <Route path="/home-projects" component={HomeProjsPage} />
+        <Route path="/discover" component={DiscoverPage} />
+        <Route path="/journal-profile" component={JournalProfilePage} />
+        <Route path="/journal-entries" component={JournalMyEntriesPage} />
+        <Route path="/journal-projects" component={JournalMyProjsPage} />
+        <Route path="/journal-friends" component={JournalFriendsPage} />
+        <Route path="/settings-preferences" component={SettingsPrefsPage} />
+        <Route path="/settings-credits" component={SettingsCreditsPage} />
+        <Route path="/login" component={LoginPage} />
+        <Route path="/profile" component={ProfilePage} />
+        <Route path="/project" component={ProjPage} />
+        <Route path="/edit-profile" component={EditProfilePage} />
+        <Route path="/edit-project" component={EditProjPage} />
+        <Route path="/edit-entry" component={EditEntryPage} />
+        <Route component={NullPage} />
+      </Switch>
     </Router>
   );
 }

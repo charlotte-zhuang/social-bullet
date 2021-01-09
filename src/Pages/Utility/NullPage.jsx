@@ -1,5 +1,7 @@
+import Template from '../../Components/template.jsx';
+
 function NullPage() {
-	return <h1>Null Page</h1>;
+	return <Template activePage="" bodyLeft={<></>} bodyCenter={<>Sorry! This Page doesn't seem to exist yet.</>} bodyRight={<></>} />;
 }
 
 export default NullPage;

@@ -1,0 +1,53 @@
+img.iconCard-sm {
+  object-fit: cover;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+}
+
+img.iconCard-md {
+  object-fit: cover;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+
+img.iconCard-lg {
+  object-fit: cover;
+  border-radius: 50%;
+  height: 240px;
+  width: 240px;
+}
+
+h4.iconCard-sm {
+  font-size: 10pt;
+  width: 100%;
+  text-align: center;
+}
+
+h4.iconCard-md {
+  font-size: 14pt;
+  width: 100%;
+  text-align: center;
+}
+
+h4.iconCard-lg {
+  font-size: 18pt;
+  width: 100%;
+  text-align: center;
+}
+
+div.iconCard-sm {
+  width: 60px;
+  margin: 5px;
+}
+
+div.iconCard-md {
+  width: 100px;
+  margin: 8px;
+}
+
+div.iconCard-lg {
+  width: 240px;
+  margin: 10px;
+}

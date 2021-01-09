@@ -1,0 +1,58 @@
+.nav-btn,
+.nav-btn:hover {
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  height: 50px;
+  width: 200px;
+  border-radius: 2px;
+  margin: 0px 10px 20px;
+
+  font-family: 'Advent Pro', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+  text-decoration: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: black;
+}
+
+.nav-btn.teal {
+  background-color: var(--teal);
+}
+
+.nav-btn.dark-teal {
+  background-color: var(--dark-teal);
+  color: white;
+}
+
+.nav-btn.orange {
+  background-color: var(--orange);
+}
+
+.nav-btn.purple {
+  background-color: var(--purple);
+}
+
+.panel-btn {
+  background-color: var(--orange);
+  color: var(--dark-teal);
+
+  font-family: 'Advent Pro', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  height: 38px;
+  width: 164px;
+}
