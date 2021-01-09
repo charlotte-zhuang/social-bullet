@@ -22,13 +22,27 @@ import EditProjPage from "./Pages/Edit/EditProjPage.jsx";
 import EditEntryPage from "./Pages/Edit/EditEntryPage.jsx";
 import "./App.css";
 
-import Amplify from "aws-amplify";
+import { Auth, Amplify } from "aws-amplify";
 import awsconfig from "./aws-exports";
 import { AmplifySignOut, withAuthenticator } from "@aws-amplify/ui-react";
+import { useEffect, useState } from "react";
 
 Amplify.configure(awsconfig);
 
 function App() {
+  useEffect(() => {
+    console.log("Use effect is called");
+    fetch();
+  }, []);
+  const fetch = async () => {
+    try {
+      let user = await Auth.currentAuthenticatedUser();
+      const { username } = user;
+      console.log(username);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <Router>
       <div className="App">
