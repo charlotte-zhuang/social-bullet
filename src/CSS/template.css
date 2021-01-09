@@ -8,6 +8,7 @@
   background: var(--light-yellow);
   background-size: 25px 25px;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  padding: 15px;
 }
 
 .body-center {
@@ -20,4 +21,22 @@
   max-width: 200px;
   min-width: 100px;
   width: 15%;
+}
+
+.page-top-padding {
+  padding-top: 20px;
+}
+
+.template-container {
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
+}
+
+.template-header{
+  flex: 0 1 auto;
+}
+
+.template-body{
+  flex: 1;
 }
