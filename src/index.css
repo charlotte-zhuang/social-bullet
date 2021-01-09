@@ -23,7 +23,8 @@ body {
   position: absolute;
 }
 
-.normal-text-link, .normal-text-link:hover {
+.normal-text-link,
+.normal-text-link:hover {
   color: var(--dark-teal);
   text-decoration: none;
 }
@@ -37,17 +38,15 @@ body {
 }
 
 h1.advent-font {
-  font-family: 'Advent Pro', sans-serif;
-  font-style: normal;
-  font-weight: 400;
   font-size: 48px;
 }
 
 h3.advent-font {
-  font-family: 'Advent Pro', sans-serif;
-  font-style: normal;
-  font-weight: 400;
   font-size: 28px;
+}
+
+h5.advent-font {
+  font-size: 16px;
 }
 
 .advent-font {
@@ -55,4 +54,8 @@ h3.advent-font {
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
+}
+
+p.advent-font{
+  line-height: 27px;
 }

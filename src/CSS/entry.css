@@ -1,0 +1,30 @@
+.entry-container {
+    width: 100%;
+    border-radius: 15px;
+    background: rgba(216, 203, 199, 0.1);
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.05) inset;
+    padding: 15px 20px;
+    margin-top: 15px;
+}
+
+.full-width {
+    width: 95%;
+}
+
+.advent-font i {
+    color: var(--purple);
+    font-style: normal;
+}
+
+.advent-font b {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.advent-font p {
+    margin-bottom: 0px;
+}
+
+h5.advent-font{
+    color: var(--dark-teal);
+}

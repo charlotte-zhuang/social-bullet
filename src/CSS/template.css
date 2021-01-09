@@ -18,6 +18,10 @@
   overflow: scroll;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .body-right {
   max-width: 200px;
   min-width: 100px;
