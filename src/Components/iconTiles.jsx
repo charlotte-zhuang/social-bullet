@@ -8,7 +8,7 @@ import IconCard from "./iconCard";
  * @param {Object[]} props.arr
  * @param {'sm' | 'md' | 'lg'} props.size
  */
-export default function IconList({ arr, size }) {
+export default function IconTiles({ arr, size }) {
   return (
     <div class='d-flex flex-wrap justify-content-center align-items-center full-width'>
       {arr.map((elem) => (
