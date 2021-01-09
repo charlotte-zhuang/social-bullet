@@ -1,10 +1,5 @@
 html,
 body {
-  height: 100%;
-  margin: 0;
-}
-
-body {
   --teal: rgba(72, 169, 166, 1);
   --dark-teal: rgba(15, 82, 87, 1);
   --dark-brown: rgba(90, 35, 40, 1);
@@ -16,42 +11,82 @@ body {
 
   z-index: -2;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: white;
-  background-image: radial-gradient(rgba(210, 229, 158, 0.3) 4px, transparent 0);
+  background-image: radial-gradient(
+    rgba(210, 229, 158, 0.3) 4px,
+    transparent 0
+  );
   background-size: 25px 25px;
   position: absolute;
+
+  font-family: "Advent Pro", sans-serif;
+  font-style: normal;
+  font-weight: normal;
 }
 
-.normal-text-link {
+a {
+  color: black !important;
+}
+
+a:hover {
+  color: var(--dark-brown) !important;
+}
+
+.normal-text-link,
+.normal-text-link:hover {
   color: var(--dark-teal);
+  text-decoration: none;
 }
 
 #root {
   width: 100%;
 }
 
-.full-height {
-  height: 100%;
-}
-
 h1.advent-font {
-  font-family: 'Advent Pro', sans-serif;
-  font-style: normal;
-  font-weight: 400;
   font-size: 48px;
 }
 
 h3.advent-font {
-  font-family: 'Advent Pro', sans-serif;
-  font-style: normal;
-  font-weight: 400;
   font-size: 28px;
 }
 
+h5.advent-font {
+  font-size: 16px;
+}
+
 .advent-font {
-  font-family: 'Advent Pro', sans-serif;
+  font-family: "Advent Pro", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
+}
+
+p.advent-font {
+  line-height: 27px;
+}
+
+img.circle-crop-sm {
+  object-fit: cover;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+}
+
+img.circle-crop-md {
+  object-fit: cover;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+
+img.circle-crop-lg {
+  object-fit: cover;
+  border-radius: 50%;
+  height: 240px;
+  width: 240px;
+}
+
+.icon-teal {
+  color: var(--teal);
 }

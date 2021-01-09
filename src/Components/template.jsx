@@ -25,8 +25,8 @@ function Template({ activePage, bodyLeft, bodyCenter, bodyRight }) {
 				</nav>
 			</header>
 			<div className="d-flex justify-content-around template-body">
-				<div className="body-left">{bodyLeft}</div>
-				<div className="body-center">{bodyCenter}</div>
+				<div className="body-left template-int-body">{bodyLeft}</div>
+				<div className="body-center template-int-body">{bodyCenter}</div>
 				<div className="body-right">{bodyRight}</div>
 			</div>
 		</div>

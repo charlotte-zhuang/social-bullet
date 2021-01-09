@@ -34,6 +34,15 @@ import { updateUser, createUser } from "./graphql/mutations";
 
 import { v4 as uuid } from "uuid";
 
+// import all icons here to use in other components
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faPencilAlt } from '@fortawesome/free-solid-svg-icons'
+library.add(faPencilAlt)
+// to use:
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// <FontAwesomeIcon icon="pencil-alt" size="xs"/>
+
+
 Amplify.configure(awsconfig);
 
 function App() {
