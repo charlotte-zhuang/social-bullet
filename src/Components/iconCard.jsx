@@ -1,6 +1,5 @@
-import "../CSS/iconCard.css";
-import React from "react";
-import { Link } from "react-router-dom";
+import '../CSS/iconCard.css';
+import { Link } from 'react-router-dom';
 
 /**
  * A clickable thumbnail with a caption.
