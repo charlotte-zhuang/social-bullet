@@ -9,7 +9,7 @@ type User @model {
   journal: [Entry]
   projects: [Project]
   interests: [String]
-  friends: [User]
+  friends: [String]
 }
 
 type Project {
@@ -17,7 +17,7 @@ type Project {
   name: String!
   imageFilePath: String
   journal: [Entry]
-  members: [User]
+  members: [String]
   tags: [String]
   description: String
   startTime: String

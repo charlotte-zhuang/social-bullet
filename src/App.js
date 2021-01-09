@@ -30,6 +30,8 @@ import { useEffect, useState } from "react";
 import { listUsers } from "./graphql/queries";
 import { updateUser, createUser } from "./graphql/mutations";
 
+import { v4 as uuid } from "uuid";
+
 Amplify.configure(awsconfig);
 
 function App() {
@@ -37,6 +39,7 @@ function App() {
 
   useEffect(() => {
     console.log("Use effect is called");
+    //addUser();
     fetchUser();
   }, []);
 
@@ -61,6 +64,43 @@ function App() {
       // users.map((user, idx) => {
       //   console.log("User ", idx, " is ", user);
       // });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const addUser = async () => {
+    try {
+      const entryOne = {
+        description: "Entry one description",
+        filePath: "filePathOne",
+      };
+      const entryTwo = {
+        description: "Entry two description",
+        filePath: "filePathOne",
+      };
+
+      const proj = {
+        id: uuid(),
+        name: "Project name",
+        members: ["1", "2"],
+      };
+      const createUserInput = {
+        id: uuid(),
+        username: "Wingspear",
+        email: "wingspear@gmail.com",
+        firstName: "Wing",
+        lastName: "Spear",
+        imageFilePath: "",
+        description: "description....",
+        journal: [entryOne, entryTwo],
+        projects: [proj, proj],
+        interests: ["basketball", "football"],
+        friends: ["Bob", "Joe"],
+      };
+      await API.graphql(
+        graphqlOperation(createUser, { input: createUserInput })
+      );
     } catch (error) {
       console.log(error);
     }

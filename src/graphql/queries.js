@@ -23,61 +23,14 @@ export const getUser = /* GraphQL */ `
           description
           filePath
         }
-        members {
-          id
-          username
-          email
-          firstName
-          lastName
-          imageFilePath
-          description
-          interests
-          createdAt
-          updatedAt
-        }
+        members
         tags
         description
         startTime
         finishTime
       }
       interests
-      friends {
-        id
-        username
-        email
-        firstName
-        lastName
-        imageFilePath
-        description
-        journal {
-          description
-          filePath
-        }
-        projects {
-          id
-          name
-          imageFilePath
-          tags
-          description
-          startTime
-          finishTime
-        }
-        interests
-        friends {
-          id
-          username
-          email
-          firstName
-          lastName
-          imageFilePath
-          description
-          interests
-          createdAt
-          updatedAt
-        }
-        createdAt
-        updatedAt
-      }
+      friends
       createdAt
       updatedAt
     }
@@ -106,24 +59,14 @@ export const listUsers = /* GraphQL */ `
           id
           name
           imageFilePath
+          members
           tags
           description
           startTime
           finishTime
         }
         interests
-        friends {
-          id
-          username
-          email
-          firstName
-          lastName
-          imageFilePath
-          description
-          interests
-          createdAt
-          updatedAt
-        }
+        friends
         createdAt
         updatedAt
       }
