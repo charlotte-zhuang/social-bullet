@@ -1,7 +1,6 @@
-import React from 'react';
-import Template from '../../Components/template';
+import Template from '../../Components/template.jsx';
 import Submenu from '../../Components/submenu.jsx';
-import IconList from '../../Components/iconList';
+import IconList from '../../Components/iconTiles.jsx';
 
 function HomeEntriesPage() {
 	const menuItems = [
