@@ -1,6 +1,6 @@
 projects:
-  entryAPI:
-    schemaPath: amplify/backend/api/entryAPI/build/schema.graphql
+  userAPI:
+    schemaPath: src/graphql/schema.json
     includes:
       - src/graphql/**/*.js
     excludes:
@@ -10,6 +10,3 @@ projects:
         codeGenTarget: javascript
         generatedFileName: ''
         docsFilePath: src/graphql
-        region: us-west-2
-        apiId: null
-        maxDepth: 2

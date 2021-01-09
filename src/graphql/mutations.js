@@ -1,46 +1,256 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const createEntry = /* GraphQL */ `
-  mutation CreateEntry(
-    $input: CreateEntryInput!
-    $condition: ModelEntryConditionInput
+export const createUser = /* GraphQL */ `
+  mutation CreateUser(
+    $input: CreateUserInput!
+    $condition: ModelUserConditionInput
   ) {
-    createEntry(input: $input, condition: $condition) {
+    createUser(input: $input, condition: $condition) {
       id
-      title
+      username
+      email
+      firstName
+      lastName
+      imageFilePath
       description
-      like
+      journal {
+        description
+        filePath
+      }
+      projects {
+        id
+        name
+        imageFilePath
+        journal {
+          description
+          filePath
+        }
+        members {
+          id
+          username
+          email
+          firstName
+          lastName
+          imageFilePath
+          description
+          interests
+          createdAt
+          updatedAt
+        }
+        tags
+        description
+        startTime
+        finishTime
+      }
+      interests
+      friends {
+        id
+        username
+        email
+        firstName
+        lastName
+        imageFilePath
+        description
+        journal {
+          description
+          filePath
+        }
+        projects {
+          id
+          name
+          imageFilePath
+          tags
+          description
+          startTime
+          finishTime
+        }
+        interests
+        friends {
+          id
+          username
+          email
+          firstName
+          lastName
+          imageFilePath
+          description
+          interests
+          createdAt
+          updatedAt
+        }
+        createdAt
+        updatedAt
+      }
       createdAt
       updatedAt
     }
   }
 `;
-export const updateEntry = /* GraphQL */ `
-  mutation UpdateEntry(
-    $input: UpdateEntryInput!
-    $condition: ModelEntryConditionInput
+export const updateUser = /* GraphQL */ `
+  mutation UpdateUser(
+    $input: UpdateUserInput!
+    $condition: ModelUserConditionInput
   ) {
-    updateEntry(input: $input, condition: $condition) {
+    updateUser(input: $input, condition: $condition) {
       id
-      title
+      username
+      email
+      firstName
+      lastName
+      imageFilePath
       description
-      like
+      journal {
+        description
+        filePath
+      }
+      projects {
+        id
+        name
+        imageFilePath
+        journal {
+          description
+          filePath
+        }
+        members {
+          id
+          username
+          email
+          firstName
+          lastName
+          imageFilePath
+          description
+          interests
+          createdAt
+          updatedAt
+        }
+        tags
+        description
+        startTime
+        finishTime
+      }
+      interests
+      friends {
+        id
+        username
+        email
+        firstName
+        lastName
+        imageFilePath
+        description
+        journal {
+          description
+          filePath
+        }
+        projects {
+          id
+          name
+          imageFilePath
+          tags
+          description
+          startTime
+          finishTime
+        }
+        interests
+        friends {
+          id
+          username
+          email
+          firstName
+          lastName
+          imageFilePath
+          description
+          interests
+          createdAt
+          updatedAt
+        }
+        createdAt
+        updatedAt
+      }
       createdAt
       updatedAt
     }
   }
 `;
-export const deleteEntry = /* GraphQL */ `
-  mutation DeleteEntry(
-    $input: DeleteEntryInput!
-    $condition: ModelEntryConditionInput
+export const deleteUser = /* GraphQL */ `
+  mutation DeleteUser(
+    $input: DeleteUserInput!
+    $condition: ModelUserConditionInput
   ) {
-    deleteEntry(input: $input, condition: $condition) {
+    deleteUser(input: $input, condition: $condition) {
       id
-      title
+      username
+      email
+      firstName
+      lastName
+      imageFilePath
       description
-      like
+      journal {
+        description
+        filePath
+      }
+      projects {
+        id
+        name
+        imageFilePath
+        journal {
+          description
+          filePath
+        }
+        members {
+          id
+          username
+          email
+          firstName
+          lastName
+          imageFilePath
+          description
+          interests
+          createdAt
+          updatedAt
+        }
+        tags
+        description
+        startTime
+        finishTime
+      }
+      interests
+      friends {
+        id
+        username
+        email
+        firstName
+        lastName
+        imageFilePath
+        description
+        journal {
+          description
+          filePath
+        }
+        projects {
+          id
+          name
+          imageFilePath
+          tags
+          description
+          startTime
+          finishTime
+        }
+        interests
+        friends {
+          id
+          username
+          email
+          firstName
+          lastName
+          imageFilePath
+          description
+          interests
+          createdAt
+          updatedAt
+        }
+        createdAt
+        updatedAt
+      }
       createdAt
       updatedAt
     }

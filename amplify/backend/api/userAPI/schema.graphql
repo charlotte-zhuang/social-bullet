@@ -1,0 +1,30 @@
+type User @model {
+  id: ID!
+  username: String!
+  email: String!
+  firstName: String!
+  lastName: String!
+  imageFilePath: String
+  description: String
+  journal: [Entry]
+  projects: [Project]
+  interests: [String]
+  friends: [User]
+}
+
+type Project {
+  id: ID!
+  name: String!
+  imageFilePath: String
+  journal: [Entry]
+  members: [User]
+  tags: [String]
+  description: String
+  startTime: String
+  finishTime: String
+}
+
+type Entry {
+  description: String
+  filePath: String!
+}

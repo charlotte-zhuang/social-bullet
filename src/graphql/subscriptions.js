@@ -1,37 +1,247 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const onCreateEntry = /* GraphQL */ `
-  subscription OnCreateEntry {
-    onCreateEntry {
+export const onCreateUser = /* GraphQL */ `
+  subscription OnCreateUser {
+    onCreateUser {
       id
-      title
+      username
+      email
+      firstName
+      lastName
+      imageFilePath
       description
-      like
+      journal {
+        description
+        filePath
+      }
+      projects {
+        id
+        name
+        imageFilePath
+        journal {
+          description
+          filePath
+        }
+        members {
+          id
+          username
+          email
+          firstName
+          lastName
+          imageFilePath
+          description
+          interests
+          createdAt
+          updatedAt
+        }
+        tags
+        description
+        startTime
+        finishTime
+      }
+      interests
+      friends {
+        id
+        username
+        email
+        firstName
+        lastName
+        imageFilePath
+        description
+        journal {
+          description
+          filePath
+        }
+        projects {
+          id
+          name
+          imageFilePath
+          tags
+          description
+          startTime
+          finishTime
+        }
+        interests
+        friends {
+          id
+          username
+          email
+          firstName
+          lastName
+          imageFilePath
+          description
+          interests
+          createdAt
+          updatedAt
+        }
+        createdAt
+        updatedAt
+      }
       createdAt
       updatedAt
     }
   }
 `;
-export const onUpdateEntry = /* GraphQL */ `
-  subscription OnUpdateEntry {
-    onUpdateEntry {
+export const onUpdateUser = /* GraphQL */ `
+  subscription OnUpdateUser {
+    onUpdateUser {
       id
-      title
+      username
+      email
+      firstName
+      lastName
+      imageFilePath
       description
-      like
+      journal {
+        description
+        filePath
+      }
+      projects {
+        id
+        name
+        imageFilePath
+        journal {
+          description
+          filePath
+        }
+        members {
+          id
+          username
+          email
+          firstName
+          lastName
+          imageFilePath
+          description
+          interests
+          createdAt
+          updatedAt
+        }
+        tags
+        description
+        startTime
+        finishTime
+      }
+      interests
+      friends {
+        id
+        username
+        email
+        firstName
+        lastName
+        imageFilePath
+        description
+        journal {
+          description
+          filePath
+        }
+        projects {
+          id
+          name
+          imageFilePath
+          tags
+          description
+          startTime
+          finishTime
+        }
+        interests
+        friends {
+          id
+          username
+          email
+          firstName
+          lastName
+          imageFilePath
+          description
+          interests
+          createdAt
+          updatedAt
+        }
+        createdAt
+        updatedAt
+      }
       createdAt
       updatedAt
     }
   }
 `;
-export const onDeleteEntry = /* GraphQL */ `
-  subscription OnDeleteEntry {
-    onDeleteEntry {
+export const onDeleteUser = /* GraphQL */ `
+  subscription OnDeleteUser {
+    onDeleteUser {
       id
-      title
+      username
+      email
+      firstName
+      lastName
+      imageFilePath
       description
-      like
+      journal {
+        description
+        filePath
+      }
+      projects {
+        id
+        name
+        imageFilePath
+        journal {
+          description
+          filePath
+        }
+        members {
+          id
+          username
+          email
+          firstName
+          lastName
+          imageFilePath
+          description
+          interests
+          createdAt
+          updatedAt
+        }
+        tags
+        description
+        startTime
+        finishTime
+      }
+      interests
+      friends {
+        id
+        username
+        email
+        firstName
+        lastName
+        imageFilePath
+        description
+        journal {
+          description
+          filePath
+        }
+        projects {
+          id
+          name
+          imageFilePath
+          tags
+          description
+          startTime
+          finishTime
+        }
+        interests
+        friends {
+          id
+          username
+          email
+          firstName
+          lastName
+          imageFilePath
+          description
+          interests
+          createdAt
+          updatedAt
+        }
+        createdAt
+        updatedAt
+      }
       createdAt
       updatedAt
     }
