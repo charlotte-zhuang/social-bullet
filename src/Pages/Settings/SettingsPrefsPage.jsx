@@ -12,11 +12,13 @@ function SettingsPrefPage() {
 		try {
 			await Auth.signOut().then(history.go(0));
 			const copy = [...menuItems];
+			copy.forEach((item) => (item.selected = false));
 			copy[copy.length - 1].title = (
 				<>
 					<Spinner animation="border" className="d-flex mr-2" /> Signing Out
 				</>
 			);
+			copy[copy.length - 1].selected = true;
 			updateMenuItems(copy);
 		} catch (error) {
 			console.log('Error signing out: ', error);
