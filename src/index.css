@@ -67,3 +67,9 @@ h1.advent-font {
 .nav-btn.purple {
   background-color: var(--purple);
 }
+
+.normal-text-link,
+.normal-text-link:hover {
+  text-decoration: none;
+  color: black;
+}

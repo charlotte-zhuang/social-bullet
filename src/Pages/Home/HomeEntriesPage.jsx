@@ -1,5 +1,5 @@
 import React from "react";
-import Template from "../../Components/template.jsx";
+import Template from "../../Components/template";
 
 function HomeEntriesPage() {
   return (

@@ -1,5 +1,7 @@
 .body-left {
   max-width: 200px;
+  min-width: 100px;
+  width: 15%;
 }
 
 .body-center {
@@ -9,4 +11,6 @@
 
 .body-right {
   max-width: 200px;
+  min-width: 100px;
+  width: 15%;
 }

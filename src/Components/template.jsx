@@ -6,11 +6,11 @@ import NavBtn from "./navBtn.jsx";
 /**
  * A page with a title, navbar, and 3 column body.
  *
- * @param {Object} param0 activePage={'home', 'discover', 'journal', 'settings'}
- * @param {String} param0.activePage
- * @param {JSX.Element} param0.bodyLeft
- * @param {JSX.Element} param0.bodyCenter
- * @param {JSX.Element} param0.bodyRight
+ * @param {Object} props
+ * @param {'home' | 'discover' | 'journal' | 'settings'} props.activePage
+ * @param {JSX.Element} props.bodyLeft
+ * @param {JSX.Element} props.bodyCenter
+ * @param {JSX.Element} props.bodyRight
  */
 function Template({ activePage, bodyLeft, bodyCenter, bodyRight }) {
   return (
