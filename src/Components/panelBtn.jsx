@@ -3,7 +3,7 @@ import '../CSS/btns.css';
 
 function PanelBtn({ title, clicked }) {
 	return (
-		<a className='panel-btn mt-auto' onClick={() => clicked()}>
+		<a className="panel-btn mt-auto" onClick={() => clicked(console.log('clicked ' + { title }))}>
 			{title}
 		</a>
 	);
