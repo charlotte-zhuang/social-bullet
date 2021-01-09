@@ -48,5 +48,16 @@ code {
   justify-content: center;
   align-items: center;
 
-  color: #000000;
+  color: black;
+}
+
+body {
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  background-image: radial-gradient(rgba(210, 229, 158, 0.3) 4px, transparent 0);
+  background-size: 25px 25px;
+  background-position: -1px -1px;
+  position: absolute;
 }

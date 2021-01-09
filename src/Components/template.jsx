@@ -1,5 +1,4 @@
 import { AmplifySignOut } from '@aws-amplify/ui-react';
-import { Link } from 'react-router-dom';
 import NavBtn from './navBtn.jsx';
 
 function Template() {
@@ -12,7 +11,7 @@ function Template() {
 			</div>
 			<div class="row">
 				<div class="col-12 d-flex justify-content-center">
-					<NavBtn title='Home'/>
+					<NavBtn title="Home" />
 				</div>
 			</div>
 			<div class="row page-top-padding">
