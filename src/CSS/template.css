@@ -1,16 +1,3 @@
-.body-left {
-  max-width: 200px;
-}
-
-.body-center {
-  max-width: 40em;
-  min-width: 30em;
-}
-
-.body-right {
-  max-width: 200px;
-}
-
 .left-panel {
   z-index: -1;
   width: 250px;

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { Link } from 'react-router-dom';
 
 /* <NavBtn title="Home" type="nav" selected url="/home"/> */ 
