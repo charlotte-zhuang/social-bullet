@@ -1,0 +1,12 @@
+.date-picker-custom>div>input {
+    font-family: 'Advent Pro', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: center;
+    color: var(--dark-teal)
+}
+
+.date-picker-custom>.MuiInput-underline:before,.date-picker-custom>.MuiInput-underline:hover:not(.Mui-disabled):before {
+    border-bottom-color: var(--dark-teal);
+}
