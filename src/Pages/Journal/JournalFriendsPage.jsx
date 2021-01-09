@@ -1,5 +1,35 @@
+import Template from '../../Components/template.jsx';
+import Submenu from '../../Components/submenu.jsx';
+
 function JournalFriendsPage() {
-	return <h1>Journal Friends Page</h1>;
+	const menuItems = [
+		{
+			isRoute: true,
+			title: 'Profile',
+			selected: false,
+			url: '/journal-profile',
+		},
+		{
+			isRoute: true,
+			title: 'My Entries',
+			selected: false,
+			url: '/journal-entries',
+		},
+		{
+			isRoute: true,
+			title: 'My Projects',
+			selected: false,
+			url: '/journal-projects',
+		},
+		{
+			isRoute: true,
+			title: 'Friends',
+			selected: true,
+			url: '/journal-friends',
+		},
+	];
+
+	return <Template activePage="journal" bodyLeft={<>Friends List</>} bodyCenter={<>Friends</>} bodyRight={<Submenu menuItems={menuItems} />} />;
 }
 
 export default JournalFriendsPage;

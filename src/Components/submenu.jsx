@@ -6,8 +6,7 @@ function Submenu({ menuItems }) {
 	return (
 		<>
 			{menuItems.map((item, key) => {
-                if (item.isRoute)
-                    return < NavBtn key = { key } title = { item.title } type = "submenu" selected = { item.selected } url = { item.url } />;
+				if (item.isRoute) return <NavBtn key={key} title={item.title} type="submenu" selected={item.selected} url={item.url} />;
 				return <NavBtn key={key} title={item.title} type="submenu" selected={item.selected} clicked={() => item.clicked()} />;
 			})}
 		</>
