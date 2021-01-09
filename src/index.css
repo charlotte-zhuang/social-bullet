@@ -17,8 +17,33 @@ body {
   position: absolute;
 }
 
-.normal-text-link,
-.normal-text-link:hover {
+#root {
+  width: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.page-top-padding {
+  padding-top: 20px;
+}
+
+.nav-btn,
+.nav-btn:hover {
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  height: 50px;
+  min-width: 100px;
+  max-width: 200px;
+  width: 100%;
+  border-radius: 2px;
+  margin: 0px 10px 20px;
+
+  font-family: 'Advent Pro', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
   text-decoration: none;
   color: black;
 }

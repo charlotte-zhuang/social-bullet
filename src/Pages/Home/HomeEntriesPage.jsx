@@ -1,6 +1,6 @@
 import Template from '../../Components/template.jsx';
 import Submenu from '../../Components/submenu.jsx';
-import IconList from '../../Components/iconTiles.jsx';
+import FriendPanel from '../../Components/friendPanel.jsx';
 
 function HomeEntriesPage() {
 	const menuItems = [
@@ -18,25 +18,25 @@ function HomeEntriesPage() {
 		},
 	];
 
-	const iconItems = [
+	const friends = [
 		{
-			pictureSource: '/resources/mallard.jpg',
-			name: 'Mal Jones',
+			imgSrc: '/resources/mallard.jpg',
+			text: 'Mal Jones',
 			url: '/profile',
 		},
 		{
-			pictureSource: '/resources/mallard.jpg',
-			name: 'Mal Jones',
+			imgSrc: '/resources/mallard.jpg',
+			text: 'Mal Jones',
 			url: '/profile',
 		},
 		{
-			pictureSource: '/resources/mallard.jpg',
-			name: 'Mal Jones',
+			imgSrc: '/resources/mallard.jpg',
+			text: 'Mal Jones',
 			url: '/profile',
 		},
 	];
 
-	return <Template activePage="home" bodyLeft={<IconList arr={iconItems} size="sm" />} bodyCenter={<>Entries</>} bodyRight={<Submenu menuItems={menuItems} />} />;
+	return <Template activePage="home" bodyLeft={<FriendPanel friends={friends} />} bodyCenter={<>Entries</>} bodyRight={<Submenu menuItems={menuItems} />} />;
 }
 
 export default HomeEntriesPage;
