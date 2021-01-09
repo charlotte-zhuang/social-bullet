@@ -1,7 +1,7 @@
 import "../CSS/projectCard.css";
 import React from "react";
 import ProgressBar from "react-bootstrap/ProgressBar";
-import IconList from "./iconList";
+import IconTiles from "./iconTiles";
 import { Link } from "react-router-dom";
 
 /**
@@ -46,7 +46,7 @@ export default function ProjectCard({ project }) {
       </div>
       <ProgressBar now={completion} />
       <h4 className='m-2'>Members</h4>
-      <IconList arr={project.members} size='sm' />
+      <IconTiles arr={project.members} size='sm' />
     </div>
   );
 }
