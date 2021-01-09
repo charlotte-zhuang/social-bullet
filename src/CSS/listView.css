@@ -1,0 +1,11 @@
+.list-img {
+    object-fit: cover;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    margin: 8px 15px;
+}
+
+.full-width {
+    width: 100%;
+}
