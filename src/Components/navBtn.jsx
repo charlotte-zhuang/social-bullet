@@ -1,13 +1,26 @@
 import { Link } from 'react-router-dom';
 
-/* <NavBtn title="Home" type="nav" selected url="/home"/> */
-function NavBtn({ title, type, selected, url }) {
-    const getColor = () => {
-        if (type === 'nav') return selected ? 'dark-teal' : 'teal';
-        if (type === 'submenu') return selected ? 'orange' : 'purple';
-    };
+/* <NavBtn title="Home" type="nav" selected url="/home"/> */ 
+/* <NavBtn title="Back" type="submenu" selected clicked={goBack}/> */
+function NavBtn({ title, type, selected, url, clicked }) {
+	const getColor = () => {
+		if (type === 'nav') return selected ? 'dark-teal' : 'teal';
+		if (type === 'submenu') return selected ? 'orange' : 'purple';
+	};
 
-    return (<Link className={`nav-btn ${getColor()}`} to={url}>{title}</Link>);
+	if (url)
+		return (
+			<Link className={`nav-btn ${getColor()}`} to={url}>
+				{title}
+			</Link>
+		);
+	if (clicked)
+		return (
+			<a className={`nav-btn ${getColor()}`} onClick={() => clicked()}>
+				{title}
+			</a>
+		);
+	return <></>;
 }
 
 export default NavBtn;
