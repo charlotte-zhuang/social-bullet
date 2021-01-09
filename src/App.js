@@ -22,13 +22,89 @@ import EditProjPage from "./Pages/Edit/EditProjPage.jsx";
 import EditEntryPage from "./Pages/Edit/EditEntryPage.jsx";
 import "./App.css";
 
-import Amplify from "aws-amplify";
+import Amplify, { API, Auth, graphqlOperation } from "aws-amplify";
 import awsconfig from "./aws-exports";
 import { AmplifySignOut, withAuthenticator } from "@aws-amplify/ui-react";
+import { useEffect, useState } from "react";
+
+import { listUsers } from "./graphql/queries";
+import { updateUser, createUser } from "./graphql/mutations";
+
+import { v4 as uuid } from "uuid";
 
 Amplify.configure(awsconfig);
 
 function App() {
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    console.log("Use effect is called");
+    //addUser();
+    fetchUser();
+  }, []);
+
+  const update = async () => {
+    try {
+      let user = await Auth.currentAuthenticatedUser();
+      const { username } = user;
+      console.log(username);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const fetchUser = async () => {
+    try {
+      const userData = await API.graphql(graphqlOperation(listUsers));
+
+      const userList = userData.data.listUsers.items;
+      setUsers(userList);
+      console.log("user list", userList);
+
+      // users.map((user, idx) => {
+      //   console.log("User ", idx, " is ", user);
+      // });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const addUser = async () => {
+    try {
+      const entryOne = {
+        description: "Entry one description",
+        filePath: "filePathOne",
+      };
+      const entryTwo = {
+        description: "Entry two description",
+        filePath: "filePathOne",
+      };
+
+      const proj = {
+        id: uuid(),
+        name: "Project name",
+        members: ["1", "2"],
+      };
+      const createUserInput = {
+        id: uuid(),
+        username: "Wingspear",
+        email: "wingspear@gmail.com",
+        firstName: "Wing",
+        lastName: "Spear",
+        imageFilePath: "",
+        description: "description....",
+        journal: [entryOne, entryTwo],
+        projects: [proj, proj],
+        interests: ["basketball", "football"],
+        friends: ["Bob", "Joe"],
+      };
+      await API.graphql(
+        graphqlOperation(createUser, { input: createUserInput })
+      );
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <Router>
       <div className="App">
