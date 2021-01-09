@@ -7,6 +7,28 @@
     color: var(--dark-teal)
 }
 
-.date-picker-custom>.MuiInput-underline:before,.date-picker-custom>.MuiInput-underline:hover:not(.Mui-disabled):before {
+.date-picker-custom>.MuiInput-underline:before,.date-picker-custom>.MuiInput-underline:after,
+.date-picker-custom>.MuiInput-underline:hover:not(.Mui-disabled):before {
     border-bottom-color: var(--dark-teal);
+}
+
+.MuiPickersToolbar-toolbar.MuiToolbar-root {
+    background-color: var(--teal);
+    font-family: 'Advent Pro', sans-serif;
+}
+
+.MuiTypography-h4.MuiTypography-root,
+.MuiTypography-body2.MuiTypography-root,
+.MuiTypography-body1.MuiTypography-root,
+.MuiTypography-caption.MuiTypography-root,
+.MuiButton-root.MuiButton-text {
+    font-family: 'Advent Pro', sans-serif;
+}
+
+.MuiPickersDay-day.MuiPickersDay-daySelected {
+    background-color: var(--teal);
+}
+
+.MuiButton-textPrimary.MuiButton-text {
+    color: var(--teal);
 }
