@@ -1,5 +1,7 @@
+import Template from '../../Components/template.jsx';
+
 function LoginPage() {
-	return <h1>Login Page</h1>;
+	return <Template activePage="" bodyLeft={<></>} bodyCenter={<>Login Form</>} bodyRight={<></>} />;
 }
 
 export default LoginPage;
