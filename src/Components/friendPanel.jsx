@@ -4,9 +4,14 @@ import PanelBtn from './panelBtn';
 
 function FriendPanel({ friends }) {
 	return (
-		<div className="d-flex flex-column align-items-center">
+		<div className="d-flex flex-column align-items-center full-height">
 			<ListView listItems={friends} title="Friends" />
-			<PanelBtn className="mt-auto" title="Find Friends" />
+			<PanelBtn
+				title="Find Friends"
+				clicked={() => {
+					console.log('clicked Find Friends');
+				}}
+			/>
 		</div>
 	);
 }

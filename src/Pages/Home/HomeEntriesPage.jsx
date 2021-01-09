@@ -36,7 +36,7 @@ function HomeEntriesPage() {
 		},
 	];
 
-	return <Template activePage="home" bodyLeft={<FriendPanel friends={friends} />} bodyCenter={<>Entries</>} bodyRight={<Submenu menuItems={menuItems} />} />;
+	return <Template activePage="home" bodyLeft={<><FriendPanel friends={friends} /></>} bodyCenter={<>Entries</>} bodyRight={<Submenu menuItems={menuItems} />} />;
 }
 
 export default HomeEntriesPage;
