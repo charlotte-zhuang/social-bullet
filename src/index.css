@@ -1,18 +1,4 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-:root {
   --teal: rgba(72, 169, 166, 1);
   --dark-teal: rgba(15, 82, 87, 1);
   --dark-brown: rgba(90, 35, 40, 1);
@@ -21,6 +7,14 @@ code {
   --purple: rgba(176, 161, 186, 1);
   --green: rgba(210, 229, 158, 1);
   --orange: rgba(243, 155, 109, 1);
+
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  background-image: radial-gradient(rgba(210, 229, 158, 0.3) 4px, transparent 0);
+  background-size: 25px 25px;
+  position: absolute;
 }
 
 .page-top-padding {
@@ -29,7 +23,6 @@ code {
 
 .nav-btn,
 .nav-btn:hover {
-  background-color: var(--teal);
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25) inset;
   height: 50px;
   width: 200px;
@@ -51,13 +44,26 @@ code {
   color: black;
 }
 
-body {
-  z-index: -1;
-  width: 100%;
-  height: 100vh;
-  background: white;
-  background-image: radial-gradient(rgba(210, 229, 158, 0.3) 4px, transparent 0);
-  background-size: 25px 25px;
-  background-position: -1px -1px;
-  position: absolute;
+h1.advent-font {
+  font-family: 'Advent Pro', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+}
+
+.nav-btn.teal {
+  background-color: var(--teal);
+}
+
+.nav-btn.dark-teal {
+  background-color: var(--dark-teal);
+  color: white;
+}
+
+.nav-btn.orange {
+  background-color: var(--orange);
+}
+
+.nav-btn.purple {
+  background-color: var(--purple);
 }
