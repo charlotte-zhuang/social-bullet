@@ -1,6 +1,7 @@
 import Template from "../../Components/template.jsx";
 import Submenu from "../../Components/submenu.jsx";
 import FriendPanel from "../../Components/friendPanel.jsx";
+import { AmplifySignOut } from "@aws-amplify/ui-react";
 
 function HomeEntriesPage() {
   const menuItems = [
