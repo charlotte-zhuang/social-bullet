@@ -22,23 +22,45 @@ import EditProjPage from "./Pages/Edit/EditProjPage.jsx";
 import EditEntryPage from "./Pages/Edit/EditEntryPage.jsx";
 import "./App.css";
 
-import { Auth, Amplify } from "aws-amplify";
+import Amplify, { API, Auth, graphqlOperation } from "aws-amplify";
 import awsconfig from "./aws-exports";
 import { AmplifySignOut, withAuthenticator } from "@aws-amplify/ui-react";
 import { useEffect, useState } from "react";
 
+import { listUsers } from "./graphql/queries";
+import { updateUser, createUser } from "./graphql/mutations";
+
 Amplify.configure(awsconfig);
 
 function App() {
+  const [users, setUsers] = useState([]);
+
   useEffect(() => {
     console.log("Use effect is called");
-    fetch();
+    fetchUser();
   }, []);
-  const fetch = async () => {
+
+  const update = async () => {
     try {
       let user = await Auth.currentAuthenticatedUser();
       const { username } = user;
       console.log(username);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const fetchUser = async () => {
+    try {
+      const userData = await API.graphql(graphqlOperation(listUsers));
+
+      const userList = userData.data.listUsers.items;
+      setUsers(userList);
+      console.log("user list", userList);
+
+      // users.map((user, idx) => {
+      //   console.log("User ", idx, " is ", user);
+      // });
     } catch (error) {
       console.log(error);
     }
