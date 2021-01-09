@@ -21,7 +21,7 @@ import './CSS/inputs.css';
 import Amplify, { API, Auth, graphqlOperation } from 'aws-amplify';
 import awsconfig from './aws-exports';
 
-import { AmplifySignOut, withAuthenticator } from '@aws-amplify/ui-react';
+import { withAuthenticator } from '@aws-amplify/ui-react';
 import { useEffect, useState } from 'react';
 
 import { test } from './data-models/user';
@@ -115,7 +115,6 @@ function App() {
 	};
 	return (
 		<>
-			{/* <AmplifySignOut /> */}
 			<Router>
 				<Switch>
 					<Redirect from="/" to="/home-entries" exact />
