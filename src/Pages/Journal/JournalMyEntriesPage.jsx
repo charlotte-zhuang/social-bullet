@@ -4,7 +4,7 @@ import Submenu from "../../Components/submenu.jsx";
 import MainList from "../../Components/mainList.jsx";
 import MyEntryPanel from "../../Components/myEntryPanel.jsx";
 
-function JournalMyEntriesPage() {
+function JournalMyEntriesPage(props) {
   const [selectedDate, handleDateChange] = useState(new Date());
 
   const menuItems = [
