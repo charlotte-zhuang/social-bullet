@@ -11,7 +11,11 @@
     background-color: var(--green);
 }
 
-.panel-section{
+.tile-container-yellow {
+    background-color: var(--light-yellow);
+}
+
+.panel-section {
     margin-top: 15px;
 }
 
@@ -30,7 +34,7 @@ p.short-descr {
     font-weight: 200;
 }
 
-.small-dates {
+.small-text-i {
     color: var(--teal);
     font-size: 16px;
     line-height: 19px;
@@ -57,6 +61,9 @@ p.short-descr {
     font-size: 14px;
     line-height: 16px;
     color: var(--dark-teal);
+}
+
+.p-rmv-margin {
     margin-bottom: 0px;
 }
 
@@ -79,4 +86,8 @@ p.short-descr {
 .indent-body {
     width: 100%;
     padding-left: 10px;
+}
+
+.corner-neg {
+    margin: -5px;
 }

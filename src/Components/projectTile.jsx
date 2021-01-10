@@ -5,7 +5,7 @@ import '../CSS/profileView.css';
 
 function ProjectTile({ project }) {
 	return (
-		<div className="d-flex flex-column tile-container tile-container-green align-content-start">
+		<div className="d-flex flex-column tile-container tile-container-green">
 			<div className="d-flex justify-content-between align-items-top full-width">
 				<ListItem url={project.url} imgSrc={project.imgSrc} text={project.name} size="md" />
 				<div></div>
@@ -15,7 +15,7 @@ function ProjectTile({ project }) {
 				{project.status === 'active' ? 'Current' : 'Final'} Rank: <span className="rank-text-i">{project.rank}</span>
 			</div>
 			<p className="short-descr advent-font">{project.shortDescr.substring(0, 100)}...</p>
-			<div className="d-flex justify-content-between small-dates advent-font">
+			<div className="d-flex justify-content-between small-text-i advent-font">
 				<span>
 					{project.start.toLocaleString('default', {
 						month: 'short',

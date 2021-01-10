@@ -14,7 +14,7 @@ function Entry({ user, entry, taskList }) {
 				</div>
 				<p className="advent-font">{entry.text}</p>
 				<div className="indent-width">
-					<ListView listItems={taskList} title="" size="sm" />
+					<ListView listItems={taskList} size="sm" type="task" />
 				</div>
 			</div>
 		);
@@ -25,7 +25,7 @@ function Entry({ user, entry, taskList }) {
 			</div>
 			<p className="advent-font">{entry.text}</p>
 			<div className="d-flex align-items-bottom indent-width">
-				<ListView listItems={taskList} title="" size="sm" />
+				<ListView listItems={taskList} size="sm" type="task" />
 				<div className="d-flex">
 					<Link className="icon-btn mt-auto" to="/edit-entry">
 						<FontAwesomeIcon icon="pencil-alt" size="xs" />
