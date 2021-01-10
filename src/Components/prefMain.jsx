@@ -23,9 +23,9 @@ function PrefMain() {
     }
 	return (
 		<form className="m-4" ref={prefForm}>
-			<h2 id="general">General</h2>
+			<h2 id="general" className='form-section-heading'>General</h2>
 			{/* checkbox */}
-			<h2 id="account">Account</h2>
+			<h2 id="account" className='form-section-heading'>Account</h2>
 			<div className="form-row m-3">
 				<div className="col-auto">
 					<div className="form-group">
