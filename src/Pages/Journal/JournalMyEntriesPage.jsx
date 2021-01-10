@@ -4,7 +4,7 @@ import Submenu from "../../Components/submenu.jsx";
 import MainList from "../../Components/mainList.jsx";
 import MyEntryPanel from "../../Components/myEntryPanel.jsx";
 
-function JournalMyEntriesPage() {
+function JournalMyEntriesPage(props) {
   const [selectedDate, handleDateChange] = useState(new Date());
 
   const menuItems = [
@@ -44,7 +44,7 @@ function JournalMyEntriesPage() {
       taskList: [
         {
           text: (
-            <p className='advent-font'>
+            <p className="advent-font">
               Added <i>January Cooking</i> Project <b>[at 7:00 am]</b>
             </p>
           ),
@@ -53,7 +53,7 @@ function JournalMyEntriesPage() {
         },
         {
           text: (
-            <p className='advent-font'>
+            <p className="advent-font">
               Completed Yoga from <i>2021 Fitness</i> Project{" "}
               <b>[at 7:28 am]</b>
             </p>
@@ -63,7 +63,7 @@ function JournalMyEntriesPage() {
         },
         {
           text: (
-            <p className='advent-font'>
+            <p className="advent-font">
               Challenged Friend 1 to <i>January Cooking</i> Project{" "}
               <b>[at 8:00 am]</b>
             </p>
@@ -82,7 +82,7 @@ function JournalMyEntriesPage() {
       taskList: [
         {
           text: (
-            <p className='advent-font'>
+            <p className="advent-font">
               Added <i>January Cooking</i> Project <b>[at 7:00 am]</b>
             </p>
           ),
@@ -91,7 +91,7 @@ function JournalMyEntriesPage() {
         },
         {
           text: (
-            <p className='advent-font'>
+            <p className="advent-font">
               Completed Yoga from <i>2021 Fitness</i> Project{" "}
               <b>[at 7:28 am]</b>
             </p>
@@ -101,7 +101,7 @@ function JournalMyEntriesPage() {
         },
         {
           text: (
-            <p className='advent-font'>
+            <p className="advent-font">
               Challenged Friend 1 to <i>January Cooking</i> Project{" "}
               <b>[at 8:00 am]</b>
             </p>
@@ -120,7 +120,7 @@ function JournalMyEntriesPage() {
       taskList: [
         {
           text: (
-            <p className='advent-font'>
+            <p className="advent-font">
               Added <i>January Cooking</i> Project <b>[at 7:00 am]</b>
             </p>
           ),
@@ -129,7 +129,7 @@ function JournalMyEntriesPage() {
         },
         {
           text: (
-            <p className='advent-font'>
+            <p className="advent-font">
               Completed Yoga from <i>2021 Fitness</i> Project{" "}
               <b>[at 7:28 am]</b>
             </p>
@@ -139,7 +139,7 @@ function JournalMyEntriesPage() {
         },
         {
           text: (
-            <p className='advent-font'>
+            <p className="advent-font">
               Challenged Friend 1 to <i>January Cooking</i> Project{" "}
               <b>[at 8:00 am]</b>
             </p>
@@ -158,7 +158,7 @@ function JournalMyEntriesPage() {
       taskList: [
         {
           text: (
-            <p className='advent-font'>
+            <p className="advent-font">
               Added <i>January Cooking</i> Project <b>[at 7:00 am]</b>
             </p>
           ),
@@ -167,7 +167,7 @@ function JournalMyEntriesPage() {
         },
         {
           text: (
-            <p className='advent-font'>
+            <p className="advent-font">
               Completed Yoga from <i>2021 Fitness</i> Project{" "}
               <b>[at 7:28 am]</b>
             </p>
@@ -177,7 +177,7 @@ function JournalMyEntriesPage() {
         },
         {
           text: (
-            <p className='advent-font'>
+            <p className="advent-font">
               Challenged Friend 1 to <i>January Cooking</i> Project{" "}
               <b>[at 8:00 am]</b>
             </p>
@@ -196,7 +196,7 @@ function JournalMyEntriesPage() {
       taskList: [
         {
           text: (
-            <p className='advent-font'>
+            <p className="advent-font">
               Added <i>January Cooking</i> Project <b>[at 7:00 am]</b>
             </p>
           ),
@@ -205,7 +205,7 @@ function JournalMyEntriesPage() {
         },
         {
           text: (
-            <p className='advent-font'>
+            <p className="advent-font">
               Completed Yoga from <i>2021 Fitness</i> Project{" "}
               <b>[at 7:28 am]</b>
             </p>
@@ -215,7 +215,7 @@ function JournalMyEntriesPage() {
         },
         {
           text: (
-            <p className='advent-font'>
+            <p className="advent-font">
               Challenged Friend 1 to <i>January Cooking</i> Project{" "}
               <b>[at 8:00 am]</b>
             </p>
@@ -226,17 +226,26 @@ function JournalMyEntriesPage() {
       ],
     },
   ];
+  const listItems =
+    props.user === null
+      ? []
+      : props.user.journal.map((entry) => {
+          return {
+            user: props.user,
+            entry,
+          };
+        });
 
   return (
     <Template
-      activePage='journal'
+      activePage="journal"
       bodyLeft={
         <MyEntryPanel
           selectedDate={selectedDate}
           handleDateChange={handleDateChange}
         />
       }
-      bodyCenter={<MainList type='entry' listItems={entries} />}
+      bodyCenter={<MainList type="entry" listItems={listItems} />}
       bodyRight={<Submenu menuItems={menuItems} />}
     />
   );

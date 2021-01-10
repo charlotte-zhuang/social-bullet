@@ -184,12 +184,14 @@ export default class User {
   async addJournalEntry(body) {
     let input = {
       body,
-      createdAt: Date.now(),
-      updatedAt: Date.now(),
+      createdAt: formatDate(),
+      updatedAt: formatDate(),
     };
-    this.journalData.push(input);
+    this.journal.push(input);
     const model = await this.instance();
     model.journal = [...this.journal];
+    console.log("model", model);
+
     return this.updateModel(model);
   }
   async removeJournalEntry(idx) {
@@ -201,7 +203,7 @@ export default class User {
     return this.updateModel(model);
   }
   async addProject(input) {
-    this.projectsData.push(input);
+    this.projects.push(input);
     const model = await this.instance();
     model.projects = [...this.projects];
     return this.updateModel(model);
@@ -247,6 +249,38 @@ export default class User {
       feed.concat(this.friends[i].journal);
     }
 
-    feed.sort((a, b) => (a.updatedAt > b.updatedAt ? 1 : -1));
+    feed.sort((a, b) =>
+      new Date(a.updatedAt).getTime() < new Date(b.updatedAt).getTime() ? 1 : -1
+    );
+
+    return feed;
   }
+}
+
+function formatDate() {
+  const monthNames = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  var today = new Date();
+  var dd = String(today.getDate()).padStart(2, "0");
+  var mm = monthNames[today.getMonth()];
+  var yyyy = today.getFullYear();
+  var time = today.toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+  today = time + " " + mm + " " + dd + " " + yyyy;
+  return today;
 }

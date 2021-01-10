@@ -138,109 +138,109 @@ class EditProjPage extends Component {
 
     return (
       <Template
-        activePage='journal'
+        activePage="journal"
         bodyLeft={<TableOfContents contents={contents} />}
         bodyCenter={
-          <form className='m-4'>
-            <h2 className='form-section-heading' id='project-info'>
+          <form className="m-4">
+            <h2 className="form-section-heading" id="project-info">
               Project Info
             </h2>
-            <div className='form-row m-3'>
-              <div className='form-group'>
+            <div className="form-row m-3">
+              <div className="form-group">
                 <label
-                  className='form-label'
-                  id='input-name'
-                  htmlFor='input-name-field'
+                  className="form-label"
+                  id="input-name"
+                  htmlFor="input-name-field"
                 >
                   Project name
                 </label>
                 <input
-                  type='text'
-                  className='form-control form-txt-input'
-                  id='input-name-field'
-                  placeholder='Project name'
+                  type="text"
+                  className="form-control form-txt-input"
+                  id="input-name-field"
+                  placeholder="Project name"
                   onChange={handleNameChange}
                   value={notNullString(name)}
                 />
               </div>
             </div>
-            <div className='form-row m-3'>
-              <div className='custom-file'>
+            <div className="form-row m-3">
+              <div className="custom-file">
                 <input
-                  type='file'
-                  className='custom-file-input'
-                  id='input-picture'
+                  type="file"
+                  className="custom-file-input"
+                  id="input-picture"
                 />
                 <label
-                  className='custom-file-label form-label'
-                  htmlFor='input-picture'
+                  className="custom-file-label form-label"
+                  htmlFor="input-picture"
                 >
                   Upload new project icon
                 </label>
               </div>
             </div>
-            <div className='form-row m-3'>
-              <div className='form-group full-width'>
+            <div className="form-row m-3">
+              <div className="form-group full-width">
                 <label
-                  className='form-label'
-                  id='input-blurb'
-                  htmlFor='input-blurb-field'
+                  className="form-label"
+                  id="input-blurb"
+                  htmlFor="input-blurb-field"
                 >
                   Blurb
                 </label>
                 <textarea
-                  name='blurb'
-                  rows='5'
-                  className='form-control form-text-input'
-                  id='input-blurb-field'
-                  placeholder='Blurb...'
+                  name="blurb"
+                  rows="5"
+                  className="form-control form-text-input"
+                  id="input-blurb-field"
+                  placeholder="Blurb..."
                   style={{ resize: "none" }}
                   onChange={handleBlurbChange}
                   value={notNullString(blurb)}
                 />
               </div>
             </div>
-            <div className='form-row m-3'>
+            <div className="form-row m-3">
               <label
-                className='form-label'
-                id='input-tags'
-                htmlFor='input-tags-field'
+                className="form-label"
+                id="input-tags"
+                htmlFor="input-tags-field"
               >
                 Interests
               </label>
             </div>
-            <div className='form-row m-3'>
-              <div className='col-auto'>
-                <div className='form-group'>
+            <div className="form-row m-3">
+              <div className="col-auto">
+                <div className="form-group">
                   <input
-                    type='text'
-                    className='form-control form-txt-input'
-                    id='input-tags-field'
-                    placeholder='New tag'
+                    type="text"
+                    className="form-control form-txt-input"
+                    id="input-tags-field"
+                    placeholder="New tag"
                     value={inputTag}
                     onChange={handleInputTagChange}
                   />
                 </div>
               </div>
-              <div className='col-auto'>
+              <div className="col-auto">
                 <button
-                  className='form-btn secondary mb-1'
-                  htmlFor='input-tag-field'
+                  className="form-btn secondary mb-1"
+                  htmlFor="input-tag-field"
                   onClick={addTag}
                 >
                   Add
                 </button>
               </div>
             </div>
-            <div className='m-4'>
+            <div className="m-4">
               {tags.length > 0 ? (
-                <div className='form-row'>
+                <div className="form-row">
                   <span>Click on a tag to remove</span>
                 </div>
               ) : (
                 <></>
               )}
-              <div className='form-row d-flex flex-wrap'>
+              <div className="form-row d-flex flex-wrap">
                 {tags.map((elem, index) => (
                   <Tag
                     key={`project-tag-${index}`}
@@ -250,29 +250,29 @@ class EditProjPage extends Component {
                 ))}
               </div>
             </div>
-            <h2 id='time-header' className='form-section-heading'>
+            <h2 id="time-header" className="form-section-heading">
               Time
             </h2>
             <div
-              id='start-end-time'
-              className='form-row justify-content-center m-3'
+              id="start-end-time"
+              className="form-row justify-content-center m-3"
             >
-              <div className='col-4'>
-                <label className='form-label m-2' htmlFor='start-date-picker'>
+              <div className="col-4">
+                <label className="form-label m-2" htmlFor="start-date-picker">
                   Start
                 </label>
                 <DatePick
-                  id='start-date-picker'
+                  id="start-date-picker"
                   selectedDate={start}
                   handleDateChange={handleStartChange}
                 />
               </div>
-              <div className='col-4'>
-                <label className='form-label m-2' htmlFor='finish-date-picker'>
+              <div className="col-4">
+                <label className="form-label m-2" htmlFor="finish-date-picker">
                   Finish
                 </label>
                 <DatePick
-                  id='finish-date-picker'
+                  id="finish-date-picker"
                   selectedDate={finish}
                   handleDateChange={handleFinishChange}
                 />
