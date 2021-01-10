@@ -6,6 +6,9 @@ import { userExists, findUser } from "./utility";
 import { v4 as uuid } from "uuid";
 
 export default class User {
+  static ALPHABETICAL = "alphabetical";
+  static MOST_RECENT = "most recent";
+
   constructor(usernameInput, emailInput) {
     if (!userExists(usernameInput)) {
       console.log("Username doesn't exist");
@@ -69,16 +72,16 @@ export default class User {
   get description() {
     return this.descriptionData;
   }
-  get journal() {
+  get journal(sort = MOST_RECENT) {
     return this.journalData;
   }
-  get projects() {
+  get projects(sort = MOST_RECENT) {
     return this.projectsData;
   }
-  get interests() {
+  get interests(sort = ALPHABETICAL) {
     return this.interestsData;
   }
-  get friends() {
+  get friends(sort = ALPHABETICAL) {
     return this.friendsData;
   }
 

@@ -23,7 +23,7 @@ import EditEntryPage from "./Pages/Edit/EditEntryPage.jsx";
 import "./App.css";
 import "./CSS/inputs.css";
 
-import Amplify, { API, Auth, graphqlOperation } from "aws-amplify";
+import Amplify, { Auth } from "aws-amplify";
 import awsconfig from "./aws-exports";
 
 import { withAuthenticator } from "@aws-amplify/ui-react";
@@ -42,7 +42,7 @@ library.add(faPencilAlt);
 Amplify.configure(awsconfig);
 
 function App() {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(user);
 
   //authenticate after login or page refreshes
   useEffect(() => {
@@ -66,17 +66,18 @@ function App() {
     let email = user.attributes.email;
     return new User(username, email);
   };
-  //some test code
-  // const click = () => {
-  //   user.updateEmail("test@gmail.com").then((user) => {
-  //     setUser(user);
-  //   });
-  // };
-  //      <a class="panel-btn mt-auto" onClick={() => click()}>
-  //button
-  //</a>
+  //  some test code
+  const click = () => {
+    // user.updateEmail("test@gmail.com").then((user) => {
+    //   setUser(user);
+    //    });
+  };
+
   return (
     <>
+      <a class="panel-btn mt-auto" onClick={() => click()}>
+        button
+      </a>
       <Router>
         <Switch>
           <Redirect from="/" to="/home-entries" exact />
