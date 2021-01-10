@@ -78,7 +78,7 @@ function App() {
   //</a>
 
   const userText = () => {
-    return user === null ? "" : user.username;
+    return user === null ? "" : "Logged in as " + user.username;
   };
 
   return (
