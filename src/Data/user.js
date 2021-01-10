@@ -72,7 +72,7 @@ export default class User {
       this.interestsData = this.model.interests;
       this.friendsData = this.model.friends;
     }
-
+    this.refreshJournalEntryFeed();
     console.log("Loaded user info ", this.model);
     return this;
   }
@@ -116,7 +116,9 @@ export default class User {
   get friends() {
     return this.friendsData;
   }
-
+  get entryFeed() {
+    return this.journalFeed;
+  }
   async updateModel(model) {
     delete model.createdAt;
     delete model.updatedAt;
@@ -183,6 +185,7 @@ export default class User {
 
   async addJournalEntry(body) {
     let input = {
+      owner: this.username,
       body,
       createdAt: formatDate(),
       updatedAt: formatDate(),
@@ -230,11 +233,16 @@ export default class User {
     model.interests = [...this.interests];
     return this.updateModel(model);
   }
-  async addFriend(input) {
-    this.friends.push(input);
-    const model = await this.instance();
-    model.friends = [...this.friends];
-    return this.updateModel(model);
+  async addFriend(user) {
+    userExists(user).then((value) => {
+      if (value && user.localeCompare(this.username)) {
+        this.friends.push(user);
+        this.instance().then((model) => {
+          model.friends = [...this.friends];
+          return this.updateModel(model);
+        });
+      }
+    });
   }
   async removeFriend(username) {
     this.friends.filter((friend) => friend !== username);
@@ -243,17 +251,18 @@ export default class User {
     return this.updateModel(model);
   }
 
-  journalEntryFeed() {
+  async refreshJournalEntryFeed() {
     let feed = this.journal;
     for (var i = 0; i < this.friends.length; i++) {
-      feed.concat(this.friends[i].journal);
+      let friend = await findUser(this.friends[i]);
+      feed.concat(friend.journal);
     }
 
     feed.sort((a, b) =>
       new Date(a.updatedAt).getTime() < new Date(b.updatedAt).getTime() ? 1 : -1
     );
 
-    return feed;
+    this.journalFeed = feed;
   }
 }
 

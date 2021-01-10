@@ -18,6 +18,7 @@ function EditEntryPage(props) {
         console.log("clicked Submit");
         console.log("text display: ", text);
 
+        props.user.refreshJournalFeed();
         history.push("/journal-entries");
       },
     },

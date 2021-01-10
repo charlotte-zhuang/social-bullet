@@ -27,6 +27,7 @@ type Project {
 }
 
 type Entry {
+  owner: String!
   body: String!
   createdAt: String
   updatedAt: String

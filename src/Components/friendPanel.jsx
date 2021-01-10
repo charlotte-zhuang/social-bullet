@@ -1,31 +1,17 @@
 import ListView from "./listView";
 import PanelBtn from "./panelBtn";
 
-<<<<<<< HEAD
 function FriendPanel({ friends, user }) {
+  var insertQuery = (username) => {
+    console.log(username);
+    user.addFriend(username);
+  };
   return (
-    <div className="d-flex flex-column align-items-center full-height">
+    <div className="d-flex flex-column align-items-center full-height full-width">
       <ListView listItems={friends} title="Friends" size="md" />
-      <PanelBtn
-        title="Add Friend"
-        clicked={() => {
-          console.log("clicked Find Friends");
-        }}
-      />
+      <PanelBtn title="Add Friend" input clicked={insertQuery} />
     </div>
   );
-=======
-function FriendPanel({ friends }) {
-	var insertQuery = (username) => {
-		console.log(username);
-	};
-	return (
-		<div className="d-flex flex-column align-items-center full-height full-width">
-			<ListView listItems={friends} title="Friends" size="md" />
-			<PanelBtn title="Add Friend" input clicked={insertQuery} />
-		</div>
-	);
->>>>>>> ff50f727ed414608b9d21a43b2044c972f0f6536
 }
 
 export default FriendPanel;
