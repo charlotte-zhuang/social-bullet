@@ -8,7 +8,7 @@ function ListItem({ url, imgSrc, text, size }) {
 		<Link className="normal-text-link" to={url}>
 			<div className="d-flex flex-row align-items-center justify-content-around">
 				<img src={imgSrc} className={`list-img-${size}`} alt={text}></img>
-				<h4 className={`advent-font advent-font-${size}`}>{text}</h4>
+				<h4 className={`advent-font panel-text advent-font-${size}`}>{text}</h4>
 			</div>
 		</Link>
 	);

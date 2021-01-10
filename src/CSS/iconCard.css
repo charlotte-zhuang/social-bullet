@@ -45,7 +45,7 @@
 }
 
 .iconCard-sm div {
-  width: 60px;
+  width: var(--sm);
   margin: 5px;
 }
 
