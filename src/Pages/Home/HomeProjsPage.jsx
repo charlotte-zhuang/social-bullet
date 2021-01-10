@@ -1,23 +1,67 @@
-import Template from '../../Components/template.jsx';
-import Submenu from '../../Components/submenu.jsx';
+import Template from "../../Components/template.jsx";
+import Submenu from "../../Components/submenu.jsx";
+import ProjectCard from "../../Components/projectCard";
+
+const testMembers = [
+  {
+    pictureSource: "/resources/mallard.jpg",
+    name: "Donald",
+    url: "/user/donald",
+  },
+  {
+    pictureSource: "/resources/mallard.jpg",
+    name: "Jerry",
+    url: "/user/jerry",
+  },
+  {
+    pictureSource: "/resources/mallard.jpg",
+    name: "April",
+    url: "/user/panda",
+  },
+];
 
 function HomeProjsPage() {
-	const menuItems = [
-		{
-			isRoute: true,
-			title: 'Entries',
-			selected: false,
-			url: '/home',
-		},
-		{
-			isRoute: true,
-			title: 'Projects',
-			selected: true,
-			url: '/home-projects',
-		},
-	];
+  const menuItems = [
+    {
+      isRoute: true,
+      title: "Entries",
+      selected: false,
+      url: "/home",
+    },
+    {
+      isRoute: true,
+      title: "Projects",
+      selected: true,
+      url: "/home-projects",
+    },
+  ];
 
-	return <Template activePage="home" bodyLeft={<>Your Day</>} bodyCenter={<>Projects</>} bodyRight={<Submenu menuItems={menuItems} />} />;
+  return (
+    <Template
+      activePage='home'
+      bodyLeft={<>Your Day</>}
+      bodyCenter={
+        <ProjectCard
+          project={{
+            imgSrc: "/resources/mallard.jpg",
+            name: "Yoga with Yogis",
+            text: "Hey you! You want to do yoga NAO with yogis! Join us.",
+            tasks: [
+              "downward facing dog",
+              "upward facing dog",
+              "leftward facing dog",
+            ],
+            milestones: ["Day One", "Day Two", "Year Three"],
+            start: new Date("December 17, 2020 03:24:00"),
+            end: new Date("February 21, 2021 03:24:00"),
+            url: "/project/yoga",
+            members: testMembers,
+          }}
+        />
+      }
+      bodyRight={<Submenu menuItems={menuItems} />}
+    />
+  );
 }
 
 export default HomeProjsPage;
