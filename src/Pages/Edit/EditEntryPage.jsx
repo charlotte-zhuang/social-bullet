@@ -2,17 +2,23 @@ import React, { useState } from "react";
 import Template from "../../Components/template.jsx";
 import Submenu from "../../Components/submenu.jsx";
 import Editor from "../../Components/editor";
+import { useHistory } from "react-router-dom";
 
 function EditEntryPage(props) {
   const [text, setText] = useState("");
 
+  const history = useHistory();
+
   const menuItems = [
     {
       isRoute: false,
-      title: "Update",
+      title: "Submit",
       selected: true,
       clicked: () => {
-        console.log("clicked Update");
+        console.log("clicked Submit");
+        console.log("text display: ", text);
+
+        history.push("/journal-entries");
       },
     },
     {
@@ -21,6 +27,7 @@ function EditEntryPage(props) {
       selected: false,
       clicked: () => {
         console.log("clicked Cancel");
+        history.push("/journal-entries");
       },
     },
   ];

@@ -263,7 +263,7 @@ function HomeEntriesPage(props) {
   return (
     <Template
       activePage="home"
-      bodyLeft={<FriendPanel friends={friends} />}
+      bodyLeft={<FriendPanel friends={friends} user={props.user} />}
       bodyCenter={<MainList type="entry" listItems={listItems} />}
       bodyRight={<Submenu menuItems={menuItems} />}
     />
