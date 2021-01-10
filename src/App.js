@@ -42,7 +42,7 @@ library.add(faPencilAlt);
 Amplify.configure(awsconfig);
 
 function App() {
-  const [user, setUser] = useState(user);
+  const [user, setUser] = useState(null);
 
   //authenticate after login or page refreshes
   useEffect(() => {
