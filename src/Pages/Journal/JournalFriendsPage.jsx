@@ -834,7 +834,9 @@ function JournalFriendsPage() {
 		},
 	];
 
-	return <Template activePage="journal" bodyLeft={<FriendPanel friends={friends} />} bodyCenter={<MainTiles type="friend" tileItems={friends} />} bodyRight={<Submenu menuItems={menuItems} />} />;
+	return (
+		<Template activePage="journal" bodyLeft={<FriendPanel friends={friends} />} bodyCenter={<MainTiles type="friend" tileItems={friends} vScroll />} bodyRight={<Submenu menuItems={menuItems} />} />
+	);
 }
 
 export default JournalFriendsPage;
