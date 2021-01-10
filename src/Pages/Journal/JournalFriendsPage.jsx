@@ -1,35 +1,35 @@
-import Template from "../../Components/template.jsx";
-import Submenu from "../../Components/submenu.jsx";
-import FriendPanel from "../../Components/friendPanel.jsx";
-import MainTiles from "../../Components/mainTiles.jsx";
+import Template from '../../Components/template.jsx';
+import Submenu from '../../Components/submenu.jsx';
+import FriendPanel from '../../Components/friendPanel.jsx';
+import MainTiles from '../../Components/mainTiles.jsx';
 
 function JournalFriendsPage(props) {
-  const menuItems = [
-    {
-      isRoute: true,
-      title: "Profile",
-      selected: false,
-      url: "/journal-profile",
-    },
-    {
-      isRoute: true,
-      title: "My Entries",
-      selected: false,
-      url: "/journal-entries",
-    },
-    {
-      isRoute: true,
-      title: "My Projects",
-      selected: false,
-      url: "/journal-projects",
-    },
-    {
-      isRoute: true,
-      title: "Friends",
-      selected: true,
-      url: "/journal-friends",
-    },
-  ];
+	const menuItems = [
+		{
+			isRoute: true,
+			title: 'Profile',
+			selected: false,
+			url: '/journal-profile',
+		},
+		{
+			isRoute: true,
+			title: 'My Entries',
+			selected: false,
+			url: '/journal-entries',
+		},
+		{
+			isRoute: true,
+			title: 'My Projects',
+			selected: false,
+			url: '/journal-projects',
+		},
+		{
+			isRoute: true,
+			title: 'Friends',
+			selected: true,
+			url: '/journal-friends',
+		},
+	];
 
 	const friends = [
 		{
@@ -40,7 +40,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'active',
 					shortDescr:
@@ -52,7 +52,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'active',
 					shortDescr:
@@ -64,7 +64,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'active',
 					shortDescr:
@@ -83,7 +83,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'active',
 					shortDescr:
@@ -95,7 +95,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'active',
 					shortDescr:
@@ -107,7 +107,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'complete',
 					shortDescr:
@@ -119,7 +119,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1 hello',
 					status: 'active',
 					shortDescr:
@@ -138,7 +138,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'active',
 					shortDescr:
@@ -150,7 +150,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'active',
 					shortDescr:
@@ -162,7 +162,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'active',
 					shortDescr:
@@ -181,7 +181,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'active',
 					shortDescr:
@@ -193,7 +193,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'active',
 					shortDescr:
@@ -205,7 +205,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'complete',
 					shortDescr:
@@ -217,7 +217,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1 hello',
 					status: 'active',
 					shortDescr:
@@ -236,7 +236,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'active',
 					shortDescr:
@@ -248,7 +248,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'active',
 					shortDescr:
@@ -260,7 +260,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'active',
 					shortDescr:
@@ -279,7 +279,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'active',
 					shortDescr:
@@ -291,7 +291,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'active',
 					shortDescr:
@@ -303,7 +303,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'complete',
 					shortDescr:
@@ -315,7 +315,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1 hello',
 					status: 'active',
 					shortDescr:
@@ -334,7 +334,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'active',
 					shortDescr:
@@ -346,7 +346,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'active',
 					shortDescr:
@@ -358,7 +358,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'active',
 					shortDescr:
@@ -377,7 +377,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'active',
 					shortDescr:
@@ -389,7 +389,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'active',
 					shortDescr:
@@ -401,7 +401,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'complete',
 					shortDescr:
@@ -413,7 +413,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1 hello',
 					status: 'active',
 					shortDescr:
@@ -432,7 +432,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'active',
 					shortDescr:
@@ -444,7 +444,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'active',
 					shortDescr:
@@ -456,7 +456,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'active',
 					shortDescr:
@@ -475,7 +475,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'active',
 					shortDescr:
@@ -487,7 +487,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'active',
 					shortDescr:
@@ -499,7 +499,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'complete',
 					shortDescr:
@@ -511,7 +511,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1 hello',
 					status: 'active',
 					shortDescr:
@@ -530,7 +530,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'active',
 					shortDescr:
@@ -542,7 +542,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'active',
 					shortDescr:
@@ -554,7 +554,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'active',
 					shortDescr:
@@ -573,7 +573,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'active',
 					shortDescr:
@@ -585,7 +585,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'active',
 					shortDescr:
@@ -597,7 +597,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'complete',
 					shortDescr:
@@ -609,7 +609,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1 hello',
 					status: 'active',
 					shortDescr:
@@ -628,7 +628,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'active',
 					shortDescr:
@@ -640,7 +640,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'active',
 					shortDescr:
@@ -652,7 +652,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'active',
 					shortDescr:
@@ -671,7 +671,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'active',
 					shortDescr:
@@ -683,7 +683,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'active',
 					shortDescr:
@@ -695,7 +695,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'complete',
 					shortDescr:
@@ -707,7 +707,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1 hello',
 					status: 'active',
 					shortDescr:
@@ -726,7 +726,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'active',
 					shortDescr:
@@ -738,7 +738,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'active',
 					shortDescr:
@@ -750,7 +750,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'active',
 					shortDescr:
@@ -769,7 +769,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'active',
 					shortDescr:
@@ -781,7 +781,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'active',
 					shortDescr:
@@ -793,7 +793,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1',
 					status: 'complete',
 					shortDescr:
@@ -805,7 +805,7 @@ function JournalFriendsPage(props) {
 				{
 					url: '/project',
 					rank: '2nd',
-					imgSrc: 'resources/mallard.jpg',
+
 					name: 'Project 1 hello',
 					status: 'active',
 					shortDescr:
@@ -818,14 +818,9 @@ function JournalFriendsPage(props) {
 		},
 	];
 
-  return (
-    <Template
-      activePage="journal"
-      bodyLeft={<FriendPanel friends={friends} />}
-      bodyCenter={<MainTiles type="friend" tileItems={friends} vScroll />}
-      bodyRight={<Submenu menuItems={menuItems} />}
-    />
-  );
+	return (
+		<Template activePage="journal" bodyLeft={<FriendPanel friends={friends} />} bodyCenter={<MainTiles type="friend" tileItems={friends} vScroll />} bodyRight={<Submenu menuItems={menuItems} />} />
+	);
 }
 
 export default JournalFriendsPage;

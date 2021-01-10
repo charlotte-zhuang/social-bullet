@@ -27,7 +27,7 @@ function ProfilePage() {
 		{
 			url: '/project',
 			rank: '2nd',
-			imgSrc: 'resources/mallard.jpg',
+
 			name: 'Project 1',
 			status: 'active',
 			shortDescr:
@@ -39,7 +39,7 @@ function ProfilePage() {
 		{
 			url: '/project',
 			rank: '2nd',
-			imgSrc: 'resources/mallard.jpg',
+
 			name: 'Project 1',
 			status: 'active',
 			shortDescr:
@@ -51,7 +51,7 @@ function ProfilePage() {
 		{
 			url: '/project',
 			rank: '2nd',
-			imgSrc: 'resources/mallard.jpg',
+
 			name: 'Project 1',
 			status: 'complete',
 			shortDescr:
@@ -63,7 +63,7 @@ function ProfilePage() {
 		{
 			url: '/project',
 			rank: '2nd',
-			imgSrc: 'resources/mallard.jpg',
+
 			name: 'Project 1',
 			status: 'active',
 			shortDescr:
@@ -75,7 +75,7 @@ function ProfilePage() {
 		{
 			url: '/project',
 			rank: '2nd',
-			imgSrc: 'resources/mallard.jpg',
+
 			name: 'Project 1',
 			status: 'complete',
 			shortDescr:
@@ -87,7 +87,7 @@ function ProfilePage() {
 		{
 			url: '/project',
 			rank: '2nd',
-			imgSrc: 'resources/mallard.jpg',
+
 			name: 'Project 1',
 			status: 'complete',
 			shortDescr:
@@ -99,7 +99,7 @@ function ProfilePage() {
 		{
 			url: '/project',
 			rank: '2nd',
-			imgSrc: 'resources/mallard.jpg',
+
 			name: 'Project 1',
 			status: 'active',
 			shortDescr:
