@@ -72,16 +72,16 @@ export default class User {
   get description() {
     return this.descriptionData;
   }
-  get journal(sort = MOST_RECENT) {
+  get journal() {
     return this.journalData;
   }
-  get projects(sort = MOST_RECENT) {
+  get projects() {
     return this.projectsData;
   }
-  get interests(sort = ALPHABETICAL) {
+  get interests() {
     return this.interestsData;
   }
-  get friends(sort = ALPHABETICAL) {
+  get friends() {
     return this.friendsData;
   }
 
