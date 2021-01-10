@@ -29,24 +29,24 @@ export default class User {
         console.log("New user has been created in database")
       );
     }
-    //load user info
-    findUser(usernameInput).then((model) => {
-      console.log(model);
-      this.idData = model.id;
-      this.usernameData = model.username;
-      this.emailData = model.email;
-      this.firstNameData = model.firstName;
-      this.lastNameData = model.lastName;
-      this.imageFilePathData = model.imageFilePath;
-      this.descriptionData = model.description;
-      this.journalData = model.journal;
-      this.projectsData = model.projects;
-      this.interestsData = model.interests;
-      this.friendsData = model.friends;
-      console.log("Loaded user info ", model);
-    });
   }
-
+  async initialize(usernameInput) {
+    //load user info
+    const model = await findUser(usernameInput);
+    this.idData = model.id;
+    this.usernameData = model.username;
+    this.emailData = model.email;
+    this.firstNameData = model.firstName;
+    this.lastNameData = model.lastName;
+    this.imageFilePathData = model.imageFilePath;
+    this.descriptionData = model.description;
+    this.journalData = model.journal;
+    this.projectsData = model.projects;
+    this.interestsData = model.interests;
+    this.friendsData = model.friends;
+    console.log("Loaded user info ", model);
+    return this;
+  }
   //returns JSON object of user
   async instance() {
     return findUser(this.username);

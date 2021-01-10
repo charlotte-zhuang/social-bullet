@@ -1,0 +1,11 @@
+.username {
+  font-family: "Advent Pro", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  vertical-align: top;
+  text-align: left;
+  padding-top: 25px;
+  padding-left: 25px;
+  color: var(--dark-teal);
+}
