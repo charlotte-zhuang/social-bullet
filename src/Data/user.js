@@ -46,7 +46,6 @@ export default class User {
 
   //returns JSON object of user
   async instance() {
-    console.log("my username is ", this.username);
     return findUser(this.username);
   }
   get id() {
