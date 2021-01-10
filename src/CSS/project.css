@@ -19,3 +19,11 @@ div.project-card {
 .list-top-padding {
   padding-top: 15px;
 }
+
+.lg>.advent-font{
+  font-size: 36px;
+}
+
+.lg>.advent-font>li{
+  font-size: 24px;
+}

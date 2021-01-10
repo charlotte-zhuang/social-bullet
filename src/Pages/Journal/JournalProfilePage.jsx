@@ -310,32 +310,32 @@ function JournalProfilePage() {
 		interests: ['Cooking', 'Fitness'],
 		friends: [
 			{
-				pictureSource: '/resources/mallard.jpg',
+				imgSrc: '/resources/mallard.jpg',
 				name: 'Mal Jones',
 				url: '/profile',
 			},
 			{
-				pictureSource: '/resources/mallard.jpg',
+				imgSrc: '/resources/mallard.jpg',
 				name: 'Mal Jones',
 				url: '/profile',
 			},
 			{
-				pictureSource: '/resources/mallard.jpg',
+				imgSrc: '/resources/mallard.jpg',
 				name: 'Mal Jones',
 				url: '/profile',
 			},
 			{
-				pictureSource: '/resources/mallard.jpg',
+				imgSrc: '/resources/mallard.jpg',
 				name: 'Mal Jones',
 				url: '/profile',
 			},
 			{
-				pictureSource: '/resources/mallard.jpg',
+				imgSrc: '/resources/mallard.jpg',
 				name: 'Mal Jones',
 				url: '/profile',
 			},
 			{
-				pictureSource: '/resources/mallard.jpg',
+				imgSrc: '/resources/mallard.jpg',
 				name: 'Mal Jones',
 				url: '/profile',
 			},

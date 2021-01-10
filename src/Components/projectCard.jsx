@@ -3,6 +3,7 @@ import React from 'react';
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import IconTiles from './iconTiles.jsx';
 import ListItem from './listItem.jsx';
+import OrderedList from './orderedList';
 /**
  * A card to showcase a project.
  *
@@ -28,24 +29,10 @@ export default function ProjectCard({ project }) {
 					<div className="d-flex flex-column container-fluid rmv-gutters-container">
 						<div className="row rmv-gutters">
 							<div className="col-4 list-top-padding">
-								<div className="d-flex flex-column">
-									<h4 className="advent-font text-center">Milestones</h4>
-									<ol className="advent-font">
-										{project.milestones.map((elem, index) => (
-											<li key={`${project.id}-milestone-${index}`}>{elem}</li>
-										))}
-									</ol>
-								</div>
+								<OrderedList title="Milestones" listItems={project.milestones} />
 							</div>
 							<div className="col-4 list-top-padding">
-								<div className="d-flex flex-column">
-									<h4 className="advent-font text-center">Daily Tasks</h4>
-									<ol className="advent-font">
-										{project.tasks.map((elem, index) => (
-											<li key={`${project.id}-tasks-${index}`}>{elem}</li>
-										))}
-									</ol>
-								</div>
+								<OrderedList title="Daily Tasks" listItems={project.tasks} />
 							</div>
 							<div className="col-4 list-top-padding">
 								<div className="d-flex flex-column full-height full-width align-items-center">
