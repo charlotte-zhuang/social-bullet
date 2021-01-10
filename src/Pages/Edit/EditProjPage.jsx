@@ -1,8 +1,10 @@
+import "../../CSS/inputs.css";
 import React, { Component } from "react";
 import Template from "../../Components/template.jsx";
 import Submenu from "../../Components/submenu.jsx";
 import TableOfContents from "../../Components/tableOfContents";
 import Tag from "../../Components/tag";
+import DatePick from "../../Components/datePick";
 
 class EditProjPage extends Component {
   constructor(props) {
@@ -11,8 +13,8 @@ class EditProjPage extends Component {
       name: "Coding",
       blurb: "hahaha",
       tags: ["dead", "insomnia"],
-			start: new Date("2020-12-17T03:24:00"),
-			finish: new Date("2021-01-10T12:24:00"),
+      start: new Date("2020-12-17T03:24:00"),
+      finish: new Date("2021-01-10T12:24:00"),
     };
     this.state = {
       name: project.name,
@@ -24,14 +26,14 @@ class EditProjPage extends Component {
     };
   }
 
-  removeInterest = (val) => {
+  removeTag = (val) => {
     const tags = this.state.tags.filter((elem) => elem !== val);
     this.setState({ tags });
   };
 
   addTag = (e) => {
     const input = this.state.inputTag.trim().toLowerCase();
-    if (input.length > 0) {
+    if (input.length > 0 && !this.state.tags.includes(input)) {
       const tags = [...this.state.tags, input];
       this.setState({ tags, inputTag: "" });
     }
@@ -50,6 +52,14 @@ class EditProjPage extends Component {
     this.setState({ blurb: e.target.value });
   };
 
+  handleStartChange = (start) => {
+    this.setState({ start: start });
+  };
+
+  handleFinishChange = (finish) => {
+    this.setState({ finish: finish });
+  };
+
   handleSubmit = async () => {
     console.log("Update project");
   };
@@ -57,7 +67,7 @@ class EditProjPage extends Component {
   notNullString = (str) => (str === null ? "" : str);
 
   render() {
-    const { name, blurb, tags, inputTag } = this.state;
+    const { name, blurb, tags, inputTag, start, finish } = this.state;
     const {
       notNullString,
       addTag,
@@ -65,6 +75,8 @@ class EditProjPage extends Component {
       handleInputTagChange,
       handleNameChange,
       handleBlurbChange,
+      handleStartChange,
+      handleFinishChange,
       handleSubmit,
     } = this;
 
@@ -111,14 +123,14 @@ class EditProjPage extends Component {
         isRoute: true,
         title: "Update",
         selected: true,
-        url: "/profile",
+        url: `/project/${this.props.id}`,
         clicked: handleSubmit,
       },
       {
         isRoute: true,
         title: "Cancel",
         selected: false,
-        url: "/profile",
+        url: `/project/${this.props.id}`,
       },
     ];
 
@@ -128,15 +140,21 @@ class EditProjPage extends Component {
         bodyLeft={<TableOfContents contents={contents} />}
         bodyCenter={
           <form className='m-4'>
-            <h2 id='project-info'>Project Info</h2>
+            <h2 className='form-section-heading' id='project-info'>
+              Project Info
+            </h2>
             <div className='form-row m-3'>
               <div className='form-group'>
-                <label id='input-name' htmlFor='input-name-field'>
+                <label
+                  className='form-label'
+                  id='input-name'
+                  htmlFor='input-name-field'
+                >
                   Project name
                 </label>
                 <input
                   type='text'
-                  className='form-control'
+                  className='form-control form-txt-input'
                   id='input-name-field'
                   placeholder='Project name'
                   onChange={handleNameChange}
@@ -151,20 +169,27 @@ class EditProjPage extends Component {
                   className='custom-file-input'
                   id='input-picture'
                 />
-                <label className='custom-file-label' htmlFor='input-picture'>
+                <label
+                  className='custom-file-label form-label'
+                  htmlFor='input-picture'
+                >
                   Upload new project icon
                 </label>
               </div>
             </div>
             <div className='form-row m-3'>
               <div className='form-group full-width'>
-                <label id='input-blurb' htmlFor='input-blurb-field'>
+                <label
+                  className='form-label'
+                  id='input-blurb'
+                  htmlFor='input-blurb-field'
+                >
                   Blurb
                 </label>
                 <textarea
                   name='blurb'
                   rows='5'
-                  className='form-control'
+                  className='form-control form-text-input'
                   id='input-blurb-field'
                   placeholder='Blurb...'
                   style={{ resize: "none" }}
@@ -174,7 +199,11 @@ class EditProjPage extends Component {
               </div>
             </div>
             <div className='form-row m-3'>
-              <label id='input-tags' htmlFor='input-tags-field'>
+              <label
+                className='form-label'
+                id='input-tags'
+                htmlFor='input-tags-field'
+              >
                 Interests
               </label>
             </div>
@@ -183,7 +212,7 @@ class EditProjPage extends Component {
                 <div className='form-group'>
                   <input
                     type='text'
-                    className='form-control'
+                    className='form-control form-txt-input'
                     id='input-tags-field'
                     placeholder='New tag'
                     value={inputTag}
@@ -193,7 +222,7 @@ class EditProjPage extends Component {
               </div>
               <div className='col-auto'>
                 <button
-                  className='btn btn-secondary mb-1'
+                  className='form-btn secondary mb-1'
                   htmlFor='input-tag-field'
                   onClick={addTag}
                 >
@@ -201,21 +230,48 @@ class EditProjPage extends Component {
                 </button>
               </div>
             </div>
-            {tags.length > 0 ? (
-              <div className='form-row'>
-                <span>Click on a tag to remove</span>
+            <div className='m-4'>
+              {tags.length > 0 ? (
+                <div className='form-row'>
+                  <span>Click on a tag to remove</span>
+                </div>
+              ) : (
+                <></>
+              )}
+              <div className='form-row d-flex flex-wrap'>
+                {tags.map((elem, index) => (
+                  <Tag
+                    key={`project-tag-${index}`}
+                    title={elem}
+                    onClick={() => removeTag(elem)}
+                  />
+                ))}
               </div>
-            ) : (
-              <></>
-            )}
-            <div className='form-row d-flex flex-wrap'>
-              {tags.map((elem, index) => (
-                <Tag
-                  key={`project-tag-${index}`}
-                  title={elem}
-                  onClick={() => removeTag(elem)}
+            </div>
+            <h2 id='time-header' className='form-section-heading'>
+              Time
+            </h2>
+            <div id='start-end-time' className='form-row justify-content-center m-3'>
+              <div className='col-4'>
+                <label className='form-label m-2' htmlFor='start-date-picker'>
+                  Start
+                </label>
+                <DatePick
+                  id='start-date-picker'
+                  selectedDate={start}
+                  handleDateChange={handleStartChange}
                 />
-              ))}
+              </div>
+              <div className='col-4'>
+                <label className='form-label m-2' htmlFor='finish-date-picker'>
+                  Finish
+                </label>
+                <DatePick
+                  id='finish-date-picker'
+                  selectedDate={finish}
+                  handleDateChange={handleFinishChange}
+                />
+              </div>
             </div>
           </form>
         }
