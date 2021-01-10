@@ -1,6 +1,5 @@
-import '../CSS/tableOfContents.css';
-import React from 'react';
-import '../CSS/listView.css';
+import "../CSS/tableOfContents.css";
+import React from "react";
 
 /**
  * A table of contents with hierarchy and links to jump on the page.

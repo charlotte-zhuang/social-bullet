@@ -235,11 +235,7 @@ export default class User {
     return this.updateModel(model);
   }
   async removeFriend(username) {
-    this.friends.map((friend, idx) => {
-      if (friend.localeCompare(username)) {
-        this.friends.splice(idx, 1);
-      }
-    });
+    this.friends.filter((friend) => friend !== username);
     const model = await this.instance();
     model.friends = [...this.friends];
     return this.updateModel(model);
