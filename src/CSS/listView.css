@@ -48,3 +48,7 @@
 .panel-text:hover {
     color: var(--teal) !important;
 }
+
+h4.panel-text:hover .advent-font i {
+    color: var(--teal);
+}

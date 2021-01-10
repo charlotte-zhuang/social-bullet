@@ -18,21 +18,21 @@ function ProfilePanel({ user, isCur }) {
 					''
 				)}
 				<div className="icon-card-container">
-					<IconCard icon="user-circle" imgSrc={user.imgSrc} icon="user-circle" size="lg" text={user.name} url={user.url} />
+					<IconCard icon="user-circle" imgSrc={user.imgSrc} size="lg" text={user.name} url={user.url} />
 				</div>
 			</div>
 			<PanelSection title="Bio" body={<p className="advent-font bio-text p-rmv-margin">{user.bio}</p>} indent />
 			<PanelSection
 				title="Interests"
 				body={
-					<div class="d-flex flex-wrap align-items-center">
+					<div className="d-flex flex-wrap align-items-center">
 						{user.interests.map((interest, key) => (
 							<Tag key={key} title={interest} />
 						))}
 					</div>
 				}
 			/>
-			<PanelSection title="Friends" body={<IconTiles arr={user.friends} size="sm" />} />
+			<PanelSection title="Friends" body={<IconTiles icon="user-circle" arr={user.friends} size="sm" />} />
 		</div>
 	);
 }
