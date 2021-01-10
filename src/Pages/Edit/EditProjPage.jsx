@@ -9,6 +9,7 @@ import DatePick from "../../Components/datePick";
 class EditProjPage extends Component {
   constructor(props) {
     super(props);
+
     const project = {
       name: "Coding",
       blurb: "hahaha",
@@ -16,6 +17,7 @@ class EditProjPage extends Component {
       start: new Date("2020-12-17T03:24:00"),
       finish: new Date("2021-01-10T12:24:00"),
     };
+
     this.state = {
       name: project.name,
       blurb: project.description,
@@ -251,7 +253,10 @@ class EditProjPage extends Component {
             <h2 id='time-header' className='form-section-heading'>
               Time
             </h2>
-            <div id='start-end-time' className='form-row justify-content-center m-3'>
+            <div
+              id='start-end-time'
+              className='form-row justify-content-center m-3'
+            >
               <div className='col-4'>
                 <label className='form-label m-2' htmlFor='start-date-picker'>
                   Start
