@@ -38,7 +38,7 @@ function HomeProjsPage() {
 
   return (
     <Template
-      activePage='home'
+      activePage="home"
       bodyLeft={<>Your Day</>}
       bodyCenter={
         <ProjectCard
