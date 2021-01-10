@@ -1,6 +1,6 @@
 type User
   @model
-  @auth(rules: [{ allow: owner }])
+  @auth(rules: [{ allow: owner, operations: [read, create, delete, update] }])
   @key(name: "byUsername", fields: ["username"], queryField: "userByUsername") {
   id: ID!
   username: String!
