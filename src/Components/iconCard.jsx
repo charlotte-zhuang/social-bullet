@@ -15,9 +15,8 @@ export default function IconCard({ imgSrc, size, alt = "", text, url }) {
   return (
     <Link className={`iconCard-${size} normal-text-link`} to={url}>
       <div className='d-flex flex-column justify-content-center'>
-        {" "}
         <img src={imgSrc} alt={alt} />
-        <h4 className='advent-font'>{text}</h4>
+        <h4 className='advent-font full-width text-center'>{text}</h4>
       </div>
     </Link>
   );

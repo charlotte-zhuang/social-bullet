@@ -1,9 +1,8 @@
-import "../CSS/projectCard.css";
-import React from "react";
-import ProgressBar from "react-bootstrap/ProgressBar";
-import IconTiles from "./iconTiles";
-import { Link } from "react-router-dom";
-
+import '../CSS/project.css';
+import React from 'react';
+import ProgressBar from 'react-bootstrap/ProgressBar';
+import IconTiles from './iconTiles.jsx';
+import ListItem from './listItem.jsx';
 /**
  * A card to showcase a project.
  *
@@ -11,42 +10,73 @@ import { Link } from "react-router-dom";
  * @param {Object} props.project
  */
 export default function ProjectCard({ project }) {
-  const completion =
-    (100 * (new Date() - project.start)) / (project.end - project.start);
-
-  return (
-    <div className='d-flex flex-column full-width projectCard'>
-      <Link className='d-flex' to={project.url}>
-        <img src={project.imgSrc} className='circle-crop-md m-2' alt='' />
-        <h3 className='align-self-center m-2'>{project.name}</h3>
-      </Link>
-      <p className='text-center m-2'>{project.text}</p>
-      <div className='d-flex flex-row justify-content-around m-2'>
-        <div className='d-flex flex-column'>
-          <h4>Milestones</h4>
-          <ol>
-            {project.milestones.map((elem, index) => (
-              <li key={`${project.id}-milestone-${index}`}>{elem}</li>
-            ))}
-          </ol>
-        </div>
-        <div className='d-flex flex-column'>
-          <h4>Daily Tasks</h4>
-          <ol>
-            {project.tasks.map((elem, index) => (
-              <li key={`${project.id}-tasks-${index}`}>{elem}</li>
-            ))}
-          </ol>
-        </div>
-      </div>
-      <div className='d-flex justify-content-between'>
-        <span>{project.start.toDateString()}</span>
-        <span>Progress</span>
-        <span>{project.end.toDateString()}</span>
-      </div>
-      <ProgressBar now={completion} />
-      <h4 className='m-2'>Members</h4>
-      <IconTiles arr={project.members} size='sm' />
-    </div>
-  );
+	return (
+		<div className="container-fluid project-card">
+			<div className="d-flex flex-column">
+				<div className="d-flex flex-row">
+					<div className="d-flex flex-column full-height max-flex-col align-items-start">
+						<div className="d-flex justify-content-between align-items-top full-width">
+							<ListItem url={project.url} imgSrc={project.imgSrc} text={project.name} size="md" />
+							<div></div>
+							{/* to space out the list item correctly */}
+						</div>
+						<div className="rank-text advent-font">
+							{project.status === 'active' ? 'Current' : 'Final'} Rank: <span className="rank-text-i">{project.rank}</span>
+						</div>
+						<p className="short-descr advent-font">{project.shortDescr.length <= 300 ? project.shortDescr : project.shortDescr.substring(0, 300) + '...'}</p>
+					</div>
+					<div className="d-flex flex-column container-fluid rmv-gutters-container">
+						<div className="row rmv-gutters">
+							<div className="col-4 list-top-padding">
+								<div className="d-flex flex-column">
+									<h4 className="advent-font text-center">Milestones</h4>
+									<ol className="advent-font">
+										{project.milestones.map((elem, index) => (
+											<li key={`${project.id}-milestone-${index}`}>{elem}</li>
+										))}
+									</ol>
+								</div>
+							</div>
+							<div className="col-4 list-top-padding">
+								<div className="d-flex flex-column">
+									<h4 className="advent-font text-center">Daily Tasks</h4>
+									<ol className="advent-font">
+										{project.tasks.map((elem, index) => (
+											<li key={`${project.id}-tasks-${index}`}>{elem}</li>
+										))}
+									</ol>
+								</div>
+							</div>
+							<div className="col-4 list-top-padding">
+								<div className="d-flex flex-column full-height full-width align-items-center">
+									<h4 className="advent-font text-center">Members</h4>
+									<IconTiles arr={project.members} size="sm" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div className="d-flex flex-row justify-content-between small-text-i advent-font">
+					<span>
+						{project.start.toLocaleString('default', {
+							month: 'short',
+							day: 'numeric',
+							year: 'numeric',
+						})}
+					</span>
+					<span>Progress</span>
+					<span>
+						{project.status === 'active'
+							? project.end.toLocaleString('default', {
+									month: 'short',
+									day: 'numeric',
+									year: 'numeric',
+							  })
+							: 'Ended'}
+					</span>
+				</div>
+				<ProgressBar now={project.progress} />
+			</div>
+		</div>
+	);
 }
