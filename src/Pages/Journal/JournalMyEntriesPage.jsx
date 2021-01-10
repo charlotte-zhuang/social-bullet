@@ -1,6 +1,7 @@
 import Template from '../../Components/template.jsx';
 import Submenu from '../../Components/submenu.jsx';
 import MainList from '../../Components/mainList.jsx';
+import MyEntryPanel from '../../Components/myEntryPanel.jsx';
 
 function JournalMyEntriesPage() {
 	const menuItems = [
@@ -213,7 +214,7 @@ function JournalMyEntriesPage() {
 		},
 	];
 
-	return <Template activePage="journal" bodyLeft={<>Calendar</>} bodyCenter={<MainList type="entry" listItems={entries} />} bodyRight={<Submenu menuItems={menuItems} />} />;
+	return <Template activePage="journal" bodyLeft={<MyEntryPanel/>} bodyCenter={<MainList type="entry" listItems={entries} />} bodyRight={<Submenu menuItems={menuItems} />} />;
 }
 
 export default JournalMyEntriesPage;

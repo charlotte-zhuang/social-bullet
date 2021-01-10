@@ -1,4 +1,3 @@
-import '../CSS/listView.css';
 import ListView from './listView';
 import PanelBtn from './panelBtn';
 

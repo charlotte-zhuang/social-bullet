@@ -1,3 +1,8 @@
+:root{
+  --sm: 60px;
+  --md: 100px;
+  --lg: 220px;
+}
 .iconCard-sm img,
 .iconCard-md img,
 .iconCard-lg img {
@@ -6,18 +11,18 @@
 }
 
 .iconCard-sm img {
-  height: 60px;
-  width: 60px;
+  height: var(--sm);
+  width: var(--sm);
 }
 
 .iconCard-md img {
-  height: 100px;
-  width: 100px;
+  height: var(--md);
+  width: var(--md);
 }
 
 .iconCard-lg img {
-  height: 240px;
-  width: 240px;
+  height: var(--lg);
+  width: var(--lg);
 }
 
 .iconCard-sm h4,
@@ -45,11 +50,11 @@
 }
 
 .iconCard-md div {
-  width: 100px;
+  width: var(--md);
   margin: 8px;
 }
 
 .iconCard-lg div {
-  width: 240px;
+  width: var(--lg);
   margin: 10px;
 }
