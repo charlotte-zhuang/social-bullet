@@ -27,6 +27,14 @@
     width: 100%;
 }
 
-.item-padding{
+.item-padding {
     padding-bottom: 2em;
+}
+
+.panel-text {
+    color: var(--dark-teal)
+}
+
+.panel-text:hover {
+    color: var(--teal)
 }

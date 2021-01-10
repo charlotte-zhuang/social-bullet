@@ -4,7 +4,7 @@ div.project-card {
   border-radius: 15px;
   box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25);
   padding: 10px 25px 16px;
-  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .max-flex-col{

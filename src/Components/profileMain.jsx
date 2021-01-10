@@ -5,6 +5,7 @@ import MainList from './mainList';
 function ProfileMain({ projects, entries }) {
 	const activeProjs = projects.filter((project) => project.status === 'active');
 	const completedProjs = projects.filter((project) => project.status === 'complete');
+
 	return (
 		<div className="d-flex flex-column align-items-start full-width">
 			<MainSection title="Active Projects" body={<MainTiles type="project" tileItems={activeProjs} />} />
