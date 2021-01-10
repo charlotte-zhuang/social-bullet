@@ -10,7 +10,6 @@ export default class User {
   static MOST_RECENT = "most recent";
 
   constructor(usernameInput, emailInput, finishAuthenticate) {
-    //let resolveUserExists = Promise.resolve(userExists(usernameInput));
     userExists(usernameInput).then((value) => {
       console.log(value);
       if (!value) {
@@ -182,7 +181,12 @@ export default class User {
     return this.updateModel(model);
   }
 
-  async addJournalEntry(input) {
+  async addJournalEntry(body) {
+    input = {
+      body,
+      createdAt: Date.now(),
+      updatedAt: Date.now(),
+    };
     this.journalData.push(input);
     const model = await this.instance();
     model.journal = [...this.journal];
@@ -239,5 +243,14 @@ export default class User {
     const model = await this.instance();
     model.friends = [...this.friends];
     return this.updateModel(model);
+  }
+
+  journalEntryFeed() {
+    let feed = this.journal;
+    for (var i = 0; i < this.friends.length; i++) {
+      feed.concat(friends[i].journal);
+    }
+
+    feed.sort((a, b) => (a.updatedAt > b.updatedAt ? 1 : -1));
   }
 }

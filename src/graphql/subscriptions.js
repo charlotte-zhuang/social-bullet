@@ -12,16 +12,18 @@ export const onCreateUser = /* GraphQL */ `
       imageFilePath
       description
       journal {
-        description
-        filePath
+        body
+        createdAt
+        updatedAt
       }
       projects {
         id
         name
         imageFilePath
         journal {
-          description
-          filePath
+          body
+          createdAt
+          updatedAt
         }
         members
         tags
@@ -48,16 +50,18 @@ export const onUpdateUser = /* GraphQL */ `
       imageFilePath
       description
       journal {
-        description
-        filePath
+        body
+        createdAt
+        updatedAt
       }
       projects {
         id
         name
         imageFilePath
         journal {
-          description
-          filePath
+          body
+          createdAt
+          updatedAt
         }
         members
         tags
@@ -84,16 +88,18 @@ export const onDeleteUser = /* GraphQL */ `
       imageFilePath
       description
       journal {
-        description
-        filePath
+        body
+        createdAt
+        updatedAt
       }
       projects {
         id
         name
         imageFilePath
         journal {
-          description
-          filePath
+          body
+          createdAt
+          updatedAt
         }
         members
         tags
