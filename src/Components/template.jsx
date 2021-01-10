@@ -1,5 +1,4 @@
 import '../CSS/template.css';
-// import { AmplifySignOut } from '@aws-amplify/ui-react';
 import NavBtn from './navBtn.jsx';
 
 /**
