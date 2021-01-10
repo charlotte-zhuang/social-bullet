@@ -4,70 +4,22 @@ import Submenu from "../../Components/submenu.jsx";
 import TableOfContents from "../../Components/tableOfContents";
 import Tag from "../../Components/tag";
 
-const contents = [
-  {
-    text: "Personal Info",
-    indent: 0,
-    id: "personal-info",
-  },
-  {
-    text: "Name",
-    indent: 1,
-    id: "input-name",
-  },
-  {
-    text: "Picture",
-    indent: 1,
-    id: "input-picture",
-  },
-  {
-    text: "Bio",
-    indent: 1,
-    id: "input-bio",
-  },
-  {
-    text: "Interests",
-    indent: 1,
-    id: "input-interests",
-  },
-];
-
-const menuItems = [
-  {
-    isRoute: true,
-    title: "Update",
-		selected: true,
-		url: "/profile",
-    clicked: () => {
-			// todo make update
-      console.log("clicked Update");
-    },
-  },
-  {
-    isRoute: true,
-    title: "Cancel",
-    selected: false,
-    url: "/profile",
-  },
-];
-
 class EditProfilePage extends Component {
   constructor(props) {
-    super(props);
+		super(props);
     this.state = {
-      name: props.user.name,
-      bio: props.user.bio,
+      name: props.user.firstName,
+      lastName: props.user.lastName,
+      bio: props.user.description,
       interests: props.user.interests,
       inputInterest: "",
     };
   }
 
   removeInterest = (val) => {
-    const interests = [...this.state.interests];
-    const index = interests.indexOf(val);
-    interests.splice(index, 1);
+    const interests = this.state.interests.filter((elem) => elem !== val);
     this.setState({ interests });
-  };
+  }
 
   addInterest = (e) => {
     const input = this.state.inputInterest.trim().toLowerCase();
@@ -76,32 +28,93 @@ class EditProfilePage extends Component {
       this.setState({ interests, inputInterest: "" });
     }
     e.preventDefault();
-  };
+  }
 
   handleInputInterestChange = (e) => {
     this.setState({ inputInterest: e.target.value });
-  };
+  }
 
   handleNameChange = (e) => {
     this.setState({ name: e.target.value });
-  };
+  }
+
+  handleLastNameChange = (e) => {
+    this.setState({ lastName: e.target.value });
+  }
 
   handleBioChange = (e) => {
     this.setState({ bio: e.target.value });
-  };
+	}
+	
+	handleSubmit = async () => {
+		const {user} = this.props;
+		const model = await user.instance();
+		model.firstName = this.state.name;
+		model.lastName = this.state.lastName;
+		model.description = this.state.bio;
+		model.interests = this.state.interests;
+		await user.updateModel(model);
+		this.props.setUser(user);
+	}
 
   notNullString = (str) => (str === null ? "" : str);
 
   render() {
-    const { name, bio, interests, inputInterest } = this.state;
+    const { name, lastName, bio, interests, inputInterest } = this.state;
     const {
       notNullString,
       addInterest,
       removeInterest,
       handleInputInterestChange,
       handleNameChange,
-      handleBioChange,
-    } = this;
+      handleLastNameChange,
+			handleBioChange,
+			handleSubmit
+		} = this;
+		
+		const contents = [
+			{
+				text: "Personal Info",
+				indent: 0,
+				id: "personal-info",
+			},
+			{
+				text: "Name",
+				indent: 1,
+				id: "input-name",
+			},
+			{
+				text: "Picture",
+				indent: 1,
+				id: "input-picture",
+			},
+			{
+				text: "Bio",
+				indent: 1,
+				id: "input-bio",
+			},
+			{
+				text: "Interests",
+				indent: 1,
+				id: "input-interests",
+			},
+		];
+		
+		const menuItems = [
+			{
+				isRoute: true,
+				title: "Update",
+				selected: true,
+				url: "/profile",
+				clicked: handleSubmit,
+			},
+			{
+				isRoute: true,
+				title: "Cancel",
+				selected: false,
+				url: "/profile",
+			},
+		];
 
     return (
       <Template
@@ -115,14 +128,24 @@ class EditProfilePage extends Component {
                 <label id='input-name' htmlFor='input-name-field'>
                   Name
                 </label>
-                <input
-                  type='text'
-                  className='form-control'
-                  id='input-name-field'
-                  placeholder='Name'
-                  onChange={handleNameChange}
-                  value={notNullString(name)}
-                />
+                <div className='col-8'>
+                  <input
+                    type='text'
+                    className='form-control'
+                    id='input-name-field'
+                    placeholder='First name'
+                    onChange={handleNameChange}
+                    value={notNullString(name)}
+                  />
+                  <input
+                    type='text'
+                    className='form-control'
+                    id='input-lastname-field'
+                    placeholder='Last name'
+                    onChange={handleLastNameChange}
+                    value={notNullString(lastName)}
+                  />
+                </div>
               </div>
             </div>
             <div className='form-row m-3'>

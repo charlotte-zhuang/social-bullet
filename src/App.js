@@ -58,7 +58,7 @@ function App() {
   //execute when user state changes
   useEffect(() => {
     console.log("User refresh");
-  }, [user]);
+	}, [user]);
 
   const authenticate = async () => {
     let user = await Auth.currentAuthenticatedUser();
@@ -74,7 +74,7 @@ function App() {
   // };
   //      <a class="panel-btn mt-auto" onClick={() => click()}>
   //button
-  //</a>
+	//</a>
   return (
     <>
       <Router>
@@ -95,7 +95,10 @@ function App() {
           <Route path="/login" component={LoginPage} />
           <Route path="/profile" component={ProfilePage} />
           <Route path="/project" component={ProjPage} />
-          <Route path="/edit-profile" component={EditProfilePage} />
+          <Route
+            path='/edit-profile'
+            component={(props) => <EditProfilePage user={user} setUser={setUser} {...props} />}
+          />
           <Route path="/edit-project" component={EditProjPage} />
           <Route path="/edit-entry" component={EditEntryPage} />
           <Route component={NullPage} />
