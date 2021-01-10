@@ -35,7 +35,6 @@ export const getUser = /* GraphQL */ `
       friends
       createdAt
       updatedAt
-      owner
     }
   }
 `;
@@ -73,7 +72,6 @@ export const listUsers = /* GraphQL */ `
         friends
         createdAt
         updatedAt
-        owner
       }
       nextToken
     }
@@ -121,7 +119,6 @@ export const userByUsername = /* GraphQL */ `
         friends
         createdAt
         updatedAt
-        owner
       }
       nextToken
     }

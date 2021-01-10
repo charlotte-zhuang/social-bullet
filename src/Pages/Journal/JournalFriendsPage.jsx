@@ -1,35 +1,35 @@
-import Template from '../../Components/template.jsx';
-import Submenu from '../../Components/submenu.jsx';
-import FriendPanel from '../../Components/friendPanel.jsx';
-import MainTiles from '../../Components/mainTiles.jsx';
+import Template from "../../Components/template.jsx";
+import Submenu from "../../Components/submenu.jsx";
+import FriendPanel from "../../Components/friendPanel.jsx";
+import MainTiles from "../../Components/mainTiles.jsx";
 
-function JournalFriendsPage() {
-	const menuItems = [
-		{
-			isRoute: true,
-			title: 'Profile',
-			selected: false,
-			url: '/journal-profile',
-		},
-		{
-			isRoute: true,
-			title: 'My Entries',
-			selected: false,
-			url: '/journal-entries',
-		},
-		{
-			isRoute: true,
-			title: 'My Projects',
-			selected: false,
-			url: '/journal-projects',
-		},
-		{
-			isRoute: true,
-			title: 'Friends',
-			selected: true,
-			url: '/journal-friends',
-		},
-	];
+function JournalFriendsPage(props) {
+  const menuItems = [
+    {
+      isRoute: true,
+      title: "Profile",
+      selected: false,
+      url: "/journal-profile",
+    },
+    {
+      isRoute: true,
+      title: "My Entries",
+      selected: false,
+      url: "/journal-entries",
+    },
+    {
+      isRoute: true,
+      title: "My Projects",
+      selected: false,
+      url: "/journal-projects",
+    },
+    {
+      isRoute: true,
+      title: "Friends",
+      selected: true,
+      url: "/journal-friends",
+    },
+  ];
 
 	const friends = [
 		{
@@ -818,9 +818,14 @@ function JournalFriendsPage() {
 		},
 	];
 
-	return (
-		<Template activePage="journal" bodyLeft={<FriendPanel friends={friends} />} bodyCenter={<MainTiles type="friend" tileItems={friends} vScroll />} bodyRight={<Submenu menuItems={menuItems} />} />
-	);
+  return (
+    <Template
+      activePage="journal"
+      bodyLeft={<FriendPanel friends={friends} />}
+      bodyCenter={<MainTiles type="friend" tileItems={friends} vScroll />}
+      bodyRight={<Submenu menuItems={menuItems} />}
+    />
+  );
 }
 
 export default JournalFriendsPage;
