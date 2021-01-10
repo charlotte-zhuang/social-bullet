@@ -1,6 +1,4 @@
 .body-left {
-  max-width: 300px;
-  min-width: 200px;
   width: 18%;
   background: var(--light-yellow);
   background-size: 25px 25px;
@@ -10,20 +8,17 @@
 }
 
 .body-center {
-  max-width: 50em;
-  min-width: 35em;
   width: 60%;
   overflow: scroll;
 }
 
-::-webkit-scrollbar {
-  display: none;
-}
 
 .body-right {
-  max-width: 200px;
-  min-width: 100px;
   width: 15%;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .page-top-padding {
