@@ -15,25 +15,27 @@ function ProjectTile({ project }) {
 				{project.status === 'active' ? 'Current' : 'Final'} Rank: <span className="rank-text-i">{project.rank}</span>
 			</div>
 			<p className="short-descr advent-font">{project.shortDescr.length <= 100 ? project.shortDescr : project.shortDescr.substring(0, 100) + '...'}</p>
-			<div className="d-flex justify-content-between small-text-i advent-font">
-				<span>
-					{project.start.toLocaleString('default', {
-						month: 'short',
-						day: 'numeric',
-						year: 'numeric',
-					})}
-				</span>
-				<span>
-					{project.status === 'active'
-						? project.end.toLocaleString('default', {
-								month: 'short',
-								day: 'numeric',
-								year: 'numeric',
-						  })
-						: 'Ended'}
-				</span>
+			<div classsName="mt-auto">
+				<div className="d-flex justify-content-between small-text-i advent-font">
+					<span>
+						{project.start.toLocaleString('default', {
+							month: 'short',
+							day: 'numeric',
+							year: 'numeric',
+						})}
+					</span>
+					<span>
+						{project.status === 'active'
+							? project.end.toLocaleString('default', {
+									month: 'short',
+									day: 'numeric',
+									year: 'numeric',
+							  })
+							: 'Ended'}
+					</span>
+				</div>
+				<ProgressBar className="mt-auto" now={project.progress} />
 			</div>
-			<ProgressBar className="mt-auto" now={project.progress} />
 		</div>
 	);
 }

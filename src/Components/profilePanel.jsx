@@ -11,7 +11,7 @@ function ProfilePanel({ user, isCur }) {
 		<div className="d-flex flex-column align-items-center full-height">
 			<div className="full-width prof-img-container">
 				{isCur ? (
-					<Link className="icon-btn mt-auto front-overlay full-width" to="/edit-entry">
+					<Link className="icon-btn mt-auto front-overlay full-width" to="/edit-profile">
 						<FontAwesomeIcon icon="pencil-alt" size="sm" />
 					</Link>
 				) : (

@@ -8,7 +8,7 @@ function MyProjMain({ projects }) {
 
 	return (
 		<div className="d-flex flex-column align-items-start full-width">
-			<MainSection title="My Entries" body={<MainList type="project" listItems={curProjs} />} />
+			<MainSection title="My Projects" body={<MainList type="project" listItems={curProjs} />} />
 			<MainSection title="Bucket List" body={<MainTiles type="project" tileItems={bucketProjs} />} />
 		</div>
 	);
