@@ -1,6 +1,6 @@
-import ListItem from '../Components/listItem';
+import ListItem from './listItem.jsx';
 import ProgressBar from 'react-bootstrap/ProgressBar';
-import '../CSS/projectCard.css';
+import '../CSS/project.css';
 import '../CSS/profileView.css';
 
 function ProjectTile({ project }) {
@@ -14,7 +14,7 @@ function ProjectTile({ project }) {
 			<div className="rank-text advent-font">
 				{project.status === 'active' ? 'Current' : 'Final'} Rank: <span className="rank-text-i">{project.rank}</span>
 			</div>
-			<p className="short-descr advent-font">{project.shortDescr.substring(0, 100)}...</p>
+			<p className="short-descr advent-font">{project.shortDescr.length <= 100 ? project.shortDescr : project.shortDescr.substring(0, 100) + '...'}</p>
 			<div className="d-flex justify-content-between small-text-i advent-font">
 				<span>
 					{project.start.toLocaleString('default', {

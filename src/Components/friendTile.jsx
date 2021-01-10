@@ -1,5 +1,5 @@
 import '../CSS/profileView.css';
-import '../CSS/projectCard.css';
+import '../CSS/project.css';
 import ListItem from './listItem';
 import IconTiles from './iconTiles';
 
