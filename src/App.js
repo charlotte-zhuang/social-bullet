@@ -60,7 +60,6 @@ function App() {
       let username = user.username;
       let email = user.attributes.email;
       let obj = new User(username, email, finishAuthenticate);
-      console.log("user object", obj.model);
     } catch (error) {
       console.log("Issue with authentication", error);
     }
@@ -68,6 +67,8 @@ function App() {
 
   const finishAuthenticate = (user) => {
     user.initialize();
+    console.log(user);
+    user.addJournalEntry("This is the body of my journal!!");
     setUser(user);
     console.log("initialized and set ", user);
   };

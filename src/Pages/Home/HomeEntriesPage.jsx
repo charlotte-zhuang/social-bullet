@@ -2,6 +2,7 @@ import Template from "../../Components/template.jsx";
 import Submenu from "../../Components/submenu.jsx";
 import FriendPanel from "../../Components/friendPanel.jsx";
 import MainList from "../../Components/mainList.jsx";
+import { attachEventProps } from "@aws-amplify/ui-react/lib-esm/react-component-lib/utils";
 
 function HomeEntriesPage(props) {
   const menuItems = [
@@ -255,11 +256,20 @@ function HomeEntriesPage(props) {
     },
   ];
 
+  const listItems =
+    props.user === null
+      ? []
+      : props.user.journalEntryFeed().map((entry) => {
+          return {
+            user: props.user,
+            entry,
+          };
+        });
   return (
     <Template
       activePage="home"
       bodyLeft={<FriendPanel friends={friends} />}
-      bodyCenter={<MainList type="entry" listItems={entries} />}
+      bodyCenter={<MainList type="entry" listItems={listItems} />}
       bodyRight={<Submenu menuItems={menuItems} />}
     />
   );
