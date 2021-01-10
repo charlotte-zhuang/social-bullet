@@ -3,9 +3,11 @@ import '../CSS/btns.css';
 
 function PanelBtn({ title, clicked }) {
 	return (
-		<a className="panel-btn mt-auto" onClick={() => clicked(console.log('clicked ' + { title }))}>
-			{title}
-		</a>
+		<div className="panel-btn-container mt-auto">
+			<a className="panel-btn" onClick={() => clicked(console.log('clicked ' + { title }))}>
+				{title}
+			</a>
+		</div>
 	);
 }
 

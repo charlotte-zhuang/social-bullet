@@ -19,9 +19,14 @@
 
 .advent-font-sm {
     font-size: 20px;
+    line-height: 27px;
     color: var(--dark-teal);
 }
 
 .full-width {
     width: 100%;
+}
+
+.item-padding{
+    padding-bottom: 2em;
 }
