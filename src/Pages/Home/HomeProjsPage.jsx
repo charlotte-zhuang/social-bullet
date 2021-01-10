@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-/** src/Pages/Home/HomeProjsPage.jsx **/
-=======
->>>>>>> c0f5d9e37ae35caf5051080ffe7b74e6ae9ab928
 import Template from "../../Components/template.jsx";
 import Submenu from "../../Components/submenu.jsx";
 import ProjectCard from "../../Components/projectCard";
@@ -42,11 +38,7 @@ function HomeProjsPage() {
 
   return (
     <Template
-<<<<<<< HEAD
       activePage="home"
-=======
-      activePage='home'
->>>>>>> c0f5d9e37ae35caf5051080ffe7b74e6ae9ab928
       bodyLeft={<>Your Day</>}
       bodyCenter={
         <ProjectCard
