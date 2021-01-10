@@ -1,4 +1,4 @@
-import { API, graphqlOperation } from "aws-amplify";
+import { API, graphqlOperation, selectInput } from "aws-amplify";
 
 import { updateUser, createUser } from "../graphql/mutations";
 import { userExists, findUser } from "./utility";
@@ -9,47 +9,80 @@ export default class User {
   static ALPHABETICAL = "alphabetical";
   static MOST_RECENT = "most recent";
 
-  constructor(usernameInput, emailInput) {
-    if (!userExists(usernameInput)) {
-      console.log("Username doesn't exist");
-      const userInput = {
-        id: uuid(),
-        username: usernameInput,
-        email: emailInput,
-        firstName: "",
-        lastName: "",
-        imageFilePath: "",
-        description: "",
-        journal: [],
-        projects: [],
-        interests: [],
-        friends: [],
-      };
-      API.graphql(graphqlOperation(createUser, { input: userInput })).then(() =>
-        console.log("New user has been created in database")
-      );
-    }
-    //load user info
-    findUser(usernameInput).then((model) => {
-      console.log(model);
-      this.idData = model.id;
-      this.usernameData = model.username;
-      this.emailData = model.email;
-      this.firstNameData = model.firstName;
-      this.lastNameData = model.lastName;
-      this.imageFilePathData = model.imageFilePath;
-      this.descriptionData = model.description;
-      this.journalData = model.journal;
-      this.projectsData = model.projects;
-      this.interestsData = model.interests;
-      this.friendsData = model.friends;
-      console.log("Loaded user info ", model);
+  constructor(usernameInput, emailInput, finishAuthenticate) {
+    //let resolveUserExists = Promise.resolve(userExists(usernameInput));
+    userExists(usernameInput).then((value) => {
+      console.log(value);
+      if (!value) {
+        console.log("Username doesn't exist");
+        const userInput = {
+          id: uuid(),
+          username: usernameInput,
+          email: emailInput,
+          firstName: "",
+          lastName: "",
+          imageFilePath: "",
+          description: "",
+          journal: [],
+          projects: [],
+          interests: [],
+          friends: [],
+        };
+        API.graphql(graphqlOperation(createUser, { input: userInput })).then(
+          (mod) => {
+            this.model = mod;
+            this.recentlyCreated = true;
+            finishAuthenticate(this);
+          }
+        );
+      } else {
+        findUser(usernameInput).then((mod) => {
+          this.model = mod;
+          this.recentlyCreated = false;
+          finishAuthenticate(this);
+        });
+      }
     });
   }
 
+  initialize() {
+    //load user info
+
+    if (this.recentlyCreated) {
+      this.idData = this.model.data.createUser.id;
+      this.usernameData = this.model.data.createUser.username;
+      this.emailData = this.model.data.createUser.email;
+      this.firstNameData = this.model.data.createUser.firstName;
+      this.lastNameData = this.model.data.createUser.lastName;
+      this.imageFilePathData = this.model.data.createUser.imageFilePath;
+      this.descriptionData = this.model.data.createUser.description;
+      this.journalData = this.model.data.createUser.journal;
+      this.projectsData = this.model.data.createUser.projects;
+      this.interestsData = this.model.data.createUser.interests;
+      this.friendsData = this.model.data.createUser.friends;
+    } else {
+      this.idData = this.model.id;
+      this.usernameData = this.model.username;
+      this.emailData = this.model.email;
+      this.firstNameData = this.model.firstName;
+      this.lastNameData = this.model.lastName;
+      this.imageFilePathData = this.model.imageFilePath;
+      this.descriptionData = this.model.description;
+      this.journalData = this.model.journal;
+      this.projectsData = this.model.projects;
+      this.interestsData = this.model.interests;
+      this.friendsData = this.model.friends;
+    }
+
+    console.log("Loaded user info ", this.model);
+    return this;
+  }
   //returns JSON object of user
   async instance() {
     return findUser(this.username);
+  }
+  get userModel() {
+    return this.model;
   }
   get id() {
     return this.idData;
