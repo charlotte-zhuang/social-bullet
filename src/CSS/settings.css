@@ -1,0 +1,13 @@
+.contr-panel {
+    padding: 10px;
+}
+
+.contr-tile {
+    height: auto;
+    padding: 15px;
+    width: 280px;
+}
+
+.expln-text {
+    color: var(--dark-teal);
+}
