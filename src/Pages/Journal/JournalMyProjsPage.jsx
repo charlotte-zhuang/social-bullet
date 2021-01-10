@@ -33,17 +33,14 @@ function JournalMyProjs() {
 
 	const testMembers = [
 		{
-			imgSrc: '/resources/mallard.jpg',
 			name: 'Donald',
 			url: '/user/donald',
 		},
 		{
-			imgSrc: '/resources/mallard.jpg',
 			name: 'Jerry',
 			url: '/user/jerry',
 		},
 		{
-			imgSrc: '/resources/mallard.jpg',
 			name: 'April',
 			url: '/user/panda',
 		},
@@ -51,7 +48,6 @@ function JournalMyProjs() {
 
 	const projects = [
 		{
-			imgSrc: '/resources/mallard.jpg',
 			rank: '2nd',
 			name: 'Yoga with Yogis',
 			status: 'bucket',
@@ -65,7 +61,6 @@ function JournalMyProjs() {
 			members: testMembers,
 		},
 		{
-			imgSrc: '/resources/mallard.jpg',
 			rank: '2nd',
 			name: 'Yoga with Yogis',
 			status: 'bucket',
@@ -79,7 +74,6 @@ function JournalMyProjs() {
 			members: testMembers,
 		},
 		{
-			imgSrc: '/resources/mallard.jpg',
 			rank: '2nd',
 			name: 'Yoga with Yogis',
 			status: 'bucket',
@@ -93,7 +87,6 @@ function JournalMyProjs() {
 			members: testMembers,
 		},
 		{
-			imgSrc: '/resources/mallard.jpg',
 			rank: '2nd',
 			name: 'Yoga with Yogis',
 			status: 'active',
@@ -108,7 +101,6 @@ function JournalMyProjs() {
 			members: testMembers,
 		},
 		{
-			imgSrc: '/resources/mallard.jpg',
 			rank: '2nd',
 			name: 'Yoga with Yogis',
 			status: 'active',
@@ -122,7 +114,6 @@ function JournalMyProjs() {
 			members: testMembers,
 		},
 		{
-			imgSrc: '/resources/mallard.jpg',
 			rank: '2nd',
 			name: 'Yoga with Yogis',
 			status: 'active',

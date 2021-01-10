@@ -60,7 +60,7 @@ function SettingsCreditsPage() {
 			name: 'Charlotte Zhuang',
 			major: 'Computer Science',
 			year: 2022,
-			imgSrc: '/resources/mallard.jpg',
+
 			url: '/profile',
 			bio: 'Contributor is Lorem ipsum dolor sit amet, consectetur adipiscing rem ipsum dolor sit amet, consectetur adipiscing. rem ipsum dolor sit ametrem ipsum dolor.',
 		},
@@ -68,13 +68,15 @@ function SettingsCreditsPage() {
 			name: 'Ethan Soo',
 			major: 'Computer Science',
 			year: 2022,
-			imgSrc: '/resources/mallard.jpg',
+
 			url: '/profile',
 			bio: 'Contributor is Lorem ipsum dolor sit amet, consectetur adipiscing rem ipsum dolor sit amet, consectetur adipiscing. rem ipsum dolor sit ametrem ipsum dolor.',
 		},
 	];
 
-	return <Template activePage="settings" bodyLeft={<ContrPanel contributors={contributors} />} bodyCenter={<CreditsMain contributors={contributors} />} bodyRight={<Submenu menuItems={menuItems} />} />;
+	return (
+		<Template activePage="settings" bodyLeft={<ContrPanel contributors={contributors} />} bodyCenter={<CreditsMain contributors={contributors} />} bodyRight={<Submenu menuItems={menuItems} />} />
+	);
 }
 
 export default SettingsCreditsPage;

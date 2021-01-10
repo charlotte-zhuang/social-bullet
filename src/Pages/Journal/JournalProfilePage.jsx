@@ -132,7 +132,7 @@ function JournalProfilePage() {
 							Added <i>January Cooking</i> Project <b>[at 7:00 am]</b>
 						</p>
 					),
-					imgSrc: '/resources/mallard.jpg',
+
 					url: '/project',
 				},
 				{
@@ -141,7 +141,7 @@ function JournalProfilePage() {
 							Completed Yoga from <i>2021 Fitness</i> Project <b>[at 7:28 am]</b>
 						</p>
 					),
-					imgSrc: '/resources/mallard.jpg',
+
 					url: '/project',
 				},
 				{
@@ -150,7 +150,7 @@ function JournalProfilePage() {
 							Challenged Friend 1 to <i>January Cooking</i> Project <b>[at 8:00 am]</b>
 						</p>
 					),
-					imgSrc: '/resources/mallard.jpg',
+
 					url: '/project',
 				},
 			],
@@ -168,7 +168,7 @@ function JournalProfilePage() {
 							Added <i>January Cooking</i> Project <b>[at 7:00 am]</b>
 						</p>
 					),
-					imgSrc: '/resources/mallard.jpg',
+
 					url: '/project',
 				},
 				{
@@ -177,7 +177,7 @@ function JournalProfilePage() {
 							Completed Yoga from <i>2021 Fitness</i> Project <b>[at 7:28 am]</b>
 						</p>
 					),
-					imgSrc: '/resources/mallard.jpg',
+
 					url: '/project',
 				},
 				{
@@ -186,7 +186,7 @@ function JournalProfilePage() {
 							Challenged Friend 1 to <i>January Cooking</i> Project <b>[at 8:00 am]</b>
 						</p>
 					),
-					imgSrc: '/resources/mallard.jpg',
+
 					url: '/project',
 				},
 			],
@@ -204,7 +204,7 @@ function JournalProfilePage() {
 							Added <i>January Cooking</i> Project <b>[at 7:00 am]</b>
 						</p>
 					),
-					imgSrc: '/resources/mallard.jpg',
+
 					url: '/project',
 				},
 				{
@@ -213,7 +213,7 @@ function JournalProfilePage() {
 							Completed Yoga from <i>2021 Fitness</i> Project <b>[at 7:28 am]</b>
 						</p>
 					),
-					imgSrc: '/resources/mallard.jpg',
+
 					url: '/project',
 				},
 				{
@@ -222,7 +222,7 @@ function JournalProfilePage() {
 							Challenged Friend 1 to <i>January Cooking</i> Project <b>[at 8:00 am]</b>
 						</p>
 					),
-					imgSrc: '/resources/mallard.jpg',
+
 					url: '/project',
 				},
 			],
@@ -240,7 +240,7 @@ function JournalProfilePage() {
 							Added <i>January Cooking</i> Project <b>[at 7:00 am]</b>
 						</p>
 					),
-					imgSrc: '/resources/mallard.jpg',
+
 					url: '/project',
 				},
 				{
@@ -249,7 +249,7 @@ function JournalProfilePage() {
 							Completed Yoga from <i>2021 Fitness</i> Project <b>[at 7:28 am]</b>
 						</p>
 					),
-					imgSrc: '/resources/mallard.jpg',
+
 					url: '/project',
 				},
 				{
@@ -258,7 +258,7 @@ function JournalProfilePage() {
 							Challenged Friend 1 to <i>January Cooking</i> Project <b>[at 8:00 am]</b>
 						</p>
 					),
-					imgSrc: '/resources/mallard.jpg',
+
 					url: '/project',
 				},
 			],
@@ -276,7 +276,7 @@ function JournalProfilePage() {
 							Added <i>January Cooking</i> Project <b>[at 7:00 am]</b>
 						</p>
 					),
-					imgSrc: '/resources/mallard.jpg',
+
 					url: '/project',
 				},
 				{
@@ -285,7 +285,7 @@ function JournalProfilePage() {
 							Completed Yoga from <i>2021 Fitness</i> Project <b>[at 7:28 am]</b>
 						</p>
 					),
-					imgSrc: '/resources/mallard.jpg',
+
 					url: '/project',
 				},
 				{
@@ -294,7 +294,7 @@ function JournalProfilePage() {
 							Challenged Friend 1 to <i>January Cooking</i> Project <b>[at 8:00 am]</b>
 						</p>
 					),
-					imgSrc: '/resources/mallard.jpg',
+
 					url: '/project',
 				},
 			],
@@ -302,7 +302,6 @@ function JournalProfilePage() {
 	];
 
 	const user = {
-		imgSrc: '/resources/mallard.jpg',
 		name: 'Jane Dole',
 		url: '/profile',
 		bio:
@@ -310,32 +309,26 @@ function JournalProfilePage() {
 		interests: ['Cooking', 'Fitness'],
 		friends: [
 			{
-				imgSrc: '/resources/mallard.jpg',
 				name: 'Mal Jones',
 				url: '/profile',
 			},
 			{
-				imgSrc: '/resources/mallard.jpg',
 				name: 'Mal Jones',
 				url: '/profile',
 			},
 			{
-				imgSrc: '/resources/mallard.jpg',
 				name: 'Mal Jones',
 				url: '/profile',
 			},
 			{
-				imgSrc: '/resources/mallard.jpg',
 				name: 'Mal Jones',
 				url: '/profile',
 			},
 			{
-				imgSrc: '/resources/mallard.jpg',
 				name: 'Mal Jones',
 				url: '/profile',
 			},
 			{
-				imgSrc: '/resources/mallard.jpg',
 				name: 'Mal Jones',
 				url: '/profile',
 			},
