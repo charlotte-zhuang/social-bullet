@@ -27,7 +27,7 @@ function EditEntryPage() {
 
   return (
     <Template
-      activePage=''
+      activePage='journal'
       bodyLeft={
         <div className='d-flex flex-column'>
           <h2 className='text-center'>Formatting</h2>
