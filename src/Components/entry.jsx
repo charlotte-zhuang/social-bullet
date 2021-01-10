@@ -3,14 +3,8 @@ import ListView from "./listView.jsx";
 import "../CSS/entry.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
-import { useState } from "react";
-import { useEffect } from "react";
 
 function Entry({ user, entry, taskList }) {
-  //const [formattedDate, setDate] = useState(new Date());
-  //   useEffect(() => {
-  //     setDate(formatDate(entry));
-  //   }, [entry]);
 
   if (user)
     return (
@@ -18,11 +12,19 @@ function Entry({ user, entry, taskList }) {
         <div className="d-flex justify-content-between align-items-top full-width">
           <ListItem
             url={user.url}
+            icon='user-circle'
             imgSrc={user.imgSrc}
-            text={user.name}
+            text={user.username}
             size="sm"
           />
-          <span className="advent-font ml-auto">{entry.updatedAt}</span>
+          <span className="advent-font ml-auto"><span className='time-font'>{new Date(entry.updatedAt).toLocaleTimeString([], {
+            hour: "2-digit",
+            minute: "2-digit"
+          })}</span> {new Date(entry.updatedAt).toLocaleString('default', {
+							month: 'short',
+							day: 'numeric',
+							year: 'numeric',
+						})}</span>
         </div>
         <div
           className="advent-font"
