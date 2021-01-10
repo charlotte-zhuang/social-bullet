@@ -12,16 +12,18 @@ export const getUser = /* GraphQL */ `
       imageFilePath
       description
       journal {
-        description
-        filePath
+        body
+        createdAt
+        updatedAt
       }
       projects {
         id
         name
         imageFilePath
         journal {
-          description
-          filePath
+          body
+          createdAt
+          updatedAt
         }
         members
         tags
@@ -53,8 +55,9 @@ export const listUsers = /* GraphQL */ `
         imageFilePath
         description
         journal {
-          description
-          filePath
+          body
+          createdAt
+          updatedAt
         }
         projects {
           id
@@ -100,8 +103,9 @@ export const userByUsername = /* GraphQL */ `
         imageFilePath
         description
         journal {
-          description
-          filePath
+          body
+          createdAt
+          updatedAt
         }
         projects {
           id
