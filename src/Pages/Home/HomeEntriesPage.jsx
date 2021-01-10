@@ -254,7 +254,7 @@ function HomeEntriesPage(props) {
   const listItems =
     props.user === null
       ? []
-      : props.user.journalEntryFeed().map((entry) => {
+      : props.user.entryFeed.map((entry) => {
           props.user.url = "/profile/" + props.user.username;
           entry.taskList = [
             {
@@ -287,16 +287,6 @@ function HomeEntriesPage(props) {
               url: "/project",
             },
           ];
-          return {
-            user: props.user,
-            entry,
-          };
-        });
-
-  const listItems =
-    props.user === null
-      ? []
-      : props.user.entryFeed.map((entry) => {
           return {
             user: props.user,
             entry,
