@@ -28,6 +28,7 @@ type Project {
 }
 
 type Entry {
-  description: String
-  filePath: String!
+  body: String!
+  createdAt: String
+  updatedAt: String
 }
