@@ -168,9 +168,9 @@ function App() {
             )}
           />
           <Route
-            path="/edit-project"
-            component={(props) => (
-              <EditProjPage user={user} setUser={setUser} {...props} />
+            path="/edit-project/:id"
+            render={(match) => (
+              <EditProjPage user={user} setUser={setUser} id={match.params.id} />
             )}
           />
           <Route

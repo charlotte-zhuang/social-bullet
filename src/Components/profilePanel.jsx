@@ -6,13 +6,13 @@ import IconTiles from './iconTiles';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-function ProfilePanel({ user }) {
+function ProfilePanel({ user, isCur }) {
 	return (
 		<div className="d-flex flex-column align-items-center full-height">
 			<div className="full-width prof-img-container">
-				<Link className="icon-btn mt-auto front-overlay full-width" to="/edit-entry">
+				{isCur? <Link className="icon-btn mt-auto front-overlay full-width" to="/edit-entry">
 					<FontAwesomeIcon icon="pencil-alt" size="sm" />
-				</Link>
+				</Link> : ''}
 				<div className="icon-card-container">
 					<IconCard imgSrc={user.imgSrc} size="lg" text={user.name} url={user.url} />
 				</div>
@@ -23,7 +23,7 @@ function ProfilePanel({ user }) {
 				body={
 					<div class="d-flex flex-wrap align-items-center">
 						{user.interests.map((interest, key) => (
-							<Tag title={interest} />
+							<Tag key={key} title={interest} />
 						))}
 					</div>
 				}

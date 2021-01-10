@@ -32,9 +32,9 @@
 }
 
 .panel-text {
-    color: var(--dark-teal)
+    color: var(--dark-teal) !important;
 }
 
 .panel-text:hover {
-    color: var(--teal)
+    color: var(--teal) !important;
 }

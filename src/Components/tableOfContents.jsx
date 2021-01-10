@@ -11,13 +11,13 @@ import React from "react";
  * @param {int} contents.indent
  */
 export default function TableOfContents({ contents }) {
-  return (
-    <div className='d-flex flex-column m-2'>
-      {contents.map((elem) => (
-        <a key={`toc-${elem.id}`} className={`indent-${elem.indent}`} href={`#${elem.id}`}>
-          {elem.text}
-        </a>
-      ))}
-    </div>
-  );
+	return (
+		<div className="d-flex flex-column pl-2 pr-2 first-gap-fix full-width">
+			{contents.map((elem) => (
+				<a key={`toc-${elem.id}`} className={`panel-text toc-link normal-text-link advent-font indent-${elem.indent}`} href={`#${elem.id}`}>
+					{elem.text}
+				</a>
+			))}
+		</div>
+	);
 }

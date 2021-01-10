@@ -7,11 +7,20 @@ import Tag from "../../Components/tag";
 class EditProjPage extends Component {
   constructor(props) {
     super(props);
+    const project = {
+      name: "Coding",
+      blurb: "hahaha",
+      tags: ["dead", "insomnia"],
+			start: new Date("2020-12-17T03:24:00"),
+			finish: new Date("2021-01-10T12:24:00"),
+    };
     this.state = {
-      name: props.project.name,
-      blurb: props.project.description,
-      tags: props.project.tags,
+      name: project.name,
+      blurb: project.description,
+      tags: project.tags,
       inputTag: "",
+      start: project.start,
+      finish: project.finish,
     };
   }
 
@@ -94,21 +103,6 @@ class EditProjPage extends Component {
         text: "Start & End Date",
         indent: 1,
         id: "start-end-date",
-      },
-      {
-        text: "Lists",
-        indent: 0,
-        id: "list-header",
-      },
-      {
-        text: "Milestones",
-        indent: 1,
-        id: "milestone-list",
-      },
-      {
-        text: "Tasks",
-        indent: 1,
-        id: "tasks-list",
       },
     ];
 

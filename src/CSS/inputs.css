@@ -32,3 +32,35 @@
 .MuiButton-textPrimary.MuiButton-text {
     color: var(--teal);
 }
+
+.form-btn {
+    padding: 5px 15px;
+    height: 37px;
+    border-radius: 2px;
+    background-color: var(--tan);
+    margin: 5px;
+    margin-top: 0px;
+
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Advent Pro', sans-serif;
+    line-height: 23px;
+
+    border: none;
+}
+
+.form-btn.primary{
+    background-color: var(--orange);
+}
+
+.form-btn.secondary{
+    background-color: var(--purple);
+}
+
+.form-control.form-txt-input{
+    width: 300px;
+}
+
+.form-section-heading{
+    font-family: 'Advent Pro', sans-serif;
+}

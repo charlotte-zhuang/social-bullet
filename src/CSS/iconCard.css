@@ -1,8 +1,9 @@
-:root{
+:root {
   --sm: 60px;
   --md: 100px;
   --lg: 220px;
 }
+
 .iconCard-sm img,
 .iconCard-md img,
 .iconCard-lg img {
@@ -42,6 +43,16 @@
 
 .iconCard-lg h4 {
   font-size: 18pt;
+}
+
+.iconCard-lg h4.sub-text-text {
+  font-size: 24pt;
+  margin-bottom: -3px;
+}
+
+.iconCard-lg h4.sub-text {
+  font-size: 14pt;
+  color: var(--dark-teal);
 }
 
 .iconCard-sm div {

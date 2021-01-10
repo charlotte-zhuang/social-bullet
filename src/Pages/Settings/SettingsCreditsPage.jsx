@@ -4,6 +4,8 @@ import { Auth } from 'aws-amplify';
 import { useHistory } from 'react-router';
 import { useState } from 'react';
 import Spinner from 'react-bootstrap/Spinner';
+import ContrPanel from '../../Components/contrPanel.jsx';
+import CreditsMain from '../../Components/creditsMain.jsx';
 
 function SettingsCreditsPage() {
 	const history = useHistory();
@@ -12,7 +14,7 @@ function SettingsCreditsPage() {
 		try {
 			await Auth.signOut().then(history.go(0));
 			const copy = [...menuItems];
-			copy.forEach((item) => item.selected = false);
+			copy.forEach((item) => (item.selected = false));
 			copy[copy.length - 1].title = (
 				<>
 					<Spinner animation="border" className="d-flex mr-2" /> Signing Out
@@ -46,7 +48,34 @@ function SettingsCreditsPage() {
 		},
 	]);
 
-	return <Template activePage="settings" bodyLeft={<>Outline</>} bodyCenter={<>Settings</>} bodyRight={<Submenu menuItems={menuItems} />} />;
+	const contributors = [
+		{
+			name: 'April Chao',
+			major: 'Computer Science',
+			year: 2022,
+			imgSrc: '/resources/mallard.jpg',
+			url: '/profile',
+			bio: 'Contributor is Lorem ipsum dolor sit amet, consectetur adipiscing rem ipsum dolor sit amet, consectetur adipiscing. rem ipsum dolor sit ametrem ipsum dolor.',
+		},
+		{
+			name: 'Charlotte Zhuang',
+			major: 'Computer Science',
+			year: 2022,
+			imgSrc: '/resources/mallard.jpg',
+			url: '/profile',
+			bio: 'Contributor is Lorem ipsum dolor sit amet, consectetur adipiscing rem ipsum dolor sit amet, consectetur adipiscing. rem ipsum dolor sit ametrem ipsum dolor.',
+		},
+		{
+			name: 'Ethan Soo',
+			major: 'Computer Science',
+			year: 2022,
+			imgSrc: '/resources/mallard.jpg',
+			url: '/profile',
+			bio: 'Contributor is Lorem ipsum dolor sit amet, consectetur adipiscing rem ipsum dolor sit amet, consectetur adipiscing. rem ipsum dolor sit ametrem ipsum dolor.',
+		},
+	];
+
+	return <Template activePage="settings" bodyLeft={<ContrPanel contributors={contributors} />} bodyCenter={<CreditsMain contributors={contributors} />} bodyRight={<Submenu menuItems={menuItems} />} />;
 }
 
 export default SettingsCreditsPage;

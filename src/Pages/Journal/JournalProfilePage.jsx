@@ -310,39 +310,46 @@ function JournalProfilePage() {
 		interests: ['Cooking', 'Fitness'],
 		friends: [
 			{
-				pictureSource: '/resources/mallard.jpg',
+				imgSrc: '/resources/mallard.jpg',
 				name: 'Mal Jones',
 				url: '/profile',
 			},
 			{
-				pictureSource: '/resources/mallard.jpg',
+				imgSrc: '/resources/mallard.jpg',
 				name: 'Mal Jones',
 				url: '/profile',
 			},
 			{
-				pictureSource: '/resources/mallard.jpg',
+				imgSrc: '/resources/mallard.jpg',
 				name: 'Mal Jones',
 				url: '/profile',
 			},
 			{
-				pictureSource: '/resources/mallard.jpg',
+				imgSrc: '/resources/mallard.jpg',
 				name: 'Mal Jones',
 				url: '/profile',
 			},
 			{
-				pictureSource: '/resources/mallard.jpg',
+				imgSrc: '/resources/mallard.jpg',
 				name: 'Mal Jones',
 				url: '/profile',
 			},
 			{
-				pictureSource: '/resources/mallard.jpg',
+				imgSrc: '/resources/mallard.jpg',
 				name: 'Mal Jones',
 				url: '/profile',
 			},
 		],
 	};
 
-	return <Template activePage="journal" bodyLeft={<ProfilePanel user={user} />} bodyCenter={<ProfileMain projects={projects} entries={entries} />} bodyRight={<Submenu menuItems={menuItems} />} />;
+	return (
+		<Template
+			activePage="journal"
+			bodyLeft={<ProfilePanel user={user} isCur />}
+			bodyCenter={<ProfileMain projects={projects} isCur entries={entries} />}
+			bodyRight={<Submenu menuItems={menuItems} />}
+		/>
+	);
 }
 
 export default JournalProfilePage;
