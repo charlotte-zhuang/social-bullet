@@ -50,7 +50,6 @@ function ProjPage() {
 	];
 
 	const project = {
-		imgSrc: '/resources/mallard.jpg',
 		rank: '2nd',
 		name: 'Yoga with Yogis',
 		status: 'bucket',

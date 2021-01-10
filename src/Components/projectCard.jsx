@@ -17,7 +17,7 @@ export default function ProjectCard({ project }) {
 				<div className="d-flex flex-row">
 					<div className="d-flex flex-column full-height max-flex-col align-items-start">
 						<div className="d-flex justify-content-between align-items-top full-width">
-							<ListItem url={project.url} imgSrc={project.imgSrc} text={project.name} size="md" />
+							<ListItem url={project.url} icon="record-vinyl" imgSrc={project.imgSrc} text={project.name} size="md" />
 							<div></div>
 							{/* to space out the list item correctly */}
 						</div>
@@ -37,7 +37,7 @@ export default function ProjectCard({ project }) {
 							<div className="col-4 list-top-padding">
 								<div className="d-flex flex-column full-height full-width align-items-center">
 									<h4 className="advent-font text-center">Members</h4>
-									<IconTiles arr={project.members} size="sm" />
+									<IconTiles icon="user-circle" arr={project.members} size="sm" />
 								</div>
 							</div>
 						</div>

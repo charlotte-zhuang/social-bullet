@@ -7,7 +7,7 @@ function ProjectTile({ project }) {
 	return (
 		<div className="d-flex flex-column tile-container tile-container-green">
 			<div className="d-flex justify-content-between align-items-top full-width">
-				<ListItem url={project.url} imgSrc={project.imgSrc} text={project.name} size="md" />
+				<ListItem url={project.url} icon="record-vinyl" imgSrc={project.imgSrc} text={project.name} size="md" />
 				<div></div>
 				{/* to space out the list item correctly */}
 			</div>

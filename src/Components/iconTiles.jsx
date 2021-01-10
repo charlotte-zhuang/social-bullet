@@ -8,11 +8,11 @@ import IconCard from './iconCard';
  * @param {Object[]} props.arr
  * @param {'sm' | 'md' | 'lg'} props.size
  */
-export default function IconTiles({ arr, size }) {
+export default function IconTiles({ arr, size, icon }) {
 	return (
 		<div className="d-flex flex-wrap justify-content-around align-items-top full-width">
 			{arr.map((elem, key) => (
-				<IconCard key={key} imgSrc={elem.imgSrc} size={size} text={elem.name} url={elem.url} />
+				<IconCard key={key} imgSrc={elem.imgSrc} size={size} icon={icon} text={elem.name} url={elem.url} />
 			))}
 		</div>
 	);

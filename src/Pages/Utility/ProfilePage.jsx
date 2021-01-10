@@ -319,7 +319,6 @@ function ProfilePage() {
 	];
 
 	const user = {
-		imgSrc: '/resources/mallard.jpg',
 		name: 'Jane Dole',
 		url: '/profile',
 		bio:

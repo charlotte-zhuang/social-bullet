@@ -23,7 +23,20 @@
 
 .iconCard-lg img {
   height: var(--lg);
-  width: var(--lg);
+}
+
+.iconCard-icon-sm {
+  font-size: var(--sm);
+  margin: -10px 3px;
+}
+
+.iconCard-icon-md {
+  font-size: var(--md);
+}
+
+.iconCard-icon-lg {
+  font-size: var(--lg);
+  margin: -50px 0px;
 }
 
 .iconCard-sm h4,
@@ -55,17 +68,17 @@
   color: var(--dark-teal);
 }
 
-.iconCard-sm div {
+.iconCard-sm.img div {
   width: var(--sm);
   margin: 5px;
 }
 
-.iconCard-md div {
+.iconCard-md.img div {
   width: var(--md);
   margin: 8px;
 }
 
-.iconCard-lg div {
+.iconCard-lg.img div {
   width: var(--lg);
   margin: 10px;
 }

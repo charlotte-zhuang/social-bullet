@@ -53,7 +53,6 @@ function SettingsCreditsPage() {
 			name: 'April Chao',
 			major: 'Computer Science',
 			year: 2022,
-			imgSrc: '/resources/mallard.jpg',
 			url: '/profile',
 			bio: 'Contributor is Lorem ipsum dolor sit amet, consectetur adipiscing rem ipsum dolor sit amet, consectetur adipiscing. rem ipsum dolor sit ametrem ipsum dolor.',
 		},

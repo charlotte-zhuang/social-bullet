@@ -10,11 +10,15 @@ function ProfilePanel({ user, isCur }) {
 	return (
 		<div className="d-flex flex-column align-items-center full-height">
 			<div className="full-width prof-img-container">
-				{isCur? <Link className="icon-btn mt-auto front-overlay full-width" to="/edit-entry">
-					<FontAwesomeIcon icon="pencil-alt" size="sm" />
-				</Link> : ''}
+				{isCur ? (
+					<Link className="icon-btn mt-auto front-overlay full-width" to="/edit-entry">
+						<FontAwesomeIcon icon="pencil-alt" size="sm" />
+					</Link>
+				) : (
+					''
+				)}
 				<div className="icon-card-container">
-					<IconCard imgSrc={user.imgSrc} size="lg" text={user.name} url={user.url} />
+					<IconCard icon="user-circle" imgSrc={user.imgSrc} icon="user-circle" size="lg" text={user.name} url={user.url} />
 				</div>
 			</div>
 			<PanelSection title="Bio" body={<p className="advent-font bio-text p-rmv-margin">{user.bio}</p>} indent />

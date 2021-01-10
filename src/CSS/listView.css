@@ -13,6 +13,16 @@
     width: 24px;
 }
 
+.list-icon-md {
+    font-size: 54px;
+    margin: -10px 8px;
+}
+
+.list-icon-sm {
+    font-size: 24px;
+    margin: -10px 0px;
+}
+
 .advent-font.advent-font-sm {
     margin: 0px 5px;
 }
