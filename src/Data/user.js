@@ -104,48 +104,107 @@ export default class User {
     this.firstNameData = input;
     const model = await this.instance();
     model.firstName = input;
-    return this.updateModel();
+    return this.updateModel(model);
   }
   async updateLastName(input) {
     this.lastNameData = input;
     const model = await this.instance();
     model.lastName = input;
-    return this.updateModel();
+    return this.updateModel(model);
   }
   async updateImageFilePath(input) {
     this.imageFilePathData = input;
     const model = await this.instance();
     model.imageFilePath = input;
-    return this.updateModel();
+    return this.updateModel(model);
   }
   async updateDescription(input) {
     this.descriptionData = input;
     const model = await this.instance();
     model.description = input;
-    return this.updateModel();
+    return this.updateModel(model);
   }
   async updateJournal(input) {
     this.journalData = input;
     const model = await this.instance();
     model.journal = input;
-    return this.updateModel();
+    return this.updateModel(model);
   }
   async updateProjects(input) {
     this.projectsData = input;
     const model = await this.instance();
     model.projects = input;
-    return this.updateModel();
+    return this.updateModel(model);
   }
   async updateInterests(input) {
     this.interestsData = input;
     const model = await this.instance();
     model.interests = input;
-    return this.updateModel();
+    return this.updateModel(model);
   }
   async updateFriends(input) {
     this.friendsData = input;
     const model = await this.instance();
     model.friends = input;
-    return this.updateModel();
+    return this.updateModel(model);
+  }
+
+  async addJournalEntry(input) {
+    this.journalData.push(input);
+    const model = await this.instance();
+    model.journal = [...this.journal];
+    return this.updateModel(model);
+  }
+  async removeJournalEntry(idx) {
+    if (idx > -1) {
+      this.journalData.splice(idx, 1);
+    }
+    const model = await this.instance();
+    model.journal = [...this.journal];
+    return this.updateModel(model);
+  }
+  async addProject(input) {
+    this.projectsData.push(input);
+    const model = await this.instance();
+    model.projects = [...this.projects];
+    return this.updateModel(model);
+  }
+  async removeProject(idx) {
+    if (idx > -1) {
+      this.projects.splice(idx, 1);
+    }
+    const model = await this.instance();
+    model.projects = [...this.projects];
+    return this.updateModel(model);
+  }
+  async addInterest(input) {
+    this.interests.push(input);
+    const model = await this.instance();
+    model.interests = [...this.interests];
+    return this.updateModel(model);
+  }
+  async removeInterest(idx) {
+    if (idx > -1) {
+      this.interests.splice(idx, 1);
+    }
+    const model = await this.instance();
+    model.interests = [...this.interests];
+    return this.updateModel(model);
+  }
+  async addFriend(input) {
+    this.friends.push(input);
+    const model = await this.instance();
+    model.friends = [...this.friends];
+    return this.updateModel(model);
+  }
+  async removeFriend(username) {
+    this.friends.map((friend, idx) => {
+      if (friend.localeCompare(username)) {
+        this.friends.splice(idx, 1);
+      }
+    });
+    const model = await this.instance();
+    model.friends = [...this.friends];
+    return this.updateModel(model);
   }
 }
