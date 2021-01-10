@@ -72,6 +72,18 @@ p.advent-font {
   line-height: 27px;
 }
 
+p.advent-font.null-msg {
+  font-size: 42px;
+  line-height: 45px;
+  color: var(--dark-teal);
+}
+
+p.advent-font.null-msg-big {
+  font-size: 72px;
+  line-height: 75px;
+  color: var(--dark-teal);
+}
+
 img.circle-crop-sm {
   object-fit: cover;
   border-radius: 50%;
@@ -95,4 +107,9 @@ img.circle-crop-lg {
 
 .icon-teal {
   color: var(--teal);
+}
+
+.null-container{
+  position: relative;
+  top: 10%;
 }
