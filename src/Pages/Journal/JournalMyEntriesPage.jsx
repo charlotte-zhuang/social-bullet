@@ -231,41 +231,76 @@ function JournalMyEntriesPage(props) {
     props.user === null
       ? []
       : props.user.entryFeed.map((entry) => {
-          props.user.url = "/profile/" + props.user.username;
-          entry.taskList = [
-            {
-              text: (
-                <p className="advent-font">
-                  Added <i>January Cooking</i> Project <b>[at 7:00 am]</b>
-                </p>
-              ),
+          // props.user.url = "/profile/" + props.user.username;
+          // entry.taskList = [
+          // {
+          //   text: (
+          //     <p className="advent-font">
+          //       Added <i>January Cooking</i> Project <b>[at 7:00 am]</b>
+          //     </p>
+          //   ),
 
-              url: "/project",
-            },
-            {
-              text: (
-                <p className="advent-font">
-                  Completed Yoga from <i>2021 Fitness</i> Project{" "}
-                  <b>[at 7:28 am]</b>
-                </p>
-              ),
+          //   url: "/project",
+          // },
+          // {
+          //   text: (
+          //     <p className="advent-font">
+          //       Completed Yoga from <i>2021 Fitness</i> Project{" "}
+          //       <b>[at 7:28 am]</b>
+          //     </p>
+          //   ),
 
-              url: "/project",
-            },
-            {
-              text: (
-                <p className="advent-font">
-                  Challenged Friend 1 to <i>January Cooking</i> Project{" "}
-                  <b>[at 8:00 am]</b>
-                </p>
-              ),
+          //   url: "/project",
+          // },
+          // {
+          //   text: (
+          //     <p className="advent-font">
+          //       Challenged Friend 1 to <i>January Cooking</i> Project{" "}
+          //       <b>[at 8:00 am]</b>
+          //     </p>
+          //   ),
 
-              url: "/project",
-            },
-          ];
+          //   url: "/project",
+          // },
+          // ];
           return {
             user: props.user,
-            entry,
+            entry: {
+              taskList: [
+                {
+                  text: (
+                    <p className="advent-font">
+                      Added <i>January Cooking</i> Project <b>[at 7:00 am]</b>
+                    </p>
+                  ),
+
+                  url: "/project",
+                },
+                {
+                  text: (
+                    <p className="advent-font">
+                      Completed Yoga from <i>2021 Fitness</i> Project{" "}
+                      <b>[at 7:28 am]</b>
+                    </p>
+                  ),
+
+                  url: "/project",
+                },
+                {
+                  text: (
+                    <p className="advent-font">
+                      Challenged Friend 1 to <i>January Cooking</i> Project{" "}
+                      <b>[at 8:00 am]</b>
+                    </p>
+                  ),
+
+                  url: "/project",
+                },
+              ],
+              body: entry.body,
+              updatedAt: entry.updatedAt,
+              createdAt: entry.createdAt,
+            },
           };
         });
   return (

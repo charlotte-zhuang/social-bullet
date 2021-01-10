@@ -60,16 +60,15 @@ function App() {
 		}
 	};
 
-	const finishAuthenticate = (user) => {
-		try {
-			user.initialize();
-			setUser(user);
-			console.log('initialized and set ', user);
-			user.addJournalEntry('testtest');
-		} catch (error) {
-			console.log('Issue with finishAuthenticate', error);
-		}
-	};
+  const finishAuthenticate = (user) => {
+    try {
+      user.initialize();
+      setUser(user);
+      console.log("initialized and set ", user);
+    } catch (error) {
+      console.log("Issue with finishAuthenticate", error);
+    }
+  };
 
 	//some test code
 	// const click = () => {

@@ -72,6 +72,8 @@ export default class User {
       this.interestsData = this.model.interests;
       this.friendsData = this.model.friends;
     }
+    //this.addJournalEntry("Test body test body testsakfdj");
+
     this.refreshJournalEntryFeed();
     console.log("Loaded user info ", this.model);
     return this;
@@ -252,8 +254,8 @@ export default class User {
   }
 
   async refreshJournalEntryFeed() {
-    let feed = this.journal;
-    for (var i = 0; i < this.friends.length; i++) {
+    let feed = [...this.journal];
+    for (let i = 0; i < this.friends.length; i++) {
       let friend = await findUser(this.friends[i]);
       feed.concat(friend.journal);
     }
