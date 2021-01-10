@@ -2,7 +2,7 @@ import MainSection from './mainSection';
 import MainTiles from './mainTiles';
 import MainList from './mainList';
 
-function ProfileMain({ projects, entries }) {
+function ProfileMain({ projects, entries, isCur }) {
 	const activeProjs = projects.filter((project) => project.status === 'active');
 	const completedProjs = projects.filter((project) => project.status === 'complete');
 
