@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import Template from "../../Components/template.jsx";
 import Submenu from "../../Components/submenu.jsx";
 import TableOfContents from "../../Components/tableOfContents";
@@ -118,7 +118,7 @@ class EditProfilePage extends Component {
 
     return (
       <Template
-        activePage='settings'
+        activePage='journal'
         bodyLeft={<TableOfContents contents={contents} />}
         bodyCenter={
           <form className='m-4'>
