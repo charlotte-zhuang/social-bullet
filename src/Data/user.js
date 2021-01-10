@@ -182,7 +182,7 @@ export default class User {
   }
 
   async addJournalEntry(body) {
-    input = {
+    let input = {
       body,
       createdAt: Date.now(),
       updatedAt: Date.now(),
@@ -248,7 +248,7 @@ export default class User {
   journalEntryFeed() {
     let feed = this.journal;
     for (var i = 0; i < this.friends.length; i++) {
-      feed.concat(friends[i].journal);
+      feed.concat(this.friends[i].journal);
     }
 
     feed.sort((a, b) => (a.updatedAt > b.updatedAt ? 1 : -1));
