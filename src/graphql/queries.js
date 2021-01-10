@@ -12,7 +12,6 @@ export const getUser = /* GraphQL */ `
       imageFilePath
       description
       journal {
-        owner
         body
         createdAt
         updatedAt
@@ -22,7 +21,6 @@ export const getUser = /* GraphQL */ `
         name
         imageFilePath
         journal {
-          owner
           body
           createdAt
           updatedAt
@@ -56,7 +54,6 @@ export const listUsers = /* GraphQL */ `
         imageFilePath
         description
         journal {
-          owner
           body
           createdAt
           updatedAt
@@ -104,7 +101,6 @@ export const userByUsername = /* GraphQL */ `
         imageFilePath
         description
         journal {
-          owner
           body
           createdAt
           updatedAt

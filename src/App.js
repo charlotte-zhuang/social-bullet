@@ -75,7 +75,7 @@ function App() {
       user.initialize();
       setUser(user);
       console.log("initialized and set ", user);
-      user.addJournalEntry("Journal #2");
+      user.addJournalEntry("testtest");
     } catch (error) {
       console.log("Issue with finishAuthenticate", error);
     }

@@ -15,7 +15,6 @@ export const createUser = /* GraphQL */ `
       imageFilePath
       description
       journal {
-        owner
         body
         createdAt
         updatedAt
@@ -25,7 +24,6 @@ export const createUser = /* GraphQL */ `
         name
         imageFilePath
         journal {
-          owner
           body
           createdAt
           updatedAt
@@ -57,7 +55,6 @@ export const updateUser = /* GraphQL */ `
       imageFilePath
       description
       journal {
-        owner
         body
         createdAt
         updatedAt
@@ -67,7 +64,6 @@ export const updateUser = /* GraphQL */ `
         name
         imageFilePath
         journal {
-          owner
           body
           createdAt
           updatedAt
@@ -99,7 +95,6 @@ export const deleteUser = /* GraphQL */ `
       imageFilePath
       description
       journal {
-        owner
         body
         createdAt
         updatedAt
@@ -109,7 +104,6 @@ export const deleteUser = /* GraphQL */ `
         name
         imageFilePath
         journal {
-          owner
           body
           createdAt
           updatedAt

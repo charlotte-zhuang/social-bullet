@@ -3,6 +3,13 @@ import Template from "../../Components/template.jsx";
 import Submenu from "../../Components/submenu.jsx";
 import Editor from "../../Components/editor";
 import { useHistory } from "react-router-dom";
+import { propTypes } from "react-bootstrap/esm/Image";
+
+function strip_html_tags(str) {
+  if (str === null || str === "") return false;
+  else str = str.toString();
+  return str.replace(/<[^>]*>/g, "");
+}
 
 function EditEntryPage(props) {
   const [text, setText] = useState("");
@@ -16,9 +23,9 @@ function EditEntryPage(props) {
       selected: true,
       clicked: () => {
         console.log("clicked Submit");
-        console.log("text display: ", text);
+        props.user.addJournalEntry(strip_html_tags(text));
 
-        props.user.refreshJournalFeed();
+        props.user.refreshJournalEntryFeed();
         history.push("/journal-entries");
       },
     },

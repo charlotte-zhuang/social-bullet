@@ -78,7 +78,8 @@ export default class User {
   }
   //returns JSON object of user
   async instance() {
-    return findUser(this.username);
+    let user = await findUser(this.username);
+    return user;
   }
   get userModel() {
     return this.model;
@@ -183,19 +184,18 @@ export default class User {
     return this.updateModel(model);
   }
 
-  async addJournalEntry(body) {
+  addJournalEntry(body) {
+    //let name = this.username;
     let input = {
-      owner: this.username,
       body,
       createdAt: formatDate(),
       updatedAt: formatDate(),
     };
     this.journal.push(input);
-    const model = await this.instance();
-    model.journal = [...this.journal];
-    console.log("model", model);
-
-    return this.updateModel(model);
+    this.instance().then((model) => {
+      model.journal = [...this.journal];
+      return this.updateModel(model);
+    });
   }
   async removeJournalEntry(idx) {
     if (idx > -1) {
