@@ -9,7 +9,7 @@ function Entry({ user, entry, taskList }) {
 		return (
 			<div className="d-flex flex-column entry-container align-items-start">
 				<div className="d-flex justify-content-between align-items-top full-width">
-					<ListItem url={user.url} icon="user-circle" imgSrc={user.imgSrc} text={user.username} size="sm" />
+					<ListItem url={user.url} icon="user-circle" imgSrc={user.imgSrc} text={user.username === 'admin' ? 'Jane Dole' : user.username} size="sm" />
 					<span className="advent-font ml-auto">
 						<span className="time-font">
 							{new Date(entry.updatedAt).toLocaleTimeString([], {
