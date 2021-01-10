@@ -164,9 +164,9 @@ function App() {
             )}
           />
           <Route
-            path='/project'
-            component={(props) => (
-              <ProjPage user={user} setUser={setUser} {...props} />
+            path='/project/:id'
+            render={(props) => (
+              <ProjPage user={user} setUser={setUser} {...props}/>
             )}
           />
           <Route
