@@ -21,12 +21,12 @@
 }
 
 .nav-btn.teal {
-	background-color: var(--teal);
+  background-color: var(--teal);
 }
 
 .nav-btn.dark-teal {
 	background-color: var(--dark-teal);
-	color: white;
+	color: white !important;
 }
 
 .nav-btn.orange {
@@ -66,5 +66,5 @@
 
 .icon-btn,
 .icon-btn:hover {
-	color: var(--teal);
+	color: var(--teal) !important;
 }

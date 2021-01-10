@@ -21,7 +21,6 @@ function Template({ activePage, bodyLeft, bodyCenter, bodyRight }) {
 					<NavBtn title="Discover" type="nav" selected={activePage === 'discover'} url="/discover" />
 					<NavBtn title="Journal" type="nav" selected={activePage === 'journal'} url="/journal" />
 					<NavBtn title="Settings" type="nav" selected={activePage === 'settings'} url="/settings" />
-					{/* <AmplifySignOut className="nav-btn" /> */}
 				</nav>
 			</header>
 			<div className="d-flex justify-content-around template-body">
