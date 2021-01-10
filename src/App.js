@@ -59,14 +59,19 @@ function App() {
       let user = await Auth.currentAuthenticatedUser();
       let username = user.username;
       let email = user.attributes.email;
-      let obj = new User(username, email);
-      obj.initialize(username).then((o) => {
-        setUser(o);
-      });
+      let obj = new User(username, email, finishAuthenticate);
+      console.log("user object", obj.model);
     } catch (error) {
-      console.log("Issue with authentication");
+      console.log("Issue with authentication", error);
     }
   };
+
+  const finishAuthenticate = (user) => {
+    user.initialize();
+    setUser(user);
+    console.log("initialized and set ", user);
+  };
+
   //some test code
   // const click = () => {
   //   user.updateEmail("test@gmail.com").then((user) => {
