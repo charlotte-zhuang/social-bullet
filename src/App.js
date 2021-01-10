@@ -28,101 +28,54 @@ import awsconfig from "./aws-exports";
 import { AmplifySignOut, withAuthenticator } from "@aws-amplify/ui-react";
 import { useEffect, useState } from "react";
 
-import { test } from "./data-models/user";
-import { listUsers } from "./graphql/queries";
-import { updateUser, createUser } from "./graphql/mutations";
-
-import { v4 as uuid } from "uuid";
+import User from "./Data/user";
 
 // import all icons here to use in other components
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faPencilAlt } from '@fortawesome/free-solid-svg-icons'
-library.add(faPencilAlt)
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faPencilAlt } from "@fortawesome/free-solid-svg-icons";
+library.add(faPencilAlt);
 // to use:
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // <FontAwesomeIcon icon="pencil-alt" size="xs"/>
 
-
 Amplify.configure(awsconfig);
 
 function App() {
-  const [users, setUsers] = useState([]);
+  const [user, setUser] = useState(null);
 
+  //authenticate after login or page refreshes
   useEffect(() => {
-    console.log("Use effect is called");
-    //addUser();
-    fetchUser();
-    update();
-    test()
-      .then((res) => setUsers(res))
-      .catch((err) => console.log(err));
+    try {
+      authenticate().then((user) => {
+        setUser(user);
+      });
+    } catch (error) {
+      console.log("Issue with authentication");
+    }
   }, []);
 
-  const update = async () => {
-    try {
-      let user = await Auth.currentAuthenticatedUser();
-      const { username } = user;
-      console.log(username);
-    } catch (error) {
-      console.log(error);
-    }
+  //execute when user state changes
+  useEffect(() => {
+    console.log("User refresh");
+  }, [user]);
+
+  const authenticate = async () => {
+    let user = await Auth.currentAuthenticatedUser();
+    let username = user.username;
+    let email = user.attributes.email;
+    return new User(username, email);
   };
-
-  const fetchUser = async () => {
-    try {
-      const userData = await API.graphql(graphqlOperation(listUsers));
-
-      const userList = userData.data.listUsers.items;
-      setUsers(userList);
-      console.log("user list", userList);
-
-      // users.map((user, idx) => {
-      //   console.log("User ", idx, " is ", user);
-      // });
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  const addUser = async () => {
-    try {
-      const entryOne = {
-        description: "Entry one description",
-        filePath: "filePathOne",
-      };
-      const entryTwo = {
-        description: "Entry two description",
-        filePath: "filePathOne",
-      };
-
-      const proj = {
-        id: uuid(),
-        name: "Project name",
-        members: ["1", "2"],
-      };
-      const createUserInput = {
-        id: uuid(),
-        username: "Wingspear",
-        email: "wingspear@gmail.com",
-        firstName: "Wing",
-        lastName: "Spear",
-        imageFilePath: "",
-        description: "description....",
-        journal: [entryOne, entryTwo],
-        projects: [proj, proj],
-        interests: ["basketball", "football"],
-        friends: ["Bob", "Joe"],
-      };
-      await API.graphql(
-        graphqlOperation(createUser, { input: createUserInput })
-      );
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  //some test code
+  // const click = () => {
+  //   user.updateEmail("test@gmail.com").then((user) => {
+  //     setUser(user);
+  //   });
+  // };
+  //      <a class="panel-btn mt-auto" onClick={() => click()}>
+  //button
+  //</a>
   return (
     <>
-      <AmplifySignOut />
       <Router>
         <Switch>
           <Redirect from="/" to="/home-entries" exact />
