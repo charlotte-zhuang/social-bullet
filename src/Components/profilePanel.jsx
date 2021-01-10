@@ -23,7 +23,7 @@ function ProfilePanel({ user, isCur }) {
 				body={
 					<div class="d-flex flex-wrap align-items-center">
 						{user.interests.map((interest, key) => (
-							<Tag title={interest} />
+							<Tag key={key} title={interest} />
 						))}
 					</div>
 				}

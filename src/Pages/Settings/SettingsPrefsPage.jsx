@@ -4,6 +4,8 @@ import { Auth } from 'aws-amplify';
 import { useHistory } from 'react-router';
 import { useState } from 'react';
 import Spinner from 'react-bootstrap/Spinner';
+import PrefPanel from '../../Components/prefPanel.jsx';
+import PrefMain from '../../Components/prefMain.jsx';
 
 function SettingsPrefPage() {
 	const history = useHistory();
@@ -46,7 +48,40 @@ function SettingsPrefPage() {
 		},
 	]);
 
-	return <Template activePage="settings" bodyLeft={<>Outline</>} bodyCenter={<>Settings</>} bodyRight={<Submenu menuItems={menuItems} />} />;
+	const contents = [
+		{
+			text: "General",
+			indent: 0,
+			id: "general",
+		},
+		{
+			text: "Toggle Grid",
+			indent: 1,
+			id: "toggle-grid",
+		},
+		{
+			text: "Account",
+			indent: 0,
+			id: "account",
+		},
+		{
+			text: "Change Password",
+			indent: 1,
+			id: "change-password",
+		},
+		{
+			text: "Reset Account",
+			indent: 1,
+			id: "reset-account",
+		},
+		{
+			text: "Delete Account",
+			indent: 1,
+			id: "delete-account",
+		},
+	];
+
+	return <Template activePage="settings" bodyLeft={<PrefPanel contents={contents}/>} bodyCenter={<PrefMain/>} bodyRight={<Submenu menuItems={menuItems} />} />;
 }
 
 export default SettingsPrefPage;
