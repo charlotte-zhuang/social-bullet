@@ -61,7 +61,7 @@ function SettingsCreditsPage(props) {
       name: "Charlotte Zhuang",
       major: "Computer Science",
       year: 2022,
-      imgSrc: "/resources/mallard.jpg",
+
       url: "/profile",
       bio:
         "Contributor is Lorem ipsum dolor sit amet, consectetur adipiscing rem ipsum dolor sit amet, consectetur adipiscing. rem ipsum dolor sit ametrem ipsum dolor.",
@@ -70,7 +70,7 @@ function SettingsCreditsPage(props) {
       name: "Ethan Soo",
       major: "Computer Science",
       year: 2022,
-      imgSrc: "/resources/mallard.jpg",
+
       url: "/profile",
       bio:
         "Contributor is Lorem ipsum dolor sit amet, consectetur adipiscing rem ipsum dolor sit amet, consectetur adipiscing. rem ipsum dolor sit ametrem ipsum dolor.",

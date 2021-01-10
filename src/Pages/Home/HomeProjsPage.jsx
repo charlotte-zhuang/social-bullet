@@ -21,17 +21,14 @@ function HomeProjsPage(props) {
 
   const testMembers = [
     {
-      imgSrc: "/resources/mallard.jpg",
       name: "Donald",
       url: "/user/donald",
     },
     {
-      imgSrc: "/resources/mallard.jpg",
       name: "Jerry",
       url: "/user/jerry",
     },
     {
-      imgSrc: "/resources/mallard.jpg",
       name: "April",
       url: "/user/panda",
     },
@@ -39,7 +36,6 @@ function HomeProjsPage(props) {
 
   const projects = [
     {
-      imgSrc: "/resources/mallard.jpg",
       rank: "2nd",
       name: "Yoga with Yogis",
       status: "active",
@@ -57,7 +53,6 @@ function HomeProjsPage(props) {
       members: testMembers,
     },
     {
-      imgSrc: "/resources/mallard.jpg",
       rank: "2nd",
       name: "Yoga with Yogis",
       status: "active",
@@ -76,7 +71,6 @@ function HomeProjsPage(props) {
       members: testMembers,
     },
     {
-      imgSrc: "/resources/mallard.jpg",
       rank: "2nd",
       name: "Yoga with Yogis",
       status: "active",
@@ -94,7 +88,6 @@ function HomeProjsPage(props) {
       members: testMembers,
     },
     {
-      imgSrc: "/resources/mallard.jpg",
       rank: "2nd",
       name: "Yoga with Yogis",
       status: "active",
@@ -116,27 +109,27 @@ function HomeProjsPage(props) {
   const tasks = [
     {
       text: "Yoga",
-      imgSrc: "/resources/mallard.jpg",
+
       url: "/project",
     },
     {
       text: "Yoga",
-      imgSrc: "/resources/mallard.jpg",
+
       url: "/project",
     },
     {
       text: "Yoga",
-      imgSrc: "/resources/mallard.jpg",
+
       url: "/project",
     },
     {
       text: "Yoga",
-      imgSrc: "/resources/mallard.jpg",
+
       url: "/project",
     },
     {
       text: "Yoga",
-      imgSrc: "/resources/mallard.jpg",
+
       url: "/project",
     },
   ];

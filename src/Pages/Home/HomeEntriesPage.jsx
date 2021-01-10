@@ -2,7 +2,6 @@ import Template from "../../Components/template.jsx";
 import Submenu from "../../Components/submenu.jsx";
 import FriendPanel from "../../Components/friendPanel.jsx";
 import MainList from "../../Components/mainList.jsx";
-import { attachEventProps } from "@aws-amplify/ui-react/lib-esm/react-component-lib/utils";
 
 function HomeEntriesPage(props) {
   const menuItems = [
@@ -22,17 +21,14 @@ function HomeEntriesPage(props) {
 
   const friends = [
     {
-      imgSrc: "/resources/mallard.jpg",
       name: "Mal Jones",
       url: "/profile",
     },
     {
-      imgSrc: "/resources/mallard.jpg",
       name: "Mal Jones",
       url: "/profile",
     },
     {
-      imgSrc: "/resources/mallard.jpg",
       name: "Mal Jones",
       url: "/profile",
     },
@@ -42,7 +38,7 @@ function HomeEntriesPage(props) {
     {
       user: {
         url: "/profile",
-        imgSrc: "/resources/mallard.jpg",
+
         name: "Mal Jones",
       },
       entry: {
@@ -57,7 +53,7 @@ function HomeEntriesPage(props) {
               Added <i>January Cooking</i> Project <b>[at 7:00 am]</b>
             </p>
           ),
-          imgSrc: "/resources/mallard.jpg",
+
           url: "/project",
         },
         {
@@ -67,7 +63,7 @@ function HomeEntriesPage(props) {
               <b>[at 7:28 am]</b>
             </p>
           ),
-          imgSrc: "/resources/mallard.jpg",
+
           url: "/project",
         },
         {
@@ -77,7 +73,7 @@ function HomeEntriesPage(props) {
               <b>[at 8:00 am]</b>
             </p>
           ),
-          imgSrc: "/resources/mallard.jpg",
+
           url: "/project",
         },
       ],
@@ -85,7 +81,7 @@ function HomeEntriesPage(props) {
     {
       user: {
         url: "/profile",
-        imgSrc: "/resources/mallard.jpg",
+
         name: "Mal Jones",
       },
       entry: {
@@ -100,7 +96,7 @@ function HomeEntriesPage(props) {
               Added <i>January Cooking</i> Project <b>[at 7:00 am]</b>
             </p>
           ),
-          imgSrc: "/resources/mallard.jpg",
+
           url: "/project",
         },
         {
@@ -110,7 +106,7 @@ function HomeEntriesPage(props) {
               <b>[at 7:28 am]</b>
             </p>
           ),
-          imgSrc: "/resources/mallard.jpg",
+
           url: "/project",
         },
         {
@@ -120,7 +116,7 @@ function HomeEntriesPage(props) {
               <b>[at 8:00 am]</b>
             </p>
           ),
-          imgSrc: "/resources/mallard.jpg",
+
           url: "/project",
         },
       ],
@@ -128,7 +124,7 @@ function HomeEntriesPage(props) {
     {
       user: {
         url: "/profile",
-        imgSrc: "/resources/mallard.jpg",
+
         name: "Mal Jones",
       },
       entry: {
@@ -143,7 +139,7 @@ function HomeEntriesPage(props) {
               Added <i>January Cooking</i> Project <b>[at 7:00 am]</b>
             </p>
           ),
-          imgSrc: "/resources/mallard.jpg",
+
           url: "/project",
         },
         {
@@ -153,7 +149,7 @@ function HomeEntriesPage(props) {
               <b>[at 7:28 am]</b>
             </p>
           ),
-          imgSrc: "/resources/mallard.jpg",
+
           url: "/project",
         },
         {
@@ -163,7 +159,7 @@ function HomeEntriesPage(props) {
               <b>[at 8:00 am]</b>
             </p>
           ),
-          imgSrc: "/resources/mallard.jpg",
+
           url: "/project",
         },
       ],
@@ -171,7 +167,7 @@ function HomeEntriesPage(props) {
     {
       user: {
         url: "/profile",
-        imgSrc: "/resources/mallard.jpg",
+
         name: "Mal Jones",
       },
       entry: {
@@ -186,7 +182,7 @@ function HomeEntriesPage(props) {
               Added <i>January Cooking</i> Project <b>[at 7:00 am]</b>
             </p>
           ),
-          imgSrc: "/resources/mallard.jpg",
+
           url: "/project",
         },
         {
@@ -196,7 +192,7 @@ function HomeEntriesPage(props) {
               <b>[at 7:28 am]</b>
             </p>
           ),
-          imgSrc: "/resources/mallard.jpg",
+
           url: "/project",
         },
         {
@@ -206,7 +202,7 @@ function HomeEntriesPage(props) {
               <b>[at 8:00 am]</b>
             </p>
           ),
-          imgSrc: "/resources/mallard.jpg",
+
           url: "/project",
         },
       ],
@@ -214,7 +210,7 @@ function HomeEntriesPage(props) {
     {
       user: {
         url: "/profile",
-        imgSrc: "/resources/mallard.jpg",
+
         name: "Mal Jones",
       },
       entry: {
@@ -229,7 +225,7 @@ function HomeEntriesPage(props) {
               Added <i>January Cooking</i> Project <b>[at 7:00 am]</b>
             </p>
           ),
-          imgSrc: "/resources/mallard.jpg",
+
           url: "/project",
         },
         {
@@ -239,7 +235,7 @@ function HomeEntriesPage(props) {
               <b>[at 7:28 am]</b>
             </p>
           ),
-          imgSrc: "/resources/mallard.jpg",
+
           url: "/project",
         },
         {
@@ -249,13 +245,12 @@ function HomeEntriesPage(props) {
               <b>[at 8:00 am]</b>
             </p>
           ),
-          imgSrc: "/resources/mallard.jpg",
+
           url: "/project",
         },
       ],
     },
   ];
-
   const listItems =
     props.user === null
       ? []
@@ -265,6 +260,15 @@ function HomeEntriesPage(props) {
             entry,
           };
         });
+  return (
+    <Template
+      activePage="home"
+      bodyLeft={<FriendPanel friends={friends} />}
+      bodyCenter={<MainList type="entry" listItems={listItems} />}
+      bodyRight={<Submenu menuItems={menuItems} />}
+    />
+  );
+
   return (
     <Template
       activePage="home"

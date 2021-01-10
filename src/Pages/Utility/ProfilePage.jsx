@@ -114,7 +114,7 @@ function ProfilePage() {
 		{
 			user: {
 				url: '/profile',
-				imgSrc: '/resources/mallard.jpg',
+
 				name: 'Mal Jones',
 			},
 			entry: {
@@ -129,7 +129,7 @@ function ProfilePage() {
 							Added <i>January Cooking</i> Project <b>[at 7:00 am]</b>
 						</p>
 					),
-					imgSrc: '/resources/mallard.jpg',
+
 					url: '/project',
 				},
 				{
@@ -138,7 +138,7 @@ function ProfilePage() {
 							Completed Yoga from <i>2021 Fitness</i> Project <b>[at 7:28 am]</b>
 						</p>
 					),
-					imgSrc: '/resources/mallard.jpg',
+
 					url: '/project',
 				},
 				{
@@ -147,7 +147,7 @@ function ProfilePage() {
 							Challenged Friend 1 to <i>January Cooking</i> Project <b>[at 8:00 am]</b>
 						</p>
 					),
-					imgSrc: '/resources/mallard.jpg',
+
 					url: '/project',
 				},
 			],
@@ -155,7 +155,7 @@ function ProfilePage() {
 		{
 			user: {
 				url: '/profile',
-				imgSrc: '/resources/mallard.jpg',
+
 				name: 'Mal Jones',
 			},
 			entry: {
@@ -170,7 +170,7 @@ function ProfilePage() {
 							Added <i>January Cooking</i> Project <b>[at 7:00 am]</b>
 						</p>
 					),
-					imgSrc: '/resources/mallard.jpg',
+
 					url: '/project',
 				},
 				{
@@ -179,7 +179,7 @@ function ProfilePage() {
 							Completed Yoga from <i>2021 Fitness</i> Project <b>[at 7:28 am]</b>
 						</p>
 					),
-					imgSrc: '/resources/mallard.jpg',
+
 					url: '/project',
 				},
 				{
@@ -188,7 +188,7 @@ function ProfilePage() {
 							Challenged Friend 1 to <i>January Cooking</i> Project <b>[at 8:00 am]</b>
 						</p>
 					),
-					imgSrc: '/resources/mallard.jpg',
+
 					url: '/project',
 				},
 			],
@@ -196,7 +196,7 @@ function ProfilePage() {
 		{
 			user: {
 				url: '/profile',
-				imgSrc: '/resources/mallard.jpg',
+
 				name: 'Mal Jones',
 			},
 			entry: {
@@ -211,7 +211,7 @@ function ProfilePage() {
 							Added <i>January Cooking</i> Project <b>[at 7:00 am]</b>
 						</p>
 					),
-					imgSrc: '/resources/mallard.jpg',
+
 					url: '/project',
 				},
 				{
@@ -220,7 +220,7 @@ function ProfilePage() {
 							Completed Yoga from <i>2021 Fitness</i> Project <b>[at 7:28 am]</b>
 						</p>
 					),
-					imgSrc: '/resources/mallard.jpg',
+
 					url: '/project',
 				},
 				{
@@ -229,7 +229,7 @@ function ProfilePage() {
 							Challenged Friend 1 to <i>January Cooking</i> Project <b>[at 8:00 am]</b>
 						</p>
 					),
-					imgSrc: '/resources/mallard.jpg',
+
 					url: '/project',
 				},
 			],
@@ -237,7 +237,7 @@ function ProfilePage() {
 		{
 			user: {
 				url: '/profile',
-				imgSrc: '/resources/mallard.jpg',
+
 				name: 'Mal Jones',
 			},
 			entry: {
@@ -252,7 +252,7 @@ function ProfilePage() {
 							Added <i>January Cooking</i> Project <b>[at 7:00 am]</b>
 						</p>
 					),
-					imgSrc: '/resources/mallard.jpg',
+
 					url: '/project',
 				},
 				{
@@ -261,7 +261,7 @@ function ProfilePage() {
 							Completed Yoga from <i>2021 Fitness</i> Project <b>[at 7:28 am]</b>
 						</p>
 					),
-					imgSrc: '/resources/mallard.jpg',
+
 					url: '/project',
 				},
 				{
@@ -270,7 +270,7 @@ function ProfilePage() {
 							Challenged Friend 1 to <i>January Cooking</i> Project <b>[at 8:00 am]</b>
 						</p>
 					),
-					imgSrc: '/resources/mallard.jpg',
+
 					url: '/project',
 				},
 			],
@@ -278,7 +278,7 @@ function ProfilePage() {
 		{
 			user: {
 				url: '/profile',
-				imgSrc: '/resources/mallard.jpg',
+
 				name: 'Mal Jones',
 			},
 			entry: {
@@ -293,7 +293,7 @@ function ProfilePage() {
 							Added <i>January Cooking</i> Project <b>[at 7:00 am]</b>
 						</p>
 					),
-					imgSrc: '/resources/mallard.jpg',
+
 					url: '/project',
 				},
 				{
@@ -302,7 +302,7 @@ function ProfilePage() {
 							Completed Yoga from <i>2021 Fitness</i> Project <b>[at 7:28 am]</b>
 						</p>
 					),
-					imgSrc: '/resources/mallard.jpg',
+
 					url: '/project',
 				},
 				{
@@ -311,7 +311,7 @@ function ProfilePage() {
 							Challenged Friend 1 to <i>January Cooking</i> Project <b>[at 8:00 am]</b>
 						</p>
 					),
-					imgSrc: '/resources/mallard.jpg',
+
 					url: '/project',
 				},
 			],
@@ -326,46 +326,33 @@ function ProfilePage() {
 		interests: ['Cooking', 'Fitness'],
 		friends: [
 			{
-				imgSrc: '/resources/mallard.jpg',
 				name: 'Mal Jones',
 				url: '/profile',
 			},
 			{
-				imgSrc: '/resources/mallard.jpg',
 				name: 'Mal Jones',
 				url: '/profile',
 			},
 			{
-				imgSrc: '/resources/mallard.jpg',
 				name: 'Mal Jones',
 				url: '/profile',
 			},
 			{
-				imgSrc: '/resources/mallard.jpg',
 				name: 'Mal Jones',
 				url: '/profile',
 			},
 			{
-				imgSrc: '/resources/mallard.jpg',
 				name: 'Mal Jones',
 				url: '/profile',
 			},
 			{
-				imgSrc: '/resources/mallard.jpg',
 				name: 'Mal Jones',
 				url: '/profile',
 			},
 		],
 	};
 
-	return (
-		<Template
-			activePage=""
-			bodyLeft={<ProfilePanel user={user} />}
-			bodyCenter={<ProfileMain projects={projects} entries={entries} />}
-			bodyRight={<Submenu menuItems={menuItems} />}
-		/>
-	);
+	return <Template activePage="" bodyLeft={<ProfilePanel user={user} />} bodyCenter={<ProfileMain projects={projects} entries={entries} />} bodyRight={<Submenu menuItems={menuItems} />} />;
 }
 
 export default ProfilePage;

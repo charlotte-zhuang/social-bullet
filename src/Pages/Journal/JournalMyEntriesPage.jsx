@@ -4,7 +4,7 @@ import Submenu from "../../Components/submenu.jsx";
 import MainList from "../../Components/mainList.jsx";
 import MyEntryPanel from "../../Components/myEntryPanel.jsx";
 
-function JournalMyEntriesPage(props) {
+function JournalMyEntriesPage() {
   const [selectedDate, handleDateChange] = useState(new Date());
 
   const menuItems = [
@@ -48,7 +48,7 @@ function JournalMyEntriesPage(props) {
               Added <i>January Cooking</i> Project <b>[at 7:00 am]</b>
             </p>
           ),
-          imgSrc: "/resources/mallard.jpg",
+
           url: "/project",
         },
         {
@@ -58,7 +58,7 @@ function JournalMyEntriesPage(props) {
               <b>[at 7:28 am]</b>
             </p>
           ),
-          imgSrc: "/resources/mallard.jpg",
+
           url: "/project",
         },
         {
@@ -68,7 +68,7 @@ function JournalMyEntriesPage(props) {
               <b>[at 8:00 am]</b>
             </p>
           ),
-          imgSrc: "/resources/mallard.jpg",
+
           url: "/project",
         },
       ],
@@ -86,7 +86,7 @@ function JournalMyEntriesPage(props) {
               Added <i>January Cooking</i> Project <b>[at 7:00 am]</b>
             </p>
           ),
-          imgSrc: "/resources/mallard.jpg",
+
           url: "/project",
         },
         {
@@ -96,7 +96,7 @@ function JournalMyEntriesPage(props) {
               <b>[at 7:28 am]</b>
             </p>
           ),
-          imgSrc: "/resources/mallard.jpg",
+
           url: "/project",
         },
         {
@@ -106,7 +106,7 @@ function JournalMyEntriesPage(props) {
               <b>[at 8:00 am]</b>
             </p>
           ),
-          imgSrc: "/resources/mallard.jpg",
+
           url: "/project",
         },
       ],
@@ -124,7 +124,7 @@ function JournalMyEntriesPage(props) {
               Added <i>January Cooking</i> Project <b>[at 7:00 am]</b>
             </p>
           ),
-          imgSrc: "/resources/mallard.jpg",
+
           url: "/project",
         },
         {
@@ -134,7 +134,7 @@ function JournalMyEntriesPage(props) {
               <b>[at 7:28 am]</b>
             </p>
           ),
-          imgSrc: "/resources/mallard.jpg",
+
           url: "/project",
         },
         {
@@ -144,7 +144,7 @@ function JournalMyEntriesPage(props) {
               <b>[at 8:00 am]</b>
             </p>
           ),
-          imgSrc: "/resources/mallard.jpg",
+
           url: "/project",
         },
       ],
@@ -162,7 +162,7 @@ function JournalMyEntriesPage(props) {
               Added <i>January Cooking</i> Project <b>[at 7:00 am]</b>
             </p>
           ),
-          imgSrc: "/resources/mallard.jpg",
+
           url: "/project",
         },
         {
@@ -172,7 +172,7 @@ function JournalMyEntriesPage(props) {
               <b>[at 7:28 am]</b>
             </p>
           ),
-          imgSrc: "/resources/mallard.jpg",
+
           url: "/project",
         },
         {
@@ -182,7 +182,7 @@ function JournalMyEntriesPage(props) {
               <b>[at 8:00 am]</b>
             </p>
           ),
-          imgSrc: "/resources/mallard.jpg",
+
           url: "/project",
         },
       ],
@@ -200,7 +200,7 @@ function JournalMyEntriesPage(props) {
               Added <i>January Cooking</i> Project <b>[at 7:00 am]</b>
             </p>
           ),
-          imgSrc: "/resources/mallard.jpg",
+
           url: "/project",
         },
         {
@@ -210,7 +210,7 @@ function JournalMyEntriesPage(props) {
               <b>[at 7:28 am]</b>
             </p>
           ),
-          imgSrc: "/resources/mallard.jpg",
+
           url: "/project",
         },
         {
@@ -220,12 +220,13 @@ function JournalMyEntriesPage(props) {
               <b>[at 8:00 am]</b>
             </p>
           ),
-          imgSrc: "/resources/mallard.jpg",
+
           url: "/project",
         },
       ],
     },
   ];
+
   const listItems =
     props.user === null
       ? []
@@ -235,7 +236,6 @@ function JournalMyEntriesPage(props) {
             entry,
           };
         });
-
   return (
     <Template
       activePage="journal"
