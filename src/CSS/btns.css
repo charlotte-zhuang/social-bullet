@@ -21,7 +21,7 @@
 }
 
 .nav-btn.teal {
-  background-color: var(--teal);
+	background-color: var(--teal);
 }
 
 .nav-btn.dark-teal {
@@ -57,6 +57,10 @@
 	border-radius: 10px;
 	height: 38px;
 	width: 164px;
+}
+
+.panel-btn-container{
+	padding: 10px;
 }
 
 .panel-btn:hover,
