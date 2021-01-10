@@ -8,8 +8,8 @@ function ProfileMain({ projects, entries, isCur }) {
 
 	return (
 		<div className="d-flex flex-column align-items-start full-width">
-			<MainSection title="Active Projects" body={<MainTiles type="project" tileItems={activeProjs} />} />
-			<MainSection title="Completed Projects" body={<MainTiles type="project" tileItems={completedProjs} />} />
+			<MainSection title="Active Projects" body={<MainTiles type="project" tileItems={activeProjs} hScroll />} />
+			<MainSection title="Completed Projects" body={<MainTiles type="project" tileItems={completedProjs} hScroll />} />
 			<MainSection title="Recent Entries" body={<MainList type="entry" listItems={entries} />} />
 		</div>
 	);
