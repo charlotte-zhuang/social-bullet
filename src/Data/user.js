@@ -6,6 +6,9 @@ import { userExists, findUser } from "./utility";
 import { v4 as uuid } from "uuid";
 
 export default class User {
+  static ALPHABETICAL = "alphabetical";
+  static MOST_RECENT = "most recent";
+
   constructor(usernameInput, emailInput) {
     if (!userExists(usernameInput)) {
       console.log("Username doesn't exist");
