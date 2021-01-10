@@ -11,6 +11,10 @@
     background-color: var(--green);
 }
 
+.panel-section{
+    margin-top: 15px;
+}
+
 p.short-descr {
     font-size: 20px;
     line-height: 22px;
@@ -37,10 +41,11 @@ p.short-descr {
 }
 
 .tag-pill {
-    width: 78px;
-    height: 32px;
+    padding: 5px 15px;
+    height: 37px;
     border-radius: 10px;
     background-color: var(--tan);
+    margin: 5px;
 }
 
 .tag-text {
@@ -48,9 +53,11 @@ p.short-descr {
     text-align: center;
 }
 
-.bio-text {
+.bio-text.advent-font {
     font-size: 14px;
     line-height: 16px;
+    color: var(--dark-teal);
+    margin-bottom: 0px;
 }
 
 .front-overlay {
@@ -65,5 +72,11 @@ p.short-descr {
 }
 
 .icon-card-container .iconCard-lg div {
-    padding-right: 5px
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.indent-body {
+    width: 100%;
+    padding-left: 10px;
 }

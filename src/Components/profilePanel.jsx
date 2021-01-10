@@ -17,14 +17,17 @@ function ProfilePanel({ user }) {
 					<IconCard imgSrc={user.imgSrc} size="lg" text={user.name} url={user.url} />
 				</div>
 			</div>
-			<PanelSection title="Bio" body={<p className="advent-font bio-text">{user.bio}</p>} />
+			<PanelSection title="Bio" body={<p className="advent-font bio-text">{user.bio}</p>} indent/>
 			<PanelSection
 				title="Interests"
-				body={user.interests.map((interest, key) => (
-					<Tag title={interest} />
-				))}
+				body={
+					<div class="d-flex flex-wrap align-items-center">
+                        {user.interests.map((interest, key) => (<Tag title={interest} />
+                        ))}
+					</div>
+				}
 			/>
-			<PanelSection title="Friends" body={<IconTiles arr={user.friends} size="md" />} />
+			<PanelSection title="Friends" body={<IconTiles arr={user.friends} size="sm" />} />
 		</div>
 	);
 }
