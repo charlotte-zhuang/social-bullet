@@ -23,7 +23,7 @@ import EditEntryPage from "./Pages/Edit/EditEntryPage.jsx";
 import "./App.css";
 import "./CSS/inputs.css";
 
-import Amplify, { API, Auth, graphqlOperation } from "aws-amplify";
+import Amplify, { Auth } from "aws-amplify";
 import awsconfig from "./aws-exports";
 
 import { withAuthenticator } from "@aws-amplify/ui-react";
@@ -46,13 +46,7 @@ function App() {
 
   //authenticate after login or page refreshes
   useEffect(() => {
-    try {
-      authenticate().then((user) => {
-        setUser(user);
-      });
-    } catch (error) {
-      console.log("Issue with authentication");
-    }
+    authenticate();
   }, []);
 
   //execute when user state changes
@@ -61,10 +55,17 @@ function App() {
 	}, [user]);
 
   const authenticate = async () => {
-    let user = await Auth.currentAuthenticatedUser();
-    let username = user.username;
-    let email = user.attributes.email;
-    return new User(username, email);
+    try {
+      let user = await Auth.currentAuthenticatedUser();
+      let username = user.username;
+      let email = user.attributes.email;
+      let obj = new User(username, email);
+      obj.initialize(username).then((o) => {
+        setUser(o);
+      });
+    } catch (error) {
+      console.log("Issue with authentication");
+    }
   };
   //some test code
   // const click = () => {
@@ -83,25 +84,101 @@ function App() {
           <Redirect from="/home" to="/home-entries" />
           <Redirect from="/journal" to="/journal-entries" />
           <Redirect from="/settings" to="/settings-preferences" />
-          <Route path="/home-entries" component={HomeEntriesPage} />
-          <Route path="/home-projects" component={HomeProjsPage} />
-          <Route path="/discover" component={DiscoverPage} />
-          <Route path="/journal-profile" component={JournalProfilePage} />
-          <Route path="/journal-entries" component={JournalMyEntriesPage} />
-          <Route path="/journal-projects" component={JournalMyProjsPage} />
-          <Route path="/journal-friends" component={JournalFriendsPage} />
-          <Route path="/settings-preferences" component={SettingsPrefsPage} />
-          <Route path="/settings-credits" component={SettingsCreditsPage} />
-          <Route path="/login" component={LoginPage} />
-          <Route path="/profile" component={ProfilePage} />
-          <Route path="/project" component={ProjPage} />
           <Route
-            path='/edit-profile'
-            component={(props) => <EditProfilePage user={user} setUser={setUser} {...props} />}
+            path="/home-entries"
+            component={(props) => (
+              <HomeEntriesPage user={user} setUser={setUser} {...props} />
+            )}
           />
-          <Route path="/edit-project" component={EditProjPage} />
-          <Route path="/edit-entry" component={EditEntryPage} />
-          <Route component={NullPage} />
+          <Route
+            path="/home-projects"
+            component={(props) => (
+              <HomeProjsPage user={user} setUser={setUser} {...props} />
+            )}
+          />
+          <Route
+            path="/discover"
+            component={(props) => (
+              <DiscoverPage user={user} setUser={setUser} {...props} />
+            )}
+          />
+          <Route
+            path="/journal-profile"
+            component={(props) => (
+              <JournalProfilePage user={user} setUser={setUser} {...props} />
+            )}
+          />
+          <Route
+            path="/journal-entries"
+            component={(props) => (
+              <JournalMyEntriesPage user={user} setUser={setUser} {...props} />
+            )}
+          />
+          <Route
+            path="/journal-projects"
+            component={(props) => (
+              <JournalMyProjsPage user={user} setUser={setUser} {...props} />
+            )}
+          />
+          <Route
+            path="/journal-friends"
+            component={(props) => (
+              <JournalFriendsPage user={user} setUser={setUser} {...props} />
+            )}
+          />
+          <Route
+            path="/settings-preferences"
+            component={(props) => (
+              <SettingsPrefsPage user={user} setUser={setUser} {...props} />
+            )}
+          />
+          <Route
+            path="/settings-credits"
+            component={(props) => (
+              <SettingsCreditsPage user={user} setUser={setUser} {...props} />
+            )}
+          />
+          <Route
+            path="/login"
+            component={(props) => (
+              <LoginPage user={user} setUser={setUser} {...props} />
+            )}
+          />
+          <Route
+            path="/profile"
+            component={(props) => (
+              <ProfilePage user={user} setUser={setUser} {...props} />
+            )}
+          />
+          <Route
+            path="/project"
+            component={(props) => (
+              <ProjPage user={user} setUser={setUser} {...props} />
+            )}
+          />
+          <Route
+            path="/edit-profile"
+            component={(props) => (
+              <EditProfilePage user={user} setUser={setUser} {...props} />
+            )}
+          />
+          <Route
+            path="/edit-project"
+            component={(props) => (
+              <EditProjPage user={user} setUser={setUser} {...props} />
+            )}
+          />
+          <Route
+            path="/edit-entry"
+            component={(props) => (
+              <EditEntryPage user={user} setUser={setUser} {...props} />
+            )}
+          />
+          <Route
+            component={(props) => (
+              <NullPage user={user} setUser={setUser} {...props} />
+            )}
+          />
         </Switch>
       </Router>
     </>
