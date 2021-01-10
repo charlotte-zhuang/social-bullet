@@ -80,7 +80,7 @@
     font-size: 24px;
 }
 
-.form-check>.form-check-input{
+.form-check>.form-check-input {
     -webkit-appearance: none;
     width: 15px;
     height: 15px;
@@ -91,10 +91,14 @@
     background-color: white;
 }
 
-.form-check>.form-check-input:checked{
+.form-check>.form-check-input:checked {
     background-color: var(--teal);
 }
 
-.form-check>.form-check-input:focus{
+.form-check>.form-check-input:focus {
     outline-width: 0px;
+}
+
+.form-control.form-txt-input.panel-input {
+    width: 100%;
 }

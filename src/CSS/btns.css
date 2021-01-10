@@ -57,6 +57,9 @@
 	border-radius: 10px;
 	height: 38px;
 	width: 164px;
+
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .panel-btn-container{
