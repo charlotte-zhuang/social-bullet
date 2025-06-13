@@ -1,5 +1,7 @@
 # Social Bullet
 
+This project is no longer being maintained.
+
 Journalling with friends!
 
 ## About
